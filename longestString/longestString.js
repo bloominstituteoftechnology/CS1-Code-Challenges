@@ -7,7 +7,7 @@
  * Compare it to the next anArray, put the bigger of the two in the holding array.
  */
 
-testanArray = ['fred', 'ted', 'bob', 'alice', 'joe', 'arnold', 'mary', 'jebedaiah', 'ed', 'zachahurres', 'mae', 'antidisestablishmentarianism']
+// testanArray = ['fred', 'ted', 'bob', 'alice', 'joe', 'arnold', 'mary', 'jebedaiah', 'ed', 'zachahurres', 'mae', 'antidisestablishmentarianism']
 
 const bigString = function (anArr) {
   const holdBig = [anArr[0]];
@@ -21,4 +21,4 @@ const bigString = function (anArr) {
   return holdBig[0];
 };
 
-console.log(bigString(testanArray));
+// console.log(bigString(testanArray));
