@@ -8,10 +8,7 @@ const longestString = (stringArray) => {
 		for(strings of stringArray) {
 			if(strings.length > currentLongest.length) {
 				currentLongest = strings;
-			}
+			} 
 		}
 	return currentLongest
 }
-
-const array = ['gorm', 'grim', 'grum', 'gram'];
-console.log(longestString(array));
