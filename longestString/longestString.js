@@ -13,6 +13,6 @@ const longestString = (arr) => {
   return longest;
 };
 
-console.log(longestString(["latoyya", "smith", "Lambda School", "mom"]));
+// console.log(longestString(["latoyya", "smith", "Lambda School", "mom"]));
 
-console.log(longestString(["latoyya", "asdfghj", "Lambda", "1234567"]));
+// console.log(longestString(["latoyya", "asdfghj", "Lambda", "1234567"]));
