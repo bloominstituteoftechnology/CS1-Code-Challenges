@@ -22,3 +22,6 @@ const bigString = function (anArr) {
 };
 
 // console.log(bigString(testanArray));
+
+// Refactor to return an array of strings if there's a tie?
+// Refactor to handle non-Array arguments?
