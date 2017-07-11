@@ -5,7 +5,7 @@
 git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
 ```
 
-**NOTE: I think this step is incorrect VVVVVVVVV**
+## NOTE: I think this step is incorrect
 2. To get the changes to the repo each day run this
 ```console
 git pull upstream master
