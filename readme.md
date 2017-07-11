@@ -53,10 +53,16 @@ $ git remote set-url upstream https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Cod
 $  git pull origin master
 // May require merge conflict resolution
 
-// STAGING FILES (git add) LOCALLY & MAKING LOCAL COMMITS (git commit -m 'awesome message') STAYS THE SAME.
+// STAGING FILES LOCALLY
+$ git add <file_name>
+// MAKING LOCAL COMMITS
+$ git commit -m 'awesome message'
+// STAYS THE SAME.
 
 // TO PUSH YOUR WORK TO YOUR GITHUB REPOSITORY:
-git push upstream master
+$ git push upstream master
 
-// TO SUBMIT A PULL REQUEST TO RYAN'S (origin) GITHUB REPOSITORY, GO ONLINE TO https://github.com/ryanhca/CS1-Code-Challenges RYAN'S REPOSITORY AND SUBMIT A NEW PULL REQUEST
+// TO SUBMIT A PULL REQUEST TO RYAN'S (origin) GITHUB REPOSITORY,
+// GO ONLINE TO https://github.com/ryanhca/CS1-Code-Challenges
+// RYAN'S REPOSITORY AND SUBMIT A NEW PULL REQUEST
 ```
