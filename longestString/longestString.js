@@ -26,7 +26,7 @@ const bigString = function (anArr) {
 };
 
 testAnArray = ['fred', 'ted', 'bob', 'alice', 'joe', 'arnold', 'mary', 'jebedaiah', 'ed', 'zachahurres', 'mae', 'antidisestablishmentarianism']
-console.log(bigString(testAnArray));
+console.log(bigString(testAnArray)); // ---> antidisestablishmentarianism
 
 // Refactor to return an array of the equal length strings if there's a tie? √
 // testAnArrayTie = ['fred', 'ted', 'bob', 'antidisestablishmentarianism', 'alice', 'joe', 'arnold', 'mary', 'jebedaiah', 'ed', 'zachahurres', 'mae', 'antidisestablishmentarianism', 'manny']
