@@ -1,6 +1,7 @@
 # CS1 - Lambda School Code Challenges
 
 ## steps to ensuring your changes get pulled down
+<<<<<<< HEAD
 1. You will only need to run this step once
 ```console
 git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
@@ -61,3 +62,15 @@ $  git pull origin master
 
   // TO SUBMIT A PULL REQUEST TO RYAN'S (origin) GITHUB REPOSITORY, GO ONLINE TO https://github.com/ryanhca/CS1-Code-Challenges RYAN'S REPOSITORY AND SUBMIT A NEW PULL REQUEST
   ```
+=======
+- You will only need to run this step once 
+
+
+1. git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
+
+- To get the changes to the repo each day run this
+
+2. git pull upstream master
+
+- You'll then have to resolve any merge conflicts that come up. Don't worry, you'll be pros at this after you're done and this is something that you'll have to do in the real world... all the time. :/
+>>>>>>> 9ec7f38c8f1bfc9727e15ce95c4c55f50815bfba
