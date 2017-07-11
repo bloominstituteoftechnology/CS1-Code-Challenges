@@ -1,6 +1,4 @@
 const longestString = (strArr) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   // tempStr variable to hold the string
   let tempStr = '';
   // loop over strArr
@@ -23,23 +21,3 @@ const longStr = (arr) => {
 }
 
 console.log(`Jesh: ${longStr(['abc', 'def', 'gasdfasf', 'asdf', 'e', 'agwoaiengpoing', 'pp'])}`);
-=======
-  let tempStr = '';
-  strArr.forEach(str => {
-    if(str.length > tempStr.length) tempStr = str;
-  });
-  return tempStr;
-};
-
-longestString(['abc', 'def', 'gasdfasf', 'asdf', 'e', 'agwoaiengpoing']);
->>>>>>> 9ec7f38c8f1bfc9727e15ce95c4c55f50815bfba
-=======
-  let tempStr = '';
-  strArr.forEach(str => {
-    if(str.length > tempStr.length) tempStr = str;
-  });
-  return tempStr;
-};
-
-longestString(['abc', 'def', 'gasdfasf', 'asdf', 'e', 'agwoaiengpoing']);
->>>>>>> 9ec7f38c8f1bfc9727e15ce95c4c55f50815bfba
