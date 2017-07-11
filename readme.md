@@ -1,7 +1,5 @@
 # CS1 - Lambda School Code Challenges
-
 ## steps to ensuring your changes get pulled down
-<<<<<<< HEAD
 1. You will only need to run this step once
 ```console
 git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
@@ -28,49 +26,37 @@ upstream	https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-Challenges (fetch)
 upstream	https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-Challenges (push)
 ```
 
-2. Then, to get the changes from the origin (ryanhca) master, the srudents will need to run:
+2. Then, to get the changes from the origin (ryanhca) master, the students will need to run:
 ```console
 $  git pull origin master
 ```
 
 3. These commands posted durig the Brown Bag
-  ```console
-  git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
-  git pull upstream master
-  git remote -v
+```console
+git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
+git pull upstream master
+git remote -v
 
-  git remote set-url upstream https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-Challenges
-  // git push/commit etc.
-  ```
+git remote set-url upstream https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-Challenges
+// git push/commit etc.
+```
 
 4. ...should be changed to:
-  ```console
-  $ git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
-  $ git pull upstream master
-  $ git remote -v
+```console
+$ git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
+$ git pull upstream master /* <---- This step only needs to be done once */
+$ git remote -v
 
-  $ git remote set-url upstream https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-Challenges
+$ git remote set-url upstream https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-Challenges
 
-  // TO GET NEW CONTENT:
-  $  git pull origin master
-  // May require merge conflict resolution
+// TO GET NEW CONTENT:
+$  git pull origin master
+// May require merge conflict resolution
 
-  // STAGING FILES (git add) & MAKING LOCAL COMMITTS (git commit -m 'awesome message') STAYS THE SAME.
+// STAGING FILES (git add) LOCALLY & MAKING LOCAL COMMITS (git commit -m 'awesome message') STAYS THE SAME.
 
-  // TO PUSH YOUR WORK TO YOUR GITHUB REPOSITORY:
-  git push upstream master
+// TO PUSH YOUR WORK TO YOUR GITHUB REPOSITORY:
+git push upstream master
 
-  // TO SUBMIT A PULL REQUEST TO RYAN'S (origin) GITHUB REPOSITORY, GO ONLINE TO https://github.com/ryanhca/CS1-Code-Challenges RYAN'S REPOSITORY AND SUBMIT A NEW PULL REQUEST
-  ```
-=======
-- You will only need to run this step once 
-
-
-1. git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
-
-- To get the changes to the repo each day run this
-
-2. git pull upstream master
-
-- You'll then have to resolve any merge conflicts that come up. Don't worry, you'll be pros at this after you're done and this is something that you'll have to do in the real world... all the time. :/
->>>>>>> 9ec7f38c8f1bfc9727e15ce95c4c55f50815bfba
+// TO SUBMIT A PULL REQUEST TO RYAN'S (origin) GITHUB REPOSITORY, GO ONLINE TO https://github.com/ryanhca/CS1-Code-Challenges RYAN'S REPOSITORY AND SUBMIT A NEW PULL REQUEST
+```
