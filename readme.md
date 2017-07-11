@@ -5,7 +5,7 @@
 git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
 ```
 
-**NOTE: I think this step is incorrect VVVVVVVVV**  
+**NOTE: I think this step is incorrect VVVVVVVVV**
 2. To get the changes to the repo each day run this
 ```console
 git pull upstream master
@@ -56,7 +56,7 @@ $  git pull origin master
 // STAGING FILES LOCALLY
 $ git add <file_name>
 // MAKING LOCAL COMMITS
-$ git commit -m 'awesome message'
+$ git commit -m '<awesome_message>'
 // STAYS THE SAME.
 
 // TO PUSH YOUR WORK TO YOUR GITHUB REPOSITORY:
