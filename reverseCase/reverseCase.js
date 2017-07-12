@@ -4,7 +4,6 @@
  * Assume that each string will contain only spaces and letters.
  */
 
-
 const reverseCase = function (str) {
   // declare an array to house individual string letters or spaces in word/sentence order
   const letters = [];
@@ -28,9 +27,10 @@ const reverseCase = function (str) {
   return caseConvertedString;
 }
 
-const testCase1 = 'Fsdfsdf ESDFSDFdfsdfsdfsdfdsf';
-console.log(reverseCase(testCase1)); // ---> fSDFSDF esdfsdfDFSDFSDFSDFDSF
-
+const testCase1 = 'Hello World'
+console.log(reverseCase(testCase1)); // ---> hELLO wORLD
+const testCase2 = 'Fsdfsdf ESDFSDFdfsdfsdfsdfdsf';
+console.log(reverseCase(testCase2)); // ---> fSDFSDF esdfsdfDFSDFSDFSDFDSF
 // will it handle periods?
-const testCase2 = 'The quick brown Mr. Fox jumped over the lazy Mr. Dog.';
-console.log(reverseCase(testCase2)); // ---> tHE QUICK BROWN mR. fOX JUMPED OVER THE LAZY mR. dOG.
+const testCase3 = 'The quick brown Mr. Fox jumped over the lazy Mr. Dog.';
+console.log(reverseCase(testCase3)); // ---> tHE QUICK BROWN mR. fOX JUMPED OVER THE LAZY mR. dOG.
