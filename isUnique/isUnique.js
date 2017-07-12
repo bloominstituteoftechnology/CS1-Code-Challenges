@@ -17,3 +17,8 @@ const isUnique = (str) => {
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
 console.log(isUnique('abcdefga')); // false
+
+/*
+If you cannot use additional datastructures, then sort the string and search for
+duplicate letters next to each other.
+*/
