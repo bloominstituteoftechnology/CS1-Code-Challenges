@@ -15,4 +15,5 @@ const rEVCASE = (str) => {
   return rEVSTR;  
 }
 
+// So this code doesnt work because you can't change one part of a string. new plan when I have free time is to make a new string and concat it with the stuff.
 console.log(rEVCASE('PiNeApPlEs'));
