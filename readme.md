@@ -1,7 +1,8 @@
 # CS1 - Lambda School Code Challenges
 
 ## steps to ensuring your changes get pulled down
-- You will only need to run this step once
+- You will only need to run this step once 
+
 
 1. git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
 
