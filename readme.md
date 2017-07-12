@@ -43,12 +43,20 @@ git remote set-url upstream https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-
 
 4. ...should be changed to:
 ```console
+// THESE TWO STEPS ONLY NEED TO BE DONE ONCE
 $ git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
-$ git pull upstream master /* <---- This step only needs to be done once */
+$ git pull upstream master
+
+// USE THIS TO SEE HOW YOUR ORIGIN AND UPSTREAM ARE CONFIGURED FOR FETCH AND PUSH
 $ git remote -v
 
+// SET YOUR UPSTREAM TO YOUR GITHUB
 $ git remote set-url upstream https://github.com/-STUDENT_GITHUB_HANDLE-/CS1-Code-Challenges
 
+// CONFIRM THAT ORIGIN IS RYAN AND UPSTREAM IS YOUR GITHUB ACCOUNT
+$ git remote -v
+
+// NOW, FOR EACH NEW CODING CHALLENGE
 // TO GET NEW CONTENT:
 $  git pull origin master
 // May require merge conflict resolution
