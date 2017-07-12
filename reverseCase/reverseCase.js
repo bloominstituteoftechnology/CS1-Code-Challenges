@@ -4,4 +4,12 @@
  * Assume that each string will contain only spaces and letters.
  */
 
+function reverseCase (str) {
+  let reversed = '';
 
+  for (s of str) {
+    reversed += s.toLowerCase() === s ? s.toUpperCase() : s.toLowerCase();
+  }
+
+  return reversed;
+}
