@@ -4,6 +4,7 @@
 */
 
 const isUnique = (str) => {
+<<<<<<< HEAD
   for (let i = 0; i < str.length; i++) {
     for (let j = i+1; j < str.length; j++) {
         if (str[i] === str[j]) {
@@ -14,6 +15,10 @@ const isUnique = (str) => {
   return true;
 };
 
+=======
+
+};
+>>>>>>> 7e76d6a009f694cbab0659f84fdabd517aac089b
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
 console.log(isUnique('abcdefga')); // false
