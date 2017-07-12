@@ -3,6 +3,8 @@
  * Return the longest string in the array.
  */
 
+let someStrings = ['one string', 'two strings', 'three strings'];
+
 const longestString = (arr) => {
   let long = '';
   for (var i = 0; i < arr.length; i++) {
@@ -10,3 +12,5 @@ const longestString = (arr) => {
   }
   return long;
 };
+
+console.log(longestString(someStrings))
