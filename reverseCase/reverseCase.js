@@ -3,5 +3,13 @@
  * Example: 'Hello World' -> 'hELLO wORLD'
  * Assume that each string will contain only spaces and letters.
  */
-
+const reverseCase = (str) => {
+  return str.split('').map(function(x){
+    if(x === x.toUpperCase()){
+      return x.toLowerCase();
+      } else{
+      return x.toUpperCase();
+    }
+  }).join('');
+};
 
