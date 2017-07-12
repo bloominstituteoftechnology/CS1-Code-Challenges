@@ -6,7 +6,6 @@
 // Create a loop to check individual characters and check to see if it was used before
 // charAt() method returns the character at a specific index.
 // str.indexOf('a', 5) find the first occurance of a letter in a string. ex: a, start position at 5
-// const str = 'abcdhijklmnopqrstuv';
 const isUnique = (str) => {
   for (let i = 0; i < str.length; i++) {
     for (let j = i + 1; j < str.length; j++) {
