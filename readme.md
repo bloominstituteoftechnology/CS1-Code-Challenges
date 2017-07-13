@@ -70,11 +70,7 @@ $ git commit -m '<awesome_message>'
 // TO PUSH YOUR WORK TO YOUR GITHUB REPOSITORY:
 $ git push upstream master
 
-<<<<<<< HEAD
 // TO SUBMIT A PULL REQUEST TO RYAN'S (origin) GITHUB REPOSITORY,
 // GO ONLINE TO https://github.com/ryanhca/CS1-Code-Challenges
 // RYAN'S REPOSITORY AND SUBMIT A NEW PULL REQUEST
 ```
-=======
-- You'll then have to resolve any merge conflicts that come up. Don't worry, you'll be pros at this after you're done and this is something that you'll have to do in the real world... all the time. 
->>>>>>> 16c30f05fda2a6621522f580bcc60d0ea35e639e
