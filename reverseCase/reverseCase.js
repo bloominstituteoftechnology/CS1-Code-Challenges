@@ -6,7 +6,6 @@
 const newString = [];
 
 const lowerUpper = (string) => {
-  // string.forEach(function(i) {
   for (let i = 0; i < string.length; i++) {
     const character = string[i];
     if (character === character.toLowerCase()) {
