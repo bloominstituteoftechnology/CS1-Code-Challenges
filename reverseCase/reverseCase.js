@@ -23,7 +23,7 @@
      }
    }
    return (console.log(resultStr));
-   //return resultStr;
+   return resultStr;
 
  };
 
