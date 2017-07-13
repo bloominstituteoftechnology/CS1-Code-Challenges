@@ -3,5 +3,3 @@
  * Example: 'Hello World' -> 'hELLO wORLD'
  * Assume that each string will contain only spaces and letters.
  */
-
-
