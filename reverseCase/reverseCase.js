@@ -10,8 +10,7 @@ const reverseCase = (str) => {
   for (let i = 0; i < str.length; i++) {
     if (str.charAt(i) === str.charAt(i).toUpperCase()) {
       strArray.push(str.charAt(i).toLowerCase());
-    }
-    if (str.charAt(i) === str.charAt(i).toLowerCase() && !(str.charAt(i) === ' ')) {
+    } else {
       strArray.push(str.charAt(i).toUpperCase());
     }
     newString += strArray[i];
