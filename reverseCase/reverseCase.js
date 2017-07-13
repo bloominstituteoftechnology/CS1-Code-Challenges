@@ -34,3 +34,19 @@ console.log(reverseCase(testCase2)); // ---> fSDFSDF esdfsdfDFSDFSDFSDFDSF
 // will it handle periods?
 const testCase3 = 'The quick brown Mr. Fox jumped over the lazy Mr. Dog.';
 console.log(reverseCase(testCase3)); // ---> tHE QUICK BROWN mR. fOX JUMPED OVER THE LAZY mR. dOG.
+
+
+// // Latoyya's solution
+// const reverseString = (str) => {
+//   let newString = '';
+//   for (let i = 0; i < str.length; i++) {
+//     if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
+//       newString += str.charAt(i).toLowerCase();
+//     } else {
+//       newString += str.charAt(i).toUpperCase();
+//     }
+//   }
+//   return newString;
+// };
+// console.log(reverseString('Hello World'));
+// console.log(reverseString('Hello World My NamE is LAtoyYa SmitH'));
