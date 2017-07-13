@@ -5,8 +5,9 @@
  */
 
  // high level solution overview. Convert string to array so you can loop over it. Loop over it and
- //each time check if the char === toUppderCase() if so convert it to lower case and add it to new array.
- //convert new array to string and return it.
+ // each time check if the char === char.toUppderCase() if so convert it to lower case and add it to new array.
+ // otherwise it's lowercase, uppercase it and add to string.
+ // return string.
 
  const stringReverse = str => {
    //str to array
