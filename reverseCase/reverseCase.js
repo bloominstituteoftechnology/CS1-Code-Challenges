@@ -27,4 +27,22 @@
 
  };
 
- stringReverse('flaA');
+ stringReverse('Hello World');
+
+
+
+ /*
+Tai the Thai's code
+const reverseCase = (str) => {
+  const chars = str.split(''); // ['H', 'e', ... , 'd']
+  const arr = [];
+  chars.forEach((letter, i) => {
+    (letter.toUpperCase() === letter) ? arr[i] = (letter.toLowerCase()) : arr[i] = (letter.toUpperCase());
+  });
+  return arr.join('');
+}
+
+str1 = 'Hello World';
+
+console.log(reverseCase(str1));
+ */
