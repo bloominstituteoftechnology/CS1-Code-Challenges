@@ -28,5 +28,3 @@
  };
 
  stringReverse('flaA');
-
- // not exactly sure why i have to do a return (console log()); would have thought the return would have done ...
