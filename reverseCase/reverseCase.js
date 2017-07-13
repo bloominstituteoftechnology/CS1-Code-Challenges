@@ -5,15 +5,15 @@
  */
 
 const rEVCASE = (str) => {
-  let rEVSTR = str;
+  let rEVSTR = '';
   for (let i = 0; i < str.length; i++) {
-    if(rEVSTR[i].toUpperCase() === rEVSTR[i]) {
-      rEVSTR[i] = rEVSTR[i].toLowerCase();
+    if(str[i].toUpperCase() === str[i]) {
+      rEVSTR = rEVSTR.concat(str[i].toLowerCase());
+    } else {
+      rEVSTR = rEVSTR.concat(str[i].toUpperCase());
     }
-    rEVSTR[i] = rEVSTR[i].toUpperCase();
   }
   return rEVSTR;  
 }
 
-// So this code doesnt work because you can't change one part of a string. new plan when I have free time is to make a new string and concat it with the stuff.
 console.log(rEVCASE('PiNeApPlEs'));
