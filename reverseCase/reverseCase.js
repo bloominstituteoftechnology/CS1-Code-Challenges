@@ -3,6 +3,7 @@
  * Example: 'Hello World' -> 'hELLO wORLD'
  * Assume that each string will contain only spaces and letters.
  */
+<<<<<<< HEAD
 
 const isUpper = (ch) => {
   const code = ch.charCodeAt(0);
@@ -27,3 +28,5 @@ const reverseCase = str => {
 }
 console.log(reverseCase('foR'));
 
+=======
+>>>>>>> 16c30f05fda2a6621522f580bcc60d0ea35e639e
