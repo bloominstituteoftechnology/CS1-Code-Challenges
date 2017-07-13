@@ -4,7 +4,14 @@
 */
 
 const isUnique = (str) => {
-
+	let currentChar = str.charAt(0);
+	for(let i = 1; i < str.length; i++) {
+		let newChar = str.charAt(i);
+		if(currentChar === newChar) {
+			return false;
+		}
+	}
+	return true;
 };
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
