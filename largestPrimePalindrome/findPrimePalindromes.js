@@ -59,22 +59,22 @@ console.log(`Q: Is 'cdc' a palindrome?                   A: ${isPalindrome('cdc'
 console.log(`Q: Is 'amanaplanacanalpanama' a palindrome? A: ${isPalindrome('amanaplanacanalpanama')}`) // <-- true
 // isPrime TEST SUITE
 // 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
-console.log(`Q:      0 is prime? A: ${isPrime(0)}`)     // <--- false
-console.log(`Q:      1 is prime? A: ${isPrime(1)}`)     // <--- false
-console.log(`Q:      2 is prime? A: ${isPrime(2)}`)     // <--- true
-console.log(`Q:      3 is prime? A: ${isPrime(3)}`)     // <--- true
-console.log(`Q:      4 is prime? A: ${isPrime(4)}`)     // <--- false
-console.log(`Q:      5 is prime? A: ${isPrime(5)}`)     // <--- true
-console.log(`Q:      6 is prime? A: ${isPrime(6)}`)     // <--- false
-console.log(`Q:      7 is prime? A: ${isPrime(7)}`)     // <--- true
-console.log(`Q:      8 is prime? A: ${isPrime(8)}`)     // <--- false
-console.log(`Q:      9 is prime? A: ${isPrime(9)}`)     // <--- false
-console.log(`Q:     10 is prime? A: ${isPrime(10)}`)    // <--- false
-console.log(`Q:     11 is prime? A: ${isPrime(11)}`)    // <--- true
-console.log(`Q:     12 is prime? A: ${isPrime(12)}`)    // <--- false
-console.log(`Q:     13 is prime? A: ${isPrime(13)}`)    // <--- true
-console.log(`Q:    121 is prime? A: ${isPrime(121)}`)   // <--- false (11 * 11 = 121)
-console.log(`Q: 104729 is prime? A: ${isPrime(104729)}`)// <--- true (104,729 is the 10,000th prime number!)
+console.log(`Q: Is   0    prime? A: ${isPrime(0)}`)     // <--- false
+console.log(`Q: Is   1    prime? A: ${isPrime(1)}`)     // <--- false
+console.log(`Q: Is   2    prime? A: ${isPrime(2)}`)     // <--- true
+console.log(`Q: Is   3    prime? A: ${isPrime(3)}`)     // <--- true
+console.log(`Q: Is   4    prime? A: ${isPrime(4)}`)     // <--- false
+console.log(`Q: Is   5    prime? A: ${isPrime(5)}`)     // <--- true
+console.log(`Q: Is   6    prime? A: ${isPrime(6)}`)     // <--- false
+console.log(`Q: Is   7    prime? A: ${isPrime(7)}`)     // <--- true
+console.log(`Q: Is   8    prime? A: ${isPrime(8)}`)     // <--- false
+console.log(`Q: Is   9    prime? A: ${isPrime(9)}`)     // <--- false
+console.log(`Q: Is   10   prime? A: ${isPrime(10)}`)    // <--- false
+console.log(`Q: Is   11   prime? A: ${isPrime(11)}`)    // <--- true
+console.log(`Q: Is   12   prime? A: ${isPrime(12)}`)    // <--- false
+console.log(`Q: Is   13   prime? A: ${isPrime(13)}`)    // <--- true
+console.log(`Q: Is  121   prime? A: ${isPrime(121)}`)   // <--- false (11 * 11 = 121)
+console.log(`Q: Is 104729 prime? A: ${isPrime(104729)}`)// <--- true (104,729 is the 10,000th prime number!)
 // findPrimes TEST SUITE
 // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127]
 console.log(`Q: what are the primes from 0 to 127?\nA: ${findPrimes(127)}`);
