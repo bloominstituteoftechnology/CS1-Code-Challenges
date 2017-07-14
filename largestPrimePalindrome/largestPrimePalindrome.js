@@ -7,16 +7,20 @@
  * Extra credit 2: How can you improve the time complexity?  (Google: Sieve of Eratosthenes)
  */
 
-function isPalindrome(str) {
-  // return true if string is a palindrome.
-  // otherwise return false
-  for (let i = 0; i < str.length / 2; i++) { // <--- make sure divided by 2 handles odd and even length (floor vs. ceiling)
-    if (str[i] === str[-1 - i]) {
-      retrun true;
-    } else {
-      return false;
+ /* return true if num is prime.
+    otherwise return false */
+
+const isPrime = function(num) {
+  if (num < 2) {return false;}
+  else if (num === 2) {return true;}
+  else if (num % 2 === 0) {return false;}
+  else if (num >= 3) {
+    for (var i = 2; i < Math.sqrt(num + 1); i++) { // Maybe a ceiling would work better (but slower?)?
+      if (num % i === 0) {
+        return false;
+      }
     }
-  }
+  } return true;
 }
 
 function isPrime(num) {
