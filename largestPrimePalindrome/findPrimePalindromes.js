@@ -5,7 +5,7 @@ const findPrimePals = function(primeArr) {
   for (i = 0; i < primeArr.length; i++) {
     if (isPalindrome(primeArr[i])) primePalsArr.push(primeArr[i])
   }
-  return primePals;
+  return primePalsArr;
 }
 
 // evaluates a range of natural numbers
