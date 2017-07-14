@@ -80,3 +80,6 @@ console.log(`Q: 104729 is prime? A: ${isPrime(104729)}`)// <--- true (104,729 is
 console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(127)}`);
 // console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(104729)}`); // <--- 10,000 prime numbers!!!!
 console.log(findPrimes(104729).length);
+// findPrimes TEST SUITE
+// [11, 101, ...]
+console.log(`Q: what are the prime palindromes from 0 to 127?\nA: ${findPrimePals(127)}`);
