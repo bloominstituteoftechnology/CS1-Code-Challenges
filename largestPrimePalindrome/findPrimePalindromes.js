@@ -1,7 +1,7 @@
 // I: a sorted array of prime numbers, smallest to largest
 // O: array of prime palindromes
 const findPrimePals = function(primeArr) {
-  console.log(primeArr);
+  // console.log(primeArr);
   const primePalsArr = []
   for (i = 0; i < primeArr.length; i++) {
     if (isPalindrome(numToStr(primeArr[i]))) primePalsArr.push(numToStr(primeArr[i]))
