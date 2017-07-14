@@ -10,6 +10,7 @@ const isUnique = (str) => {
     if (tester[i] === tester[i-1]) check = false;
   }
   return check;
+
 };
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
