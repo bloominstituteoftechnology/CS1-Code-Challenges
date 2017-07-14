@@ -23,17 +23,14 @@ const isPrime = function(num) {
   } return true;
 }
 
-function isPrime(num) {
-  // return true if num is prime.
+function isPalindrome(str) {
+  // return true if string is a palindrome.
   // otherwise return false
-  if (num < 2) {
-    return false;
-  }
-  for (var i = 2; i <= num; i++) { // <-- i < num/2 or Math.sqrt(num) for speed
-    if ( num % i == 0 && i != num) {
-      return false;
-    } else {
+  for (let i = 0; i < str.length / 2; i++) { // <--- make sure divided by 2 handles odd and even length (floor vs. ceiling)
+    if (str[i] === str[str.length - 1 - i]) {
       return true;
+    } else {
+      return false;
     }
   }
 }
