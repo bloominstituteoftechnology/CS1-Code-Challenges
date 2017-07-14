@@ -3,7 +3,7 @@
 const findPrimePals = function(primeArr) {
   const primePalsArr = []
   for (i = 0; i < primeArr.length; i++) {
-    if (isPalindrome(primeArr[i])) primePalsArr.push(primeArr[i])
+    if (isPalindrome(primeArr[i])) primePalsArr.push(numToStr(primeArr[i]))
   }
   return primePalsArr;
 }
@@ -37,9 +37,9 @@ const isPrime = function(num) {
   } return true;
 }
 
-// I: any string NOTE: handles integers as well √
+// I: any string NOTE: does NOT handle integers
 // O: "true" if INPUT is a palindrome
-const isPalindrome = function(str) {
+function isPalindrome(str) {
   // return true if string is a palindrome.
   // otherwise return false
   for (let i = 0; i < str.length / 2; i++) { // <--- make sure divided by 2 handles odd and even length (floor vs. ceiling)
@@ -50,13 +50,25 @@ const isPalindrome = function(str) {
     }
   }
 }
-// PALINDROME TEST SUITE
+
+// I: a NUMBER
+// O: a STRING
+const numToStr = function(num) {
+  return `${num}`;
+}
+
+// isPalindrome() TEST SUITE
 console.log(`Q: Is 'palindrome' a palindrome?            A: ${isPalindrome('palindrome')}`) // <-- false
 console.log(`Q: Is ' ' a palindrome?                     A: ${isPalindrome(' ')}`) // <-- true
 console.log(`Q: Is 'a' a palindrome?                     A: ${isPalindrome('a')}`) // <-- true
 console.log(`Q: Is 'bb' a palindrome?                    A: ${isPalindrome('bb')}`) // <-- true
 console.log(`Q: Is 'cdc' a palindrome?                   A: ${isPalindrome('cdc')}`) // <-- true
 console.log(`Q: Is 'amanaplanacanalpanama' a palindrome? A: ${isPalindrome('amanaplanacanalpanama')}`) // <-- true
+console.log(`Q: Is an integer a palindrome?              A: ${isPalindrome(5)}`) // <-- undefined
+// numToStr() test
+console.log(numToStr(5)); // <--- '5'
+console.log(typeof numToStr(5)); // <--- string
+console.log(`Q: Is the integer converted to a string?    A: ${isPalindrome(numToStr(5))}`) // <-- true
 // isPrime TEST SUITE
 // 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
 console.log(`Q: Is   0    prime? A: ${isPrime(0)}`)     // <--- false
