@@ -77,7 +77,7 @@ console.log(`Q:    121 is prime? A: ${isPrime(121)}`)   // <--- false (11 * 11 =
 console.log(`Q: 104729 is prime? A: ${isPrime(104729)}`)// <--- true (104,729 is the 10,000th prime number!)
 // findPrimes TEST SUITE
 // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127]
-console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(127)}`);
+console.log(`Q: what are the primes from 0 to 127?\nA: ${findPrimes(127)}`);
 // console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(104729)}`); // <--- 10,000 prime numbers!!!!
 console.log(findPrimes(104729).length);
 // findPrimes TEST SUITE
