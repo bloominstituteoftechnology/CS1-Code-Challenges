@@ -1,11 +1,13 @@
 // evaluates a range of natural numbers
 // I: largest number in range (inclusive)
 // O; an array of ALL prime #'s from range 0 thru input integer
-const findPrimes = function(*num) {
+const findPrimes = function(bigNum) {
   const primes = [];
-  for number in range 0 thru *num
-    if (**isPrime(*num)), then add to *primes
-  return *primes;
+  // for number in range 0 thru *num
+  for (i = 0; i <=bigNum; i++) {
+    if (isPrime(bigNum)) primes.push(isPrime(bigNum));
+  }
+  return primes;
   }
 
 const isPrime = function(num) {
@@ -23,8 +25,9 @@ const isPrime = function(num) {
   } return true;
 }
 
-// PRIME TEST SUITE
-// 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
+
+// isPrime TEST SUITE
+// 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 121, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
 console.log(`Q:      0 is prime? A: ${isPrime(0)}`)     // <--- false
 console.log(`Q:      1 is prime? A: ${isPrime(1)}`)     // <--- false
 console.log(`Q:      2 is prime? A: ${isPrime(2)}`)     // <--- true
@@ -41,3 +44,7 @@ console.log(`Q:     12 is prime? A: ${isPrime(12)}`)    // <--- false
 console.log(`Q:     13 is prime? A: ${isPrime(13)}`)    // <--- true
 console.log(`Q:    121 is prime? A: ${isPrime(121)}`)   // <--- false (11 * 11 = 121)
 console.log(`Q: 104729 is prime? A: ${isPrime(104729)}`)// <--- true (104,729 is the 10,000th prime number!)
+
+// findPrimes TEST SUITE
+// [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113]
+console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(121)}`);
