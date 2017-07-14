@@ -16,18 +16,18 @@ const isPalindrome = (suspect) => {
 }
 
 const isPrime = (suspect) => {
+  if (suspect === 1) return false;
+  else if (suspect === 2) return true;
   for (let j = 2; j < suspect; j++) {
-    if (suspect === 1) return false;
-    if (suspect === 2 || suspect === 3) return true;
-    if (suspect % j === 0 && suspect !== j) return false;
+    if (suspect % j === 0) return false;
   }
+  return true;
 }
 
 const largestPP = (limit) => {
   const PParray = [];
   for (let i = 1; i < limit; i++) {
     if (isPalindrome(i) && isPrime(i)) PParray.push(i);
-    console.log(PParray);
   }
   return PParray.pop();
 }
