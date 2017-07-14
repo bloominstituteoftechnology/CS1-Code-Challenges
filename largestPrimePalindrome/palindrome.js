@@ -10,6 +10,7 @@ function isPalindrome(str) {
   }
 }
 
+// PALINDROME TEST SUITE
 console.log(`Q: Is 'palindrome' a palindrome?            A: ${isPalindrome('palindrome')}`) // <-- false
 console.log(`Q: Is ' ' a palindrome?                     A: ${isPalindrome(' ')}`) // <-- true
 console.log(`Q: Is 'a' a palindrome?                     A: ${isPalindrome('a')}`) // <-- true
