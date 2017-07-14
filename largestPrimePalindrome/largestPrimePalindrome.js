@@ -6,3 +6,28 @@
  * Extra credit: Modify the function to look for the largest prime palindrome less than any provided number.
  * Extra credit 2: How can you improve the time complexity?  (Google: Sieve of Eratosthenes)
  */
+const isPalindrome = (suspect) => {
+  // checks to see if it's a palindrome
+  // turns int to str, then splits into array of 1 letter characters
+  // then reverses this array, and joins it back to a string
+  // then turns this reversed string back into an int, and checks if the two are equal
+  if (suspect === parseInt(suspect.toString().split('').reverse().join(''), 10)) return true;
+    return false;
+}
+
+const isPrime = (suspect) => {
+  for (let j = 1; j < suspect; j++) {
+    if (j === 1) return true;
+    if (j === 2 || j === 3) {
+
+    }
+  }
+}
+
+const largestPP = (limit) => {
+  const PParray = [];
+  for (let i = 1; i < limit; i++) {
+    if (isPalindrome(i) && isPrime(i)) PParray.push(i);
+  }
+  return PParray.pop();
+}
