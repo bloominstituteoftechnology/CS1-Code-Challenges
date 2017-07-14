@@ -8,8 +8,10 @@
  */
 
 // returns largest prime palindrome
+// I: end of range from 0
+// O: largest integer that is both prime and a palindrome
 const largestPrimePalindrome = function(num) {
-  const x = findPrimePals((isPalindrome(findPrimes(num)))) // <--- JS doesn't support -1 as array tail :()
+  const x = findPrimePals(num)
   return x;
 }
 
