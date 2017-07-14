@@ -1,9 +1,10 @@
 // I: a sorted array of prime numbers, smallest to largest
 // O: array of prime palindromes
 const findPrimePals = function(primeArr) {
+  console.log(primeArr);
   const primePalsArr = []
   for (i = 0; i < primeArr.length; i++) {
-    if (isPalindrome(primeArr[i])) primePalsArr.push(numToStr(primeArr[i]))
+    if (isPalindrome(numToStr(primeArr[i]))) primePalsArr.push(numToStr(primeArr[i]))
   }
   return primePalsArr;
 }
@@ -57,41 +58,42 @@ const numToStr = function(num) {
   return `${num}`;
 }
 
-// isPalindrome() TEST SUITE
-console.log(`Q: Is 'palindrome' a palindrome?            A: ${isPalindrome('palindrome')}`) // <-- false
-console.log(`Q: Is ' ' a palindrome?                     A: ${isPalindrome(' ')}`) // <-- true
-console.log(`Q: Is 'a' a palindrome?                     A: ${isPalindrome('a')}`) // <-- true
-console.log(`Q: Is 'bb' a palindrome?                    A: ${isPalindrome('bb')}`) // <-- true
-console.log(`Q: Is 'cdc' a palindrome?                   A: ${isPalindrome('cdc')}`) // <-- true
-console.log(`Q: Is 'amanaplanacanalpanama' a palindrome? A: ${isPalindrome('amanaplanacanalpanama')}`) // <-- true
-console.log(`Q: Is an integer a palindrome?              A: ${isPalindrome(5)}`) // <-- undefined
-// numToStr() test
-console.log(numToStr(5)); // <--- '5'
-console.log(typeof numToStr(5)); // <--- string
-console.log(`Q: Is the integer converted to a string?    A: ${isPalindrome(numToStr(5))}`) // <-- true
-// isPrime TEST SUITE
-// 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
-console.log(`Q: Is   0    prime? A: ${isPrime(0)}`)     // <--- false
-console.log(`Q: Is   1    prime? A: ${isPrime(1)}`)     // <--- false
-console.log(`Q: Is   2    prime? A: ${isPrime(2)}`)     // <--- true
-console.log(`Q: Is   3    prime? A: ${isPrime(3)}`)     // <--- true
-console.log(`Q: Is   4    prime? A: ${isPrime(4)}`)     // <--- false
-console.log(`Q: Is   5    prime? A: ${isPrime(5)}`)     // <--- true
-console.log(`Q: Is   6    prime? A: ${isPrime(6)}`)     // <--- false
-console.log(`Q: Is   7    prime? A: ${isPrime(7)}`)     // <--- true
-console.log(`Q: Is   8    prime? A: ${isPrime(8)}`)     // <--- false
-console.log(`Q: Is   9    prime? A: ${isPrime(9)}`)     // <--- false
-console.log(`Q: Is   10   prime? A: ${isPrime(10)}`)    // <--- false
-console.log(`Q: Is   11   prime? A: ${isPrime(11)}`)    // <--- true
-console.log(`Q: Is   12   prime? A: ${isPrime(12)}`)    // <--- false
-console.log(`Q: Is   13   prime? A: ${isPrime(13)}`)    // <--- true
-console.log(`Q: Is  121   prime? A: ${isPrime(121)}`)   // <--- false (11 * 11 = 121)
-console.log(`Q: Is 104729 prime? A: ${isPrime(104729)}`)// <--- true (104,729 is the 10,000th prime number!)
-// findPrimes TEST SUITE
+// // isPalindrome() TEST SUITE
+// console.log(`Q: Is 'palindrome' a palindrome?            A: ${isPalindrome('palindrome')}`) // <-- false
+// console.log(`Q: Is ' ' a palindrome?                     A: ${isPalindrome(' ')}`) // <-- true
+// console.log(`Q: Is 'a' a palindrome?                     A: ${isPalindrome('a')}`) // <-- true
+// console.log(`Q: Is 'bb' a palindrome?                    A: ${isPalindrome('bb')}`) // <-- true
+// console.log(`Q: Is 'cdc' a palindrome?                   A: ${isPalindrome('cdc')}`) // <-- true
+// console.log(`Q: Is 'amanaplanacanalpanama' a palindrome? A: ${isPalindrome('amanaplanacanalpanama')}`) // <-- true
+// console.log(`Q: Is an integer a palindrome?              A: ${isPalindrome(5)}`) // <-- undefined
+// // numToStr() test
+// console.log(numToStr(5)); // <--- '5'
+// console.log(typeof numToStr(5)); // <--- string
+// console.log(`Q: Is the integer converted to a string?    A: ${isPalindrome(numToStr(5))}`) // <-- true
+// // isPrime TEST SUITE
+// // 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
+// console.log(`Q: Is   0    prime? A: ${isPrime(0)}`)     // <--- false
+// console.log(`Q: Is   1    prime? A: ${isPrime(1)}`)     // <--- false
+// console.log(`Q: Is   2    prime? A: ${isPrime(2)}`)     // <--- true
+// console.log(`Q: Is   3    prime? A: ${isPrime(3)}`)     // <--- true
+// console.log(`Q: Is   4    prime? A: ${isPrime(4)}`)     // <--- false
+// console.log(`Q: Is   5    prime? A: ${isPrime(5)}`)     // <--- true
+// console.log(`Q: Is   6    prime? A: ${isPrime(6)}`)     // <--- false
+// console.log(`Q: Is   7    prime? A: ${isPrime(7)}`)     // <--- true
+// console.log(`Q: Is   8    prime? A: ${isPrime(8)}`)     // <--- false
+// console.log(`Q: Is   9    prime? A: ${isPrime(9)}`)     // <--- false
+// console.log(`Q: Is   10   prime? A: ${isPrime(10)}`)    // <--- false
+// console.log(`Q: Is   11   prime? A: ${isPrime(11)}`)    // <--- true
+// console.log(`Q: Is   12   prime? A: ${isPrime(12)}`)    // <--- false
+// console.log(`Q: Is   13   prime? A: ${isPrime(13)}`)    // <--- true
+// console.log(`Q: Is  121   prime? A: ${isPrime(121)}`)   // <--- false (11 * 11 = 121)
+// console.log(`Q: Is 104729 prime? A: ${isPrime(104729)}`)// <--- true (104,729 is the 10,000th prime number!)
+// // findPrimes TEST SUITE
 // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127]
 console.log(`Q: what are the primes from 0 to 127?\nA: ${findPrimes(127)}`);
 // console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(104729)}`); // <--- 10,000 prime numbers!!!!
 console.log(findPrimes(104729).length);
-// findPrimes TEST SUITE
+// findPrimePals TEST SUITE
 // [11, 101, ...]
-console.log(`Q: what are the prime palindromes from 0 to 127?\nA: ${findPrimePals(127)}`);
+console.log(`Q: what are the prime palindromes from 0 to 127?\nA: ${typeof findPrimePals(findPrimes(127))}`);
+console.log(`Q: what are the prime palindromes from 0 to 127?\nA: ${findPrimePals(findPrimes(127))}`);
