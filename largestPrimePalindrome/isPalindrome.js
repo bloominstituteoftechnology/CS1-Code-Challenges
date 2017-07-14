@@ -17,3 +17,4 @@ console.log(`Q: Is 'a' a palindrome?                     A: ${isPalindrome('a')}
 console.log(`Q: Is 'bb' a palindrome?                    A: ${isPalindrome('bb')}`) // <-- true
 console.log(`Q: Is 'cdc' a palindrome?                   A: ${isPalindrome('cdc')}`) // <-- true
 console.log(`Q: Is 'amanaplanacanalpanama' a palindrome? A: ${isPalindrome('amanaplanacanalpanama')}`) // <-- true
+console.log(`Q: Is an integer a palindrome?              A: ${isPalindrome(5)}`) // <-- ???
