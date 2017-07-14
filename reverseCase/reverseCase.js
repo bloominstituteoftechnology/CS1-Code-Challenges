@@ -4,6 +4,10 @@
  * Assume that each string will contain only spaces and letters.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c8eefcbc38f1d11ee9ea386da96ed49f268a916c
 
 
 const reverseString = (str) => {
@@ -34,5 +38,8 @@ ASCII UPPERCASE CHARACTERS and VALUE
 ASCII LOWERCASE CHARACTERS and VALUE
 "97": "a",   "98": "b",   "99": "c",   "100": "d",  "101": "e",    "102": "f",  "103": "g",  "104": "h",  "105": "i",  "106": "j",    "107": "k",  "108": "l",  "109": "m",  "110": "n",  "111": "o",    "112": "p",  "113": "q",  "114": "r",  "115": "s",  "116": "t",    "117": "u",  "118": "v",  "119": "w",  "120": "x",  "121": "y",    "122": "z"
 */
+<<<<<<< HEAD
 =======
 >>>>>>> 16c30f05fda2a6621522f580bcc60d0ea35e639e
+=======
+>>>>>>> c8eefcbc38f1d11ee9ea386da96ed49f268a916c

@@ -28,4 +28,3 @@ const largestPrimePalindrome = () => {
     } 
   }
 }
-console.log(largestPrimePalindrome());
