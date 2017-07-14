@@ -1,7 +1,8 @@
-/* return true if num is prime.
-   otherwise return false */
-
+// I: any integer
+// O: "true" if INPUT is a prime number
 const isPrime = function(num) {
+  // return true if num is prime.
+  // otherwise return false
   if (num < 2) {return false;}
   else if (num === 2) {return true;}
   else if (num % 2 === 0) {return false;}
