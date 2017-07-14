@@ -38,7 +38,7 @@ const isPrime = function(num) {
   } return true;
 }
 
-// I: any string
+// I: any string NOTE: handles integers as well √
 // O: "true" if INPUT is a palindrome
 const isPalindrome = function(str) {
   // return true if string is a palindrome.
