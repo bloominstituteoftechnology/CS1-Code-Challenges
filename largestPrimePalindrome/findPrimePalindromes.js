@@ -1,12 +1,12 @@
 // I: a sorted array of prime numbers, smallest to largest
 // O: array of prime Palindromes
-const findPrimePals = function(*anArrOfPrimes, e.g. findPrimes(###)) {
-  const primePals = []
-  for (i=0;i<anArrOfPrimes.length;i++) {
-    if (**isPalindrome(anArrOfPrimes[i])) primePals.push(anArrOfPrimes[i])
-  }
-  return primePals;
-}
+// const findPrimePals = function(*anArrOfPrimes, e.g. findPrimes(###)) {
+//   const primePals = []
+//   for (i=0;i<anArrOfPrimes.length;i++) {
+//     if (**isPalindrome(anArrOfPrimes[i])) primePals.push(anArrOfPrimes[i])
+//   }
+//   return primePals;
+// }
 
 
 // evaluates a range of natural numbers
