@@ -9,8 +9,8 @@
 
 // returns largest prime palindrome
 const largestPrimePalindrome = function(num) {
-  const x = findPrimePals((isPalindrome(numToStr(num)))) // <--- JS doesn't support -1 as array tail :()
-  return x[x.length - 1];
+  const x = findPrimePals((isPalindrome(findPrimes(num)))) // <--- JS doesn't support -1 as array tail :()
+  return x;
 }
 
 // const findLargestPrime = function(*arrOfPrimes, e.g. findPrimes(###)) {
