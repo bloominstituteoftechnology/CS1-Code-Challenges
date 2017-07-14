@@ -15,12 +15,14 @@ const largestPrimePalindrome = function(num) {
 // evaluates a range of natural numbers
 // I: largest number in range (inclusive)
 // O; an array of ALL prime #'s from range 0 thru input integer
-const findPrimes = function(*num) {
+const findPrimes = function(bigNum) {
   const primes = [];
-  for number in range 0 thru *num
-    if (**isPrime(*num)), then add to *primes
-  return *primes;
+  // for number in range 0 thru *num
+  for (i = 0; i <=bigNum; i++) {
+    if (isPrime(i)) primes.push(i);
   }
+  return primes;
+}
 
 // const findLargestPrime = function(*arrOfPrimes, e.g. findPrimes(###)) {
 //   return (*arrOfPrimes[*arrOfPrimes - 1]) // <--- last item in array will be largest prime
