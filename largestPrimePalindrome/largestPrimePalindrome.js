@@ -6,6 +6,36 @@
  * Extra credit: Modify the function to look for the largest prime palindrome less than any provided number.
  * Extra credit 2: How can you improve the time complexity?  (Google: Sieve of Eratosthenes)
  */
+
+// returns largest prime palindrome
+const largestPrimePalindrome = function(num) {
+  return findPrimePals(findPrimes(num))[-1] // <--- JS doesn't support -1 as array tail :()
+}
+
+// evaluates a range of natural numbers
+// I: largest number in range (inclusive)
+// O; an array of ALL prime #'s from range 0 thru input integer
+const findPrimes = function(*num) {
+  const primes = [];
+  for number in range 0 thru *num
+    if (**isPrime(*num)), then add to *primes
+  return *primes;
+  }
+
+// const findLargestPrime = function(*arrOfPrimes, e.g. findPrimes(###)) {
+//   return (*arrOfPrimes[*arrOfPrimes - 1]) // <--- last item in array will be largest prime
+// }
+
+// I: a sorted array of prime numbers, smallest to largest
+// O: array of prime Palindromes
+const findPrimePals = function(*anArrOfPrimes, e.g. findPrimes(###)) {
+  const primePals = []
+  for (i=0;i<anArrOfPrimes.length;i++) {
+    if (**isPalindrome(anArrOfPrimes[i])) primePals.push(anArrOfPrimes[i])
+  }
+  return primePals;
+}
+
 const isPrime = function(num) {
   // return true if num is prime.
   // otherwise return false
