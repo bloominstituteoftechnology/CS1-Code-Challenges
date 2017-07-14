@@ -1,17 +1,17 @@
 // I: a sorted array of prime numbers, smallest to largest
-// O: array of prime Palindromes
-// const findPrimePals = function(*anArrOfPrimes, e.g. findPrimes(###)) {
-//   const primePals = []
-//   for (i=0;i<anArrOfPrimes.length;i++) {
-//     if (**isPalindrome(anArrOfPrimes[i])) primePals.push(anArrOfPrimes[i])
-//   }
-//   return primePals;
-// }
+// O: array of prime palindromes
+const findPrimePals = function(*anArrOfPrimes, e.g. findPrimes(###)) {
+  const primePals = []
+  for (i=0;i<anArrOfPrimes.length;i++) {
+    if (**isPalindrome(anArrOfPrimes[i])) primePals.push(anArrOfPrimes[i])
+  }
+  return primePals;
+}
 
 
 // evaluates a range of natural numbers
 // I: largest number in range (inclusive)
-// O; an array of ALL prime #'s from range 0 thru input integer
+// O: an array of ALL prime #'s from range 0 thru INPUT integer
 const findPrimes = function(bigNum) {
   const primes = [];
   // for number in range 0 thru *num
@@ -21,6 +21,8 @@ const findPrimes = function(bigNum) {
   return primes;
   }
 
+// I: any integer
+// O: "true" if INPUT is a prime number
 const isPrime = function(num) {
   // return true if num is prime.
   // otherwise return false
@@ -36,6 +38,8 @@ const isPrime = function(num) {
   } return true;
 }
 
+// I: any string
+// O: "true" if INPUT is a palindrome
 const isPalindrome = function(str) {
   // return true if string is a palindrome.
   // otherwise return false
