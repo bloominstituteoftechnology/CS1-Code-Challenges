@@ -3,6 +3,7 @@
  * Example: 'Hello World' -> 'hELLO wORLD'
  * Assume that each string will contain only spaces and letters.
  */
+<<<<<<< HEAD
 
  // high level solution overview. Convert string to array so you can loop over it. Loop over it and
  // each time check if the char === char.toUppderCase() if so convert it to lower case and add it to new array.
@@ -46,3 +47,8 @@ str1 = 'Hello World';
 
 console.log(reverseCase(str1));
  */
+||||||| merged common ancestors
+
+
+=======
+>>>>>>> 16c30f05fda2a6621522f580bcc60d0ea35e639e
