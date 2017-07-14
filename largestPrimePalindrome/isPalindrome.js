@@ -1,3 +1,5 @@
+// I: any string NOTE: does NOT handle integers
+// O: "true" if INPUT is a palindrome
 function isPalindrome(str) {
   // return true if string is a palindrome.
   // otherwise return false
@@ -10,6 +12,8 @@ function isPalindrome(str) {
   }
 }
 
+// I: a NUMBER
+// O: a STRING
 const numToStr = function(num) {
   return `${num}`;
 }
