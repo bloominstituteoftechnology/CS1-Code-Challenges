@@ -6,11 +6,9 @@
  * Extra credit: Modify the function to look for the largest prime palindrome less than any provided number.
  * Extra credit 2: How can you improve the time complexity?  (Google: Sieve of Eratosthenes)
  */
-
- /* return true if num is prime.
-    otherwise return false */
-
 const isPrime = function(num) {
+  // return true if num is prime.
+  // otherwise return false
   if (num < 2) {return false;}
   else if (num === 2) {return true;}
   else if (num % 2 === 0) {return false;}
@@ -23,7 +21,7 @@ const isPrime = function(num) {
   } return true;
 }
 
-function isPalindrome(str) {
+const isPalindrome function(str) {
   // return true if string is a palindrome.
   // otherwise return false
   for (let i = 0; i < str.length / 2; i++) { // <--- make sure divided by 2 handles odd and even length (floor vs. ceiling)
