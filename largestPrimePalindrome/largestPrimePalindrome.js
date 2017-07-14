@@ -21,7 +21,7 @@ const isPrime = function(num) {
   } return true;
 }
 
-const isPalindrome function(str) {
+const isPalindrome = function(str) {
   // return true if string is a palindrome.
   // otherwise return false
   for (let i = 0; i < str.length / 2; i++) { // <--- make sure divided by 2 handles odd and even length (floor vs. ceiling)
