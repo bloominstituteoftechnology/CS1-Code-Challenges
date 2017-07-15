@@ -122,3 +122,5 @@ const numToStr = function(num) {
 
 // largestPrimePalindrome TEST SUITE
 console.log(`Q: What is the largest prime palindrome less than 1000?\nA: ${largestPrimePalindrome(1000)}`);
+
+// THIS COULD< OF COURSE< BE SIGNIFICANTLY REFACTORED...
