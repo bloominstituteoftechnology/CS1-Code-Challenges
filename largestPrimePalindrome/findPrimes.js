@@ -1,9 +1,9 @@
 // evaluates a range of natural numbers
 // I: largest number in range (inclusive)
-// O; an array of ALL prime #'s from range 0 thru input integer
+// O: an array of ALL prime #'s from range 0 thru input integer
 const findPrimes = function(bigNum) {
   const primes = [];
-  // for number in range 0 thru *num
+  // for number in range 0 thru bigNum
   for (i = 0; i <=bigNum; i++) {
     if (isPrime(i)) primes.push(i);
   }
