@@ -32,13 +32,16 @@
      });
      //
      let divisor = i - 1;
-     while(divisor > 1) {
-       if (i % divisor === 0 ) {
-        isPrimeNum = false;
+     if (isPalindrome == true) {
+       while(divisor > 1) {
+         if (i % divisor === 0 ) {
+          isPrimeNum = false;
+         }
+        divisor--;
        }
-      divisor--;
      }
-     
+
+
      if (isPrimeNum && isPalindrome) {
        return i;
      }
