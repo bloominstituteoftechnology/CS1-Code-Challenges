@@ -1,4 +1,16 @@
 const longestString = (strArr) => {
+  let tempStr = '';
+  strArr.forEach(str => {
+    if(str.length > tempStr.length) tempStr = str;
+  });
+  return tempStr;
+};
+
+longestString(['abc', 'def', 'gasdfasf', 'asdf', 'e', 'agwoaiengpoing']);
+
+// Ryan's lecture video comments:
+// https://youtu.be/juZvUpn4j5Y
+const longestString = (strArr) => {
   // tempStr variable to hold the string
   let tempStr = '';
   // loop over strArr
