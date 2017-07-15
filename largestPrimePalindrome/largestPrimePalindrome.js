@@ -15,11 +15,6 @@ const largestPrimePalindrome = function(num) {
   return x[x.length - 1];
 }
 
-// THIS MIGHT NEED TO GO
-// const findLargestPrime = function(*arrOfPrimes, e.g. findPrimes(###)) {
-//   return (*arrOfPrimes[*arrOfPrimes - 1]) // <--- last item in array will be largest prime
-// }
-
 // I: a sorted array of prime numbers, smallest to largest
 // O: array of prime palindromes
 const findPrimePals = function(primeArr) {
