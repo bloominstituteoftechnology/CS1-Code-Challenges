@@ -27,6 +27,5 @@ console.log(`Q: Is 'cdc' a palindrome?                   A: ${isPalindrome('cdc'
 console.log(`Q: Is 'amanaplanacanalpanama' a palindrome? A: ${isPalindrome('amanaplanacanalpanama')}`) // <-- true
 console.log(`Q: Is an integer a palindrome?              A: ${isPalindrome(5)}`) // <-- undefined
 // numToStr() test
-console.log(numToStr(5)); // <--- '5'
-console.log(typeof numToStr(5)); // <--- string
+console.log(`...might LOOK like a number: ${numToStr(5)} ...but it's a ${typeof numToStr(5)}`) // <--- '5' & string
 console.log(`Q: Is the integer converted to a string?    A: ${isPalindrome(numToStr(5))}`) // <-- true
