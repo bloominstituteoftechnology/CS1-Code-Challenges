@@ -18,9 +18,9 @@ const evenOccurence = (arr) => {
         count++;
       }
     }
-    if (count % 2 === 0) return unique[i]; // <--- how to write this as a ternary operator?
-    // return (count % 2 === 0) ? unique[i] : null;
+    if (count % 2 === 0) return unique[i];
   }
+  return null;
 };
 
 // // VERSION 1 √
@@ -90,4 +90,8 @@ const evenOccurence = (arr) => {
 // // evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1]); // <--- 4 x2 >>> 4
 
 const onlyEven = evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1]);
-console.log(onlyEven);
+console.log(onlyEven); // <--- 4
+const onlyEven2 = evenOccurence([ 1, 7, 2, 4, 5, 6, 8, 9 ]);
+console.log(onlyEven2); // <--- null
+const onlyEven3 = evenOccurence([ 1, 3, 3, 3, 5, 5, 5, 5, 5 ]);
+console.log(onlyEven3); // <--- null
