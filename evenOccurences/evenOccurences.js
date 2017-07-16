@@ -12,6 +12,8 @@
 //      item is in array, %2 === 0 dun, or check next until null
 // O: array item - first instance of item which occurs even # of times in array
 const evenOccurence = (arr) => {
+  arr;
+  // console.log(arr);
 
   // I: array
   // O: if (isUnique(anArray)) ? 1st unique array item : null
@@ -46,13 +48,26 @@ const evenOccurence = (arr) => {
   }
 
   const oddOrEven = (dupesArray) => {
+    const minusOddDupe = [];
     if (dupesArray === null) /* console.log(`That's some kinda ${dupesArray} oddOrEven array`); */ return null;
     const count = dupesArray.length;
-    if ((count === 0) || (count % 2 !== 0)) {
+    // console.log(count);
+    if (count === 0) {
       /* console.log(`no dupes || odd # of dupes`); */return null;
+    } else if (count % 2 !== 0) {
+      // console.log(`that's odd: ${arr}`)
+      for (let i = 0; i < arr.length; i++) {
+        // console.log(`if ${dupesArray[0]} !== ${arr[i]}`);
+        if (dupesArray[0] !== arr[i]) {
+          minusOddDupe.push(arr[i]);
+        }
+        // console.log(`minus dupes? ${minusOddDupe}`);
+      }
+      return evenOccurence(minusOddDupe);
     }
-    console.log(`The holding array for duplicates has ${count} instances of ${dupesArray[0]}: ${dupesArray}`)
-    return dupesArray[0]
+    // console.log(`The holding array for duplicates has ${count} instances of ${dupesArray[0]}: ${dupesArray}`)
+    return dupesArray[0];
+    // return dupesArray.length;
   }
 
   return oddOrEven(countNotUnique(isUnique(arr), arr));
@@ -61,9 +76,13 @@ const evenOccurence = (arr) => {
 
 // evenOccurence TEST SUITE:
 // evenOccurence();
-console.log(`Invoking evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1])}: ${evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1])}`);
-evenOccurence([5, 1, 1, 1, 1]); // <------------------------ 1 x4 >>> 1
-evenOccurence([1, 2, 3]) // <------------------------------- null
-evenOccurence([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); // <----- null
-evenOccurence([5, 1, 1, 1, 6]); // <--------------- 1 x3 >>> null
-evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1]); // <--- 4 x2 >>> 4
+// console.log(`Invoking evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1])} returns the repeated integer: ${evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1])}`);
+// evenOccurence([5, 1, 1, 1, 1]); // <------------------------ 1 x4 >>> 1
+// evenOccurence([1, 2, 3]) // <------------------------------- null
+// evenOccurence([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); // <----- null
+// evenOccurence([5, 1, 1, 1, 6, 1, 1]); // <--------- 1 x5 >>> null
+// evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1]); // <--- 4 x2 >>> 4
+
+
+const onlyEven = evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1]);
+console.log(onlyEven);
