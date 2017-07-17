@@ -30,3 +30,4 @@
  }
 
 console.log(largestPrimePalindrome(1000));
+console.log(largestPrimePalindrome(5000));
