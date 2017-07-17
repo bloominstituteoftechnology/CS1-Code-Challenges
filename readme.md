@@ -7,3 +7,5 @@
 
 ### You'll then have to resolve any merge conflicts that come up.
 *(Don't worry, you'll be pros at this after you're done and this is something that you'll have to do in the real world... all the time)*
+***
+["Cracking the Coding Interview"](http://www.crackingthecodinginterview.com/) by Gayle Laakmann McDowell
