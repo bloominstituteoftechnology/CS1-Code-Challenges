@@ -17,10 +17,10 @@ const evenOccurence = (arr) => {
 
   arr.forEach((elem, i) => {
     let result = 0;
-    while ((arr.indexOf(elem, i + 1)) !== -1){
+    while ((arr.indexOf(elem, i + 1)) !== -1){  // getting all matces to the element in the array,not working
         result ++;
         ++i;
-        console.log(`pat ${elem} ${i}`);  //this is where my bug is
+        console.log(`pat ${elem} ${i}`);
     }
     console.log(`the result is ${result}`);
     if (result > 0 && result % 2 == 0) {
