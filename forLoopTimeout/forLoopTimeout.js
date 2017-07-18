@@ -22,8 +22,8 @@
 
 // ES5 solution
 for (var i = 1; i <= 10; i++) {
-	var anonymousFunctionWrapper = function (i) {
-		return setTimeout(function() { console.log(i); }, 0);
+	var anonymousFunctionWrapper = function (x) {
+		return setTimeout(function() { console.log(x); }, 0);
 	}
 	anonymousFunctionWrapper(i);
 }
