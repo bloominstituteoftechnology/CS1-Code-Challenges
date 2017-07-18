@@ -20,7 +20,7 @@
 // 	}, 0);
 // }
 
-// ES5 solution
+// ES5 solution √
 for (var i = 1; i <= 10; i++) {
 	var anonymousFunctionWrapper = function (x) {
 		return setTimeout(function() { console.log(x); }, 0);
