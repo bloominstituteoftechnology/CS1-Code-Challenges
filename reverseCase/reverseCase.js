@@ -3,9 +3,9 @@
  * Example: 'Hello World' -> 'hELLO wORLD'
  * Assume that each string will contain only spaces and letters.
  */
- const reverseCase (str) => {
+ const reverseCase =  (str) => {
    const char = str.split('');
-   char.forEach((char, i)) => {
+   char.forEach((char, i) => {
      if (char[i] > 64 && char[i] < 91) {
        char[i] = char[i] + 32;
      } else if (char[i] > 96 && char[i] < 123) {

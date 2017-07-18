@@ -12,7 +12,6 @@ const largestPrimePalindrome = () => {
     const revstr = str.split('').reverse().join('');
     if (str === revstr) return true;
   };
-
   const checkPrime = (num) => {
     const squareRoot = Math.sqrt(num);
     if (num <= 1) {
