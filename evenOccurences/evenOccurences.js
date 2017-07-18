@@ -12,24 +12,47 @@
 
   //
 
+  const evenOccurence = (arr) => {
+    // Your code here.
+    let ans;
+    arr.forEach((elem, i) => {
+      let result = 0;
+      // go thru array, get count of matches for element.
+      // increment result for each match
+      arr.forEach((itemFound) => {
+        if (itemFound === elem) result += 1;
+      });
+      if (result > 1 && result % 2 === 0) {
+        ans = elem;
+      }
+    });
+    if (ans) return ans;
+    // no even matches found return null
+    return null;
+  };
+
+  const onlyEven = evenOccurence([1, 7, 2, 4, 5, 12, 6, 8, 9, 61, 13, 115]);
+  console.log(`${onlyEven}`);
+
+
+  /* official answer but my code works fine
+
+
 const evenOccurence = (arr) => {
   // Your code here.
-
-  arr.forEach((elem, i) => {
-    let result = 0;
-    while ((arr.indexOf(elem, i + 1)) !== -1){  // getting all matces to the element in the array,not working
-        result ++;
-        ++i;
-        console.log(`pat ${elem} ${i}`);
-    }
-    console.log(`the result is ${result}`);
-    if (result > 0 && result % 2 == 0) {
-      return  elem;
-    }
+  const obj = {};
+  let first;
+  arr.forEach((item) => {
+    if (obj[item] === undefined) return obj[item] = 1;
+    if (obj[item] === 1) return obj[item] = 2;
+    if (obj[item] === 2) return obj[item] = 1;
   });
-  // no even matches found return null
+  arr.forEach((item) => {
+    if(obj[item] === 2 && first === undefined) first = item;
+  });
+  if (first) return first;
   return null;
 };
 
-const onlyEven = evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4, 1]);
-console.log(`finala finala result ${onlyEven}`);
+const onlyEven = evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4]);
+console.log(onlyEven); //  4  */
