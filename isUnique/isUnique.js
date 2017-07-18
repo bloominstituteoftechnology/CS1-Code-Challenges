@@ -4,8 +4,21 @@
 */
 
 const isUnique = (str) => {
-
+  const set = new Set();
+  const check = (pos = 0) => {
+    if (pos === str.length) return true;
+    const s = str[pos];
+    if (set.has(s)) return false;
+    set.add(s);
+    return check(++pos);
+  }
+  return check();
 };
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
 console.log(isUnique('abcdefga')); // false
+
+/*
+If you cannot use additional datastructures, then sort the string and search for
+duplicate letters next to each other.
+*/
