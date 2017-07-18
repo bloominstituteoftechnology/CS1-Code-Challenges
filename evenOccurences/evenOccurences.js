@@ -12,4 +12,18 @@
 
 const evenOccurence = (arr) => {
   // Your code here.
+  // Create search fn
+  const findMyFriends = (arr, target, index) => {
+    const friends = [];
+    let idx = arr.indexOf(arr[index]);
+    while (idx !== -1) {
+      friends.push(idx);
+      idx = arr.indexOf(arr[index], idx + 1);
+    }
+    
+  }
+  // Iterate arr
+  for (let i = 0; i < arr.length; i ++) {
+    // Check if 
+  }
 };
