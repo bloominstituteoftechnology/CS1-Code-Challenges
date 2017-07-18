@@ -12,4 +12,22 @@
 
 const evenOccurence = (arr) => {
   // Your code here.
+  const obj = {};
+  const occurences = [];
+  arr.forEach((value) => {
+    if (obj[value]) {
+      obj[value]++;
+    } else {
+      obj[value] = 1;
+    }
+  });
+  Object.keys(obj).forEach((key) => {
+    if (obj[key] % 2 === 0) {
+      occurences.push(key);
+    }
+  });
+  if (occurences.length > 0) {
+    return occurences[0];
+  }
+  return null;
 };
