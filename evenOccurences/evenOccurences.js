@@ -23,23 +23,6 @@ const evenOccurence = (arr) => {
   return null;
 };
 
-// // Tai's solution
-// const evenOccurence = (arr) => {
-//   // Your code here.
-//   const obj = {};
-//   let first;
-//   arr.forEach((item) => {
-//     if (obj[item] === undefined) return obj[item] = 1;
-//     if (obj[item] === 1) return obj[item] = 2;
-//     if (obj[item] === 2) return obj[item] = 1;
-//   });
-//   arr.forEach((item) => {
-//     if(obj[item] === 2 && first === undefined) first = item;
-//   });
-//   if (first) return first;
-//   return null;
-// };
-
 // // VERSION 1 √
 // // I: array
 // // F(): if isUnique is false, then return null, then check total number of times
@@ -112,3 +95,20 @@ const evenOccurence = (arr) => {
 // console.log(onlyEven2); // <--- null
 // const onlyEven3 = evenOccurence([ 1, 3, 3, 3, 5, 5, 5, 5, 5 ]);
 // console.log(onlyEven3); // <--- null
+
+// // Tai's solution
+// const evenOccurence = (arr) => {
+//   // Your code here.
+//   const obj = {};
+//   let first;
+//   arr.forEach((item) => {
+//     if (obj[item] === undefined) return obj[item] = 1;
+//     if (obj[item] === 1) return obj[item] = 2;
+//     if (obj[item] === 2) return obj[item] = 1;
+//   });
+//   arr.forEach((item) => {
+//     if(obj[item] === 2 && first === undefined) first = item;
+//   });
+//   if (first) return first;
+//   return null;
+// };
