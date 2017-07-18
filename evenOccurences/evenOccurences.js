@@ -22,7 +22,8 @@
       arr.forEach((itemFound) => {
         if (itemFound === elem) result += 1;
       });
-      if (result > 1 && result % 2 === 0) {
+      if (result > 1 && result % 2 === 0 && ans === undefined) {  //undefined so it will stop when
+                                                                  // it finds first answer
         ans = elem;
       }
     });
@@ -31,7 +32,7 @@
     return null;
   };
 
-  const onlyEven = evenOccurence([1, 7, 2, 4, 5, 12, 6, 8, 9, 61, 13, 115]);
+  const onlyEven = evenOccurence([1, 7, 2, 4, 5, 4, 5, 8, 9, 61, 13, 115]);
   console.log(`${onlyEven}`);
 
 
@@ -54,5 +55,5 @@ const evenOccurence = (arr) => {
   return null;
 };
 
-const onlyEven = evenOccurence([1, 7, 2, 4, 5, 1, 6, 8, 9, 6, 4]);
+const onlyEven = evenOccurence([1, 7, 2, 4, 5, 4, 5, 8, 9, 6, 4]);
 console.log(onlyEven); //  4  */
