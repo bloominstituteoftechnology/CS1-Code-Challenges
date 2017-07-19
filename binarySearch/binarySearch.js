@@ -16,8 +16,16 @@
 // };
 
 // version 2: Divide and Conquer
-// PRESUMES SORTED ARRAY
+// I: A SORTED array of integers AND a target number
+// O: the array index of the target (presuming array contains target - no if null check yet)
+/* FUNCTION:
+  * randomly guess a number in the full range
+  * match? yes, return index
+    * no? compare hi or low
+
+*/
 const binarySearch = (nums, target) => {
+  const targetIndex = nums.indexOf(target);
   const min = nums[0];
   const max = nums[nums.length - 1];
   let odd;
@@ -33,7 +41,7 @@ const binarySearch = (nums, target) => {
   console.log(`First guess: ${guess}`);
   if (guess = nums.indexOf(target)) return guess;
   // Hi / Low guess
-  
+
   if (even) {
     guess =
   } else {
