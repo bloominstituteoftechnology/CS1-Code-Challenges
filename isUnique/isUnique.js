@@ -4,14 +4,15 @@
 */
 
 const isUnique = (str) => {
-    const set = new Set();
-    const checkSet = (i = 0) => {
-	if (i === str.length) return true;
-	if (set.has(str[i])) return false;
-	set.add(str[i]);
-	return checkSet(++i);
-    }
-    return checkSet();
+  const set = new Set();
+  const check = (pos = 0) => {
+    if (pos === str.length) return true;
+    const s = str[pos];
+    if (set.has(s)) return false;
+    set.add(s);
+    return check(++pos);
+  }
+  return check();
 };
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
