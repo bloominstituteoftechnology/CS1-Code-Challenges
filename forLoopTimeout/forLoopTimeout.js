@@ -5,9 +5,9 @@
 // I've been asked this three times in separate interviews.
 
 for (var i = 1; i <= 10; i++) {
+	console.log(i);
 	setTimeout(function() {
 		// From looking at the code you would assume it would print 1 - 10
-		// It doesn't.  Why?  How can you make it print 1 - 10.
-		console.log(i);
+		// It doesn't.  Why?  How can you make it print 1 - 10
 	}, 0);
 }
