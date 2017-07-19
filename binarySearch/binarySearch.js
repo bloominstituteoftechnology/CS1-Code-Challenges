@@ -26,6 +26,19 @@ const binarySearch = (nums, target) => {
     even = nums.length;
   } else { odd = nums.length; }
   console.log(`{ Minimum: ${min}, Maximum: ${max}, Odd: ${odd}, Even: ${even} }.`)
+  let rangeMin = 1;
+  let rangeMax = max; // NOT SURE IF THIS IS WHAT I WANT CUZ VAR <==> VAR relation???
+  console.log(`{ Minimum: ${min}, Maximum: ${max}, Odd: ${odd}, Even: ${even},\n\tRANGE: {rangeMin: ${rangeMin}, rangeMax: ${rangeMax}} }.`)
+  let guess = Math.floor((Math.random() * rangeMax) +1);
+  console.log(`First guess: ${guess}`);
+  if (guess = nums.indexOf(target)) return guess;
+  // Hi / Low guess
+  
+  if (even) {
+    guess =
+  } else {
+     =
+  }
 };
 
 // TEST SUITE
