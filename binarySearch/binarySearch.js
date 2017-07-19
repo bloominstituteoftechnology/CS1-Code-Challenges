@@ -10,9 +10,20 @@
  *	* console.log(index); // 1
 **/
 
-// version 1
+// // version 1: indexOf
+// const binarySearch = (nums, target) => {
+//   return nums.indexOf(target);
+// };
+
+// version 2: Divide and Conquer
+// PRESUMES SORTED ARRAY
 const binarySearch = (nums, target) => {
-  return nums.indexOf(target);
+  const min = nums[0];
+  const max = nums[nums.length - 1];
+  if (nums.length % 2 === 0) {
+    const odd = nums.length;
+  } else { const even = nums.length; }
+  console.log(`{ Minimum: ${min}, Maximum: ${max}, Odd: ${odd}, Even: ${even}`)
 };
 
 // TEST SUITE
