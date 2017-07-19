@@ -20,10 +20,12 @@
 const binarySearch = (nums, target) => {
   const min = nums[0];
   const max = nums[nums.length - 1];
+  let odd;
+  let even;
   if (nums.length % 2 === 0) {
-    const odd = nums.length;
-  } else { const even = nums.length; }
-  console.log(`{ Minimum: ${min}, Maximum: ${max}, Odd: ${odd}, Even: ${even}`)
+    even = nums.length;
+  } else { odd = nums.length; }
+  console.log(`{ Minimum: ${min}, Maximum: ${max}, Odd: ${odd}, Even: ${even} }.`)
 };
 
 // TEST SUITE
