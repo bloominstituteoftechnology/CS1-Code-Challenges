@@ -10,6 +10,10 @@
  *	* console.log(index); // 1
 **/
 
+// version 1
 const binarySearch = (nums, target) => {
-
+  return nums.indexOf(target);
 };
+
+// TEST SUITE
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2));
