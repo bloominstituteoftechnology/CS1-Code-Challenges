@@ -15,7 +15,6 @@
  *
 */
 
-
 // Write a function called firstItem that passes the first item of the given array to the callback function
 // version 1 √
 const firstItem = (array, cb) => {
