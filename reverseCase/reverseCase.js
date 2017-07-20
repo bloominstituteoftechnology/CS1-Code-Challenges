@@ -35,7 +35,6 @@ console.log(reverseCase(testCase2)); // ---> fSDFSDF esdfsdfDFSDFSDFSDFDSF
 const testCase3 = 'The quick brown Mr. Fox jumped over the lazy Mr. Dog.';
 console.log(reverseCase(testCase3)); // ---> tHE QUICK BROWN mR. fOX JUMPED OVER THE LAZY mR. dOG.
 
-
 // // Latoyya's solution
 // const reverseString = (str) => {
 //   let newString = '';
