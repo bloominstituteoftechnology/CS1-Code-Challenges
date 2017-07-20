@@ -26,29 +26,9 @@
     * is the target higher than the number at that index? Then do the same for the next range using the next higher to index.length -1.
 */
 const binarySearch = (nums, target) => {
-  const targetIndex = nums.indexOf(target);
-  const min = nums[0];
-  const max = nums[nums.length - 1];
-  let odd;
-  let even;
-  if (nums.length % 2 === 0) {
-    even = nums.length;
-  } else { odd = nums.length; }
-  console.log(`{ Minimum: ${min}, Maximum: ${max}, Odd: ${odd}, Even: ${even} }.`)
-  let rangeMin = 1;
-  let rangeMax = max; // NOT SURE IF THIS IS WHAT I WANT CUZ VAR <==> VAR relation???
-  console.log(`{ Minimum: ${min}, Maximum: ${max}, Odd: ${odd}, Even: ${even},\n\tRANGE: {rangeMin: ${rangeMin}, rangeMax: ${rangeMax}} }.`)
-  let guess = Math.floor((Math.random() * rangeMax) +1);
-  console.log(`First guess: ${guess}`);
-  if (guess = nums.indexOf(target)) return guess;
-  // Hi / Low guess
-
-  if (even) {
-    guess =
-  } else {
-     =
-  }
+  if (nums.indexOf(target) === -1) return "Error001: target number not in array";
 };
 
 // TEST SUITE
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20)); // ---> Error001
 console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2));
