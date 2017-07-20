@@ -33,8 +33,16 @@ const binarySearch = (nums, target) => {
   console.log(`Index # {min: ${minIndex}, max: ${maxIndex}}`)
   // High or Low check
   let guess = nums[Math.floor(maxIndex / 2)]
-  if (target === guess) {
+  if (target === guess)
     return `FIRST TRY! The value at nums index position [${guess}] is: ${nums[guess]}`;
+  if (target < nums[guess]) {
+    maxIndex = guess - 1;
+    let numSlice = nums.slice(minIndex, maxIndex);
+    console.log(`new index range {min: ${minIndex}, max: ${maxIndex}}`)
+    // return binarySearch(numSlice, target);
+  } else {
+    minIndex = guess + 1
+    let numSlice = nums.slice(minIndex, maxIndex);
   }
 
 };
@@ -44,3 +52,4 @@ console.log(`Test #2: ${binarySearch([], 20)}`);                              //
 console.log(`Test #1: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20)}`); // ---> Error002
 console.log(`Test #3: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}`);  // ---> undefined
 console.log(`Test #4: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)}`);  // ---> FIRST
+console.log(`Test #4: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}`);  // --->
