@@ -6,4 +6,3 @@ function longestString(arr) {
   let longest = arr[0];
   return arr.forEach((elem) => { if (elem.length > longest.length) longest = elem; }), longest;
 }
-
