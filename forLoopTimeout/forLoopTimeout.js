@@ -5,14 +5,14 @@
 // I've been asked this three times in separate interviews.
 
 for (var i = 1; i <= 10; i++) {
-	(function(i) {
-          let timeToStart = i;
-      	    setTimeout(function() {
-		// From looking at the code you would assume it would print 1 - 10
-		// It doesn't.  Why?  How can you make it print 1 - 10.
-		console.log(i);
-	  }, timeToStart);
-        })(i)
+  (function(i) {
+    let timeToStart = i;
+    setTimeout(function() {
+      // From looking at the code you would assume it would print 1 - 10
+      // It doesn't.  Why?  How can you make it print 1 - 10.
+      console.log(i);
+    }, timeToStart);
+  })(i)
 }
 
 // Wrap it in a self-executing function and add a pause so it isn't happening all at the same time.
