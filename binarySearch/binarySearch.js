@@ -11,5 +11,20 @@
 **/
 
 const binarySearch = (nums, target) => {
-
+	let min = 0;
+	let max = nums.length;
+	let mid = Math.floor(max/2);
+	const search = () => {
+		if (target === nums[mid]) {
+			return mid;
+		} else if (target > nums[mid]) {
+			min = mid;
+		} else if (target < nums[mid]) {
+			max = mid;
+		}
+		mid = min + Math.floor((max - min) / 2);
+		search();
+	}
+	search();
+	return mid;
 };
