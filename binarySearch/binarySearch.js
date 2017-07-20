@@ -38,3 +38,48 @@ function binarySearch(items, value){
 
 const index = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2);
 console.log(index);
+
+
+
+
+/* While Loop Solution */
+/*
+const binarySearch = (nums, target) => {
+    let min = 0;
+    let max = nums.length - 1;
+  let guessIndex;
+
+  while(min <= max) {
+    guessIndex = Math.floor((min + max) / 2);
+    if (nums[guessIndex] === target) return guessIndex;
+    if (nums[guessIndex] > target) {
+      max = guessIndex - 1;
+    } else {
+      min = guessIndex + 1;
+    }
+  }
+
+    return -1;
+};
+
+/* Recursive Solution */
+/*
+const binarySearch = (nums, target) => {
+    let min = 0;
+    let max = nums.length - 1;
+  let guessIndex = Math.floor((min + max) / 2);
+
+  const checkGuess = () => {
+    if (min > max) return -1;
+    if (nums[guessIndex] === target) return guessIndex;
+    if (nums[guessIndex] > target) {
+      max = guessIndex - 1;
+    } else {
+      min = guessIndex + 1;
+    }
+    guessIndex = Math.floor((min + max) / 2);
+    return checkGuess();
+  };
+
+  return checkGuess()
+};
