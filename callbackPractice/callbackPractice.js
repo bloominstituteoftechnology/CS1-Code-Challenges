@@ -67,6 +67,8 @@ multiplyNums(5, 10, (product) => {
 // Pass true to the callback if it is, otherwise pass false
 /* *** Notes: Array -> foods[array], str -> 'ribeye', cb -> result *** */
 const contains = (array, str, cb) => {
+  // oneLiner cb(foods.includes(str));
+  // or cb((arr.indexOf(str) >= 0));
   if (foods.includes(str)) {
     return cb(str);
   }
@@ -79,7 +81,8 @@ contains(foods, 'ribeye', (result) => {
 // Write a function called removeDuplicates that removes all duplicate values from the given array.
 // Pass the array to the callback function.  Do not mutate the original array.
 const removeDuplicates = (array, cb) => {
-  let unique = Array.from(new Set(foods));
+  // or oneliner cb(Array.from(new Set(array)));
+  let unique = Array.from(new Set(array));
   return cb(unique);
 };
 
