@@ -27,8 +27,13 @@
 */
 const binarySearch = (nums, target) => {
   if (nums.indexOf(target) === -1) return "Error001: target number not in array";
+  if (nums.length < 1) return "Error002: empty array";
+  minRangeIndexNum = 0
+  maxRangeIndexNum = nums.length
+  console.log(`Index # min${minRangeIndexNum} max${maxRangeIndexNum}`)
 };
 
 // TEST SUITE
-console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20)); // ---> Error001
-console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2));
+console.log(`Test #1: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20)}`); // ---> Error001
+console.log(`Test #2: ${binarySearch([], 20)}`);                              // ---> Error002
+console.log(`Test #3: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}`);
