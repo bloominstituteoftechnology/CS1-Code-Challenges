@@ -10,6 +10,7 @@
  *    * console.log(onlyEven); //  4
  *    */
 
+
 const evenOccurence = (arr) => {
-  // Your code here.
+  
 };
