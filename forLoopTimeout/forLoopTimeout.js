@@ -16,3 +16,5 @@ for (var i = 1; i <= 10; i++) {
 }
 
 // Wrap it in a self-executing function and add a pause so it isn't happening all at the same time.
+
+// has nothing to do with timing, has to do with closure, with var i is not in closure, let keeps i in closure, 

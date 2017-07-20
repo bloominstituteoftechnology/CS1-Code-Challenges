@@ -20,13 +20,14 @@
 
 const foods = ['pineapple', 'mango', 'ribeye', 'curry', 'tacos', 'ribeye', 'mango'];
 
+const firstItem = (arr, cb) => {
+  cb(arr[0]);
+};
+
 firstItem(foods, (firstItem) => {
   console.log(`The first item is ${firstItem}.`);
 });
 
-const firstItem = (arr, cb) => {
-  cb(arr[0]);
-};
 // Write a function called getLength that passes the length of the array into the callback
 
 getLength(foods, (length) => {
@@ -71,13 +72,18 @@ contains(foods, 'ribeye', (result) => {
   console.log(result ? 'ribeye is in the array' : 'ribeye is not in the array');
 });
 
-const contains = (arr, item, cb) => {
-  if (arr.find(item) !== undefined) {
-    return true;
-  } else {
-    return false;
-  }
+const contains = (arr, str, cb) => {
+  cb((arr.indexOf(str) >=0));
 };
+
+// const contains = (arr, item, cb) => {
+//   if (arr.find(item) !== undefined) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
 // Write a function called removeDuplicates that removes all duplicate values from the given array.
 // Pass the array to the callback function.  Do not mutate the original array.
 
