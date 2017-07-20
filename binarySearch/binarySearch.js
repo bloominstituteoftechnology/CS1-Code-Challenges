@@ -28,26 +28,34 @@
 const binarySearch = (nums, target) => {
   if (nums.length < 1) return "Error001: empty array";
   if (nums.indexOf(target) === -1) return "Error002: target number not in array";
-  let minIndex = 0;
-  let maxIndex = nums.length - 1;
-  // console.log(`Index # {min: ${minIndesx}, max: ${maxIndex}}`)
+  // INDEX RANGE
+  let min = 0;
+  let max = nums.length - 1;
+  // console.log(`Index # {min: ${minIndesx}, max: ${max}}`)
   // High or Low check
-  let guess = nums[Math.floor(maxIndex / 2)]
-  console.log(`GUESSING target value: ${target} is at index: nums[${guess}]`)
+  // CHECK THE "MIDDLE" INDEX
+  let half = Math.floor(max / 2)
+  let guess = nums[half]
+  // console.log(`GUESSING target value: ${target} is at index: nums[${guess}]`)
   if (target === guess)
     return `MATCH! The value at nums index position [${guess}] is: ${nums[guess]}`;
+  // LESS THAN?
   if (target < nums[guess]) {
-    maxIndex = guess - 1;
-    let numSlice = nums.slice(minIndex, maxIndex);
-    console.log(`Target is LESS THAN value at index:  nums[${guess}]:  new index range {min: ${minIndex}, max: ${maxIndex}}`)
-    return binarySearch(numSlice, target);
+    // max = half - 1;
+    // let numSlice = nums.slice(min, max);
+    // // console.log(`Target is LESS THAN value at index:  nums[${guess}]:  new index range {min: ${min}, max: ${max}}`)
+    // return binarySearch(numSlice, target);
+  // GREATER THAN?
   } else {
-    minIndex = guess + 1
-    let numSlice = nums.slice(minIndex, maxIndex);
-    console.log(`Target is GREATER THAN value at index: nums[${guess}]: new index range {min: ${minIndex}, max: ${maxIndex}}`)
-    return binarySearch(numSlice, target);
+    // let numSlice = nums.slice(half + 1);
+    // max = numSlice.length -1;
+    // half = Math.floor(max / 2)
+    // // console.log(numSlice);
+    // guess = numSlice[half];
+    // // console.log(half);
+    // // console.log(`Target is GREATER THAN value at index: nums[${guess}]: new index range {min: ${min}, max: ${max}}`)
+    // return binarySearch(numSlice, target);
   }
-
 };
 
 // TEST SUITE
@@ -55,5 +63,16 @@ const binarySearch = (nums, target) => {
 // console.log(`Test #2: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20)}`); // ---> Error002
 // console.log(`Test #3: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}`);  // ---> undefined
 // console.log(`Test #4: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)}`);  // ---> FIRST
-console.log(`Test #5: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}\n`);  // ---> less than index range: 0, 4
-console.log(`Test #6: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9)}`);  // ---> greater than index range: 6, 9
+// console.log(`Test #5: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}\n`);  // --->
+console.log(`Test #0: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 0)}`);
+console.log(`Test #1: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1)}`);
+console.log(`Test #2: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}`);
+console.log(`Test #3: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3)}`);
+console.log(`Test #4: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4)}`);
+console.log(`Test #5: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)}`);
+console.log(`Test #6: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6)}`);
+console.log(`Test #7: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7)}`);
+console.log(`Test #8: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8)}`);
+console.log(`Test #9: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9)}`);
+console.log(`Test #10:${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10)}`);
+console.log(`Test #11:${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 11)}`);
