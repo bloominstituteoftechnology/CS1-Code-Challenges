@@ -16,13 +16,14 @@
 // };
 
 // version 2: Divide and Conquer
-// I: A SORTED array of integers AND a target number
-// O: the array index of the target (presuming array contains target - no if null check yet)
+// I: A SORTED array (low to high) of integers AND a target number
+// O: the array index of the target
+  //  we are presuming the array actually contains target - no if null, then... check (yet)
 /* FUNCTION:
-  * randomly guess a number in the full range
-  * match? yes, return index
-    * no? compare hi or low
-
+  * We know the target is at one of the array indexes. Take the number of indexes, divide by half round up or down.
+    * Is target the number at that index? return index #
+    * Is the target lower than the number at that index? Then do the same for the next range using the next lower index and index 0.
+    * is the target higher than the number at that index? Then do the same for the next range using the next higher to index.length -1.
 */
 const binarySearch = (nums, target) => {
   const targetIndex = nums.indexOf(target);
