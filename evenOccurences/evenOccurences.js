@@ -22,7 +22,6 @@ const evenOccurence = (arr) => {
   }
   return null;
 };
-
 // // VERSION 1 √
 // // I: array
 // // F(): if isUnique is false, then return null, then check total number of times
