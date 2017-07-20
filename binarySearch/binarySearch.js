@@ -26,14 +26,21 @@
     * is the target higher than the number at that index? Then do the same for the next range using the next higher to index.length -1.
 */
 const binarySearch = (nums, target) => {
-  if (nums.indexOf(target) === -1) return "Error001: target number not in array";
-  if (nums.length < 1) return "Error002: empty array";
-  minRangeIndexNum = 0
-  maxRangeIndexNum = nums.length
-  console.log(`Index # min${minRangeIndexNum} max${maxRangeIndexNum}`)
+  if (nums.length < 1) return "Error001: empty array";
+  if (nums.indexOf(target) === -1) return "Error002: target number not in array";
+  let minIndex = 0;
+  let maxIndex = nums.length - 1;
+  console.log(`Index # {min: ${minIndex}, max: ${maxIndex}}`)
+  // High or Low check
+  let guess = nums[Math.floor(maxIndex / 2)]
+  if (target === guess) {
+    return `FIRST TRY! The value at nums index position [${guess}] is: ${nums[guess]}`;
+  }
+
 };
 
 // TEST SUITE
-console.log(`Test #1: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20)}`); // ---> Error001
-console.log(`Test #2: ${binarySearch([], 20)}`);                              // ---> Error002
-console.log(`Test #3: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}`);
+console.log(`Test #2: ${binarySearch([], 20)}`);                              // ---> Error001
+console.log(`Test #1: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 20)}`); // ---> Error002
+console.log(`Test #3: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)}`);  // ---> undefined
+console.log(`Test #4: ${binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)}`);  // ---> FIRST
