@@ -14,15 +14,13 @@
 */
 
 class Array {
-  constructor(somethingWonderful) {
+  constructor() {
     this.index = 0;
-    this.item = somethingWonderful;
     this.state = {};
   }
   push(addItem) {
+    this.state[this.index] = addItem;
     this.index++;
-    const node = new Array(addItem);
-    this.state.addItem = node;
   }
   pop(removeItem) {
 
@@ -36,8 +34,9 @@ class Array {
 };
 
 // TEST SUITE
-const test  = new Array('iced tea');
+const test  = new Array();
 console.log('TEST#1 - Array() instance contains:', test);
+// console.log(`TEST#1A - Array() instance contains: ${test}`); // ---> :(
 test.push('chzbrgr');
 console.log('TEST#2 - Array() instance contains:', test);
 test.push('salad');
