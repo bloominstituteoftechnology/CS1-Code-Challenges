@@ -8,17 +8,18 @@
  * How does the time complexity of insertion and deletion compare to that of a linked list?
  */
 
-class Array() {
+class Array {
   constructor() {
     this.state = {
     },
     this.index = 0,
-    this.item = null,
+    this.item = null
   }
-  push(item, index) {
-
+  push(item) {
+    this.state.index = item;
+    this.index++;
   }
-  pop(item, index) {
+  pop(item) {
 
   }
   get(index) {
@@ -27,4 +28,12 @@ class Array() {
   delete(index) {
 
   }
-}
+};
+
+// TEST SUITE
+const test  = new Array();
+console.log(test);
+test.push('chzbrgr');
+console.log(test);
+test.push('salad');
+console.log(test);
