@@ -29,6 +29,8 @@ class Array {
   get(isIndex) {
     if (!this.state[isIndex]) return "nope, nuthin' there";
     return this.state[isIndex];
+    // if (this.state[isIndex]) return this.state[isIndex];
+    // return "nope, nuthin' there";
 
   }
   delete(killIndex) {
