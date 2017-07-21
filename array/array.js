@@ -24,13 +24,13 @@ class Array {
     const node = new Array(addItem);
     this.state.addItem = node;
   }
-  pop(item) {
+  pop(removeItem) {
 
   }
-  get(index) {
+  get(isIndex) {
 
   }
-  delete(index) {
+  delete(killIndex) {
 
   }
 };
