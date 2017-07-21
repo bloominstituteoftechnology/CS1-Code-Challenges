@@ -18,10 +18,6 @@ class Array {
     this.index = 0;
     this.item = somethingWonderful;
     this.state = {};
-    // if (somethingWonderful) {
-    //   this.state.index = item;
-    //   this.index++;
-    // }
   }
   push(addItem) {
     this.index++;
