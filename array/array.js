@@ -22,8 +22,9 @@ class Array {
     this.state[this.index] = addItem;
     this.index++;
   }
-  pop(removeItem) {
-
+  pop() {
+    this.index--;
+    delete this.state[this.index];
   }
   get(isIndex) {
 
@@ -41,3 +42,5 @@ test.push('chzbrgr');
 console.log('TEST#2 - Array() instance contains:', test);
 test.push('salad');
 console.log('TEST#3 - Array() instance contains:', test);
+test.pop();
+console.log('TEST#4 - Array() instance contains:', test);
