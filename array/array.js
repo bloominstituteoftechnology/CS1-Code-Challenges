@@ -31,30 +31,30 @@ class Array {
     return this.state[isIndex];
     // if (this.state[isIndex]) return this.state[isIndex];
     // return "nope, nuthin' there";
-
   }
   delete(killIndex) {
 
+  }
+  getAllValues() {
+    return Object.values(this.state);
   }
 };
 
 // TEST SUITE
 const test  = new Array();
-console.log('TEST#1 - Array() instance contains:', test);
+console.log('TEST# 1 - Array() instance contains:', test);
 // console.log(`TEST#1A - Array() instance contains: ${test}`); // ---> :(
 test.push('chzbrgr');
-console.log('TEST#2 - Array() instance contains:', test);
+console.log('TEST# 2 - Array() instance contains:', test);
 test.push('salad');
-console.log('TEST#3 - Array() instance contains:', test);
+console.log('TEST# 3 - Array() instance contains:', test);
 test.push('iced tea');
-console.log('TEST#4 - Array() instance contains:', test);
+console.log('TEST# 4 - Array() instance contains:', test);
+console.log('TEST# 5 - Array() instance contains:', test);
+console.log(`TEST# 6: Q: to eat?        A: ${test.get(0)}`);
+console.log(`TEST# 7: Q: a side?        A: ${test.get(1)}`);
+console.log(`TEST# 8: Q: to drink?      A: ${test.get(2)}`);
+console.log(`TEST# 9: Q: anything else? A: ${test.get(3)}`);
 test.pop();
-console.log('TEST#5 - Array() instance contains:', test);
-console.log(`TEST#6: Q: to eat?        A: ${test.get(0)}`);
-console.log(`TEST#6: Q: a side?        A: ${test.get(1)}`);
-console.log(`TEST#7: Q: to drink?      A: ${test.get(2)}`);
-console.log(`TEST#8: Q: anything else? A: ${test.get(3)}`);
-// test.get(0);
-// test.get(1);
-// test.get(2);
-// test.get(3);
+console.log(`TEST#10: Q: just water?    A: ${test.get(2)}`);
+console.log(test.getAllValues());
