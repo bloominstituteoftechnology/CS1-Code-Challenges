@@ -27,7 +27,8 @@ class Array {
     delete this.state[this.index];
   }
   get(isIndex) {
-
+    if (this.state[this.index]) console.log(this.state[isIndex]);
+    console.log("nope, nuthin' there");
   }
   delete(killIndex) {
 
@@ -44,3 +45,9 @@ test.push('salad');
 console.log('TEST#3 - Array() instance contains:', test);
 test.pop();
 console.log('TEST#4 - Array() instance contains:', test);
+// console.log(`TEST#5: Q: to drink?      A: ${test.get(0)}`;)
+// console.log(`TEST#6: Q: to eat         A: ${test.get(1)}`;)
+// console.log(`TEST#7: Q: anything else? A: ${test.get(2)}`;)
+test.get(0);
+test.get(1);
+test.get(2);
