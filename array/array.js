@@ -15,7 +15,7 @@
 
 class Array {
   constructor() {
-    this.index = 0;
+    this.index = 0; // <--- rename to nextIndex?
     this.state = {};
   }
   push(addItem) {
@@ -51,10 +51,10 @@ console.log('TEST# 3 - Array() instance contains:', test);
 test.push('iced tea');
 console.log('TEST# 4 - Array() instance contains:', test);
 console.log('TEST# 5 - Array() instance contains:', test);
-console.log(`TEST# 6: Q: to eat?        A: ${test.get(0)}`);
-console.log(`TEST# 7: Q: a side?        A: ${test.get(1)}`);
-console.log(`TEST# 8: Q: to drink?      A: ${test.get(2)}`);
-console.log(`TEST# 9: Q: anything else? A: ${test.get(3)}`);
+console.log(`TEST# 6: Q: to eat?         A: ${test.get(0)}`);
+console.log(`TEST# 7: Q: a side?         A: ${test.get(1)}`);
+console.log(`TEST# 8: Q: to drink?       A: ${test.get(2)}`);
+console.log(`TEST# 9: Q: anything else?  A: ${test.get(3)}`);
 test.pop();
-console.log(`TEST#10: Q: just water?    A: ${test.get(2)}`);
+console.log(`TEST#10: Q: just water then? A: ${test.get(2)}`);
 console.log(test.getAllValues());
