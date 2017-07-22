@@ -57,4 +57,4 @@ console.log(`TEST# 8: Q: to drink?       A: ${test.get(2)}`);
 console.log(`TEST# 9: Q: anything else?  A: ${test.get(3)}`);
 test.pop();
 console.log(`TEST#10: Q: just water then? A: ${test.get(2)}`);
-console.log(test.getAllValues());
+console.log(`TEST#11: Q: what's in there?\nA: ${test.getAllValues()}`);
