@@ -111,4 +111,4 @@ test.push('so much stuff!')
 test.push('and even more stuff!')
 test.push('never ending stuff!!!')
 console.log(`TEST#17: Q: Wanna add some more stuff?\nA: ${test.getAllKeysAndValues()}`);
-console.log(test.getAllKeysAndValues());
+console.log(JSON.stringify(test.getAllKeysAndValues()));
