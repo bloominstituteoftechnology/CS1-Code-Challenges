@@ -15,16 +15,16 @@
 
 class Array {
   constructor() {
-    this.index = 0; // <--- rename to nextIndex?
+    this.nextIndex = 0;
     this.state = {};
   }
   push(addItem) {
-    this.state[this.index] = addItem;
-    this.index++;
+    this.state[this.nextIndex] = addItem;
+    this.nextIndex++;
   }
   pop() {
-    this.index--;
-    delete this.state[this.index];
+    this.nextIndex--;
+    delete this.state[this.nextIndex];
   }
   get(isIndex) {
     if (!this.state[isIndex]) return "nope, nuthin' there";
@@ -36,11 +36,11 @@ class Array {
   // use current this.index or last existing ondex to exit the shifting?
   delete(indexValue) {
     this.state[indexValue] = ''
-    while (indexValue < this.index) {
+    while (indexValue < this.nextIndex) {
       this.state[indexValue] =this.state[indexValue + 1];
       indexValue++;
     }
-    this.index = indexValue - 1;
+    this.nextIndex = indexValue - 1;
   }
   getAllValues() {
     return Object.values(this.state);
@@ -83,7 +83,7 @@ console.log(test.getAllKeysAndValues());
 test.delete(5);
 console.log(`TEST#14: Q: did something get deleted?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
-console.log(`TEST#15: Q: What's the index set to?\nA: ${test.index}`);
+console.log(`TEST#15: Q: What's the index set to?\nA: ${test.nextIndex}`);
 test.push('well lookie thar!')
 console.log(`TEST#16: Q: Did I add it to the right place?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
