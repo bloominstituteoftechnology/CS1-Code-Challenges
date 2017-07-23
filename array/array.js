@@ -40,13 +40,13 @@ class Array {
 
 //**************************************************************************************************
 // Check if constructor works
-const arr = new Array('first');
-console.log(arr);
+// const arr = new Array('first');
+// console.log(arr);
 // Check if push works (builds on constructor working test)
-arr.push('second');
-arr.push('third');
-arr.push('fourth');
-console.log(arr);
+// arr.push('second');
+// arr.push('third');
+// arr.push('fourth');
+// console.log(arr);
 // ***********************Leave this arr for remaining tests
 // check if length works
 // const arr = {
@@ -61,10 +61,10 @@ console.log(arr);
 // arr.push('fifth');
 // console.log(arr);
 // check if pop works
-arr.pop();
-console.log(arr);
+// arr.pop();
+// console.log(arr);
 // test get(index)
-console.log(arr.get(1)); // third
+// console.log(arr.get(1)); // third
 // test delete 
-arr.delete(1);
-console.log(arr);
+// arr.delete(1);
+// console.log(arr);
