@@ -14,14 +14,17 @@
 */
 
 class Array {
+  // starts empty - todo: set up Array class so it can take initializing value(s), e.g. `Array(...args)`
   constructor() {
     this.nextIndex = 0;
     this.state = {};
   }
+  // todo: push(...args)
   push(addItem) {
     this.state[this.nextIndex] = addItem;
     this.nextIndex++;
   }
+  // todo: push(#) to invoke push() # of times or from a index to the end
   pop() {
     this.nextIndex--;
     delete this.state[this.nextIndex];
@@ -29,11 +32,11 @@ class Array {
   get(isIndex) {
     if (!this.state[isIndex]) return "nope, nuthin' there";
     return this.state[isIndex];
-    // if (this.state[isIndex]) return this.state[isIndex];
-    // return "nope, nuthin' there";
   }
-  // will need to delete value at key#, then replace Key[n] with value at Key[n+1]
-  // use current this.index or last existing ondex to exit the shifting?
+  // delete value at Key# (i.e. array "index"), then replace Key[n] with value at Key[n+1]
+  // use current this.nextIndex (or last existing index?) to exit the shifting?
+  // set nextIndex to last Key#
+  // todo: delete(indexRange)?
   delete(indexValue) {
     this.state[indexValue] = ''
     while (indexValue < this.nextIndex) {
