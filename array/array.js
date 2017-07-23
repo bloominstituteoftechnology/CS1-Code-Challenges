@@ -18,25 +18,25 @@ class Array {
   // todo: set up Array class so it can take initializing value(s), e.g. `Array(...args)`
   constructor() {
     this.nextIndex = 0;
-    this.state = {};
+    this.listObject = {};
   }
 
   // todo: push(...args)
   push(addItem) {
-    this.state[this.nextIndex] = addItem;
+    this.listObject[this.nextIndex] = addItem;
     this.nextIndex++;
   }
 
   // todo: pop(#) to invoke push() # of times or from a index to the end
   pop() {
     this.nextIndex--;
-    delete this.state[this.nextIndex];
+    delete this.listObject[this.nextIndex];
   }
 
   // todo: get(...args)
   get(isIndex) {
-    if (!this.state[isIndex]) return "nope";
-    return this.state[isIndex];
+    if (!this.listObject[isIndex]) return "nope";
+    return this.listObject[isIndex];
   }
 
   // delete value at Key# (i.e. array "index"), then replace Key[n] with value at Key[n+1]
@@ -44,9 +44,9 @@ class Array {
   // set nextIndex to last Key#
   // todo: delete(indexRange)?
   delete(indexValue) {
-    this.state[indexValue] = ''
+    this.listObject[indexValue] = ''
     while (indexValue < this.nextIndex) {
-      this.state[indexValue] =this.state[indexValue + 1];
+      this.listObject[indexValue] = this.listObject[indexValue + 1];
       indexValue++;
     }
     this.nextIndex = indexValue - 1;
@@ -54,13 +54,13 @@ class Array {
 
   // Helper functions
   getAllValues() {
-    return Object.values(this.state);
+    return Object.values(this.listObject);
   }
   getAllKeys() {
-    return Object.keys(this.state);
+    return Object.keys(this.listObject);
   }
   getAllKeysAndValues() {
-    return this.state
+    return this.listObject;
   }
 };
 
@@ -94,7 +94,21 @@ console.log(test.getAllKeysAndValues());
 test.delete(5);
 console.log(`TEST#14: Q: did "something" get deleted?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
-console.log(`TEST#15: Q: What's the index set to?\nA: The next inde location is: ${test.nextIndex}`);
+console.log(`TEST#15: Q: What's the index set to?\nA: The next index location is: ${test.nextIndex}`);
 test.push('well lookie thar!')
 console.log(`TEST#16: Q: Did I add it to the right place?\nA: ${test.getAllKeysAndValues()}`);
+console.log(test.getAllKeysAndValues());
+test.push('more stuff!')
+console.log(`TEST#17: Q: Wanna add some more stuff?\nA: ${test.getAllKeysAndValues()}`);
+console.log(test.getAllKeysAndValues());
+test.delete(1);
+test.delete(3);
+test.delete(5);
+console.log(`TEST#18: Q: What just happened???\nA: ${test.getAllKeysAndValues()}`);
+console.log(test.getAllKeysAndValues());
+test.push('even more stuff!')
+test.push('so much stuff!')
+test.push('and even more stuff!')
+test.push('never ending stuff!!!')
+console.log(`TEST#17: Q: Wanna add some more stuff?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
