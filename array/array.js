@@ -10,70 +10,61 @@
 class Array {
   constructor(item) {
     this[0] = item;
-  }
-
-  length(){
-    let counter = 0;	  
-    for (key in this) {
-      counter++;
-    }
-    return counter;
+    this.length = 1;
   }
 
   push(item){
     this[this.length] = item;
+    this.length = this.length + 1;
   }
 
-  pop(// I know you are going to try to put something in these parentheses - Don't do it
-    ){
-    for (key in this) {
-      if (this.key === this.length) {
-        delete this.key;
-      }
-    }
+  pop(){
+    delete this[(this.length-1)];
+    this.length = this.length-1;
   }
 
   get(index){
-    for (key in this) {
-      if (this.key === index) {
-        return this.value;
-      }
-    }
+    return this[index];
   }
 
   delete(index){
     // make sure to shift the items after deletion
+    for (let n = index; n + 1 < this.length; n++) {
+      this[n] = this[n + 1];
+    }
+    delete this[this.length - 1];
+    this.length = this.length - 1;
   }
 
 }
 
 //**************************************************************************************************
 // Check if constructor works
-// const arr = new Array('first');
-// console.log(arr);
+const arr = new Array('first');
+console.log(arr);
 // Check if push works (builds on constructor working test)
-// arr.push('second');
-// arr.push('third');
-// arr.push('fourth');
-// console.log(arr);
+arr.push('second');
+arr.push('third');
+arr.push('fourth');
+console.log(arr);
 // ***********************Leave this arr for remaining tests
 // check if length works
-const arr = {
-  0: 'first',
-  1: 'second',
-  2: 'third',
-  3: 'fourth',
-}
+// const arr = {
+//  0: 'first',
+//  1: 'second',
+//  2: 'third',
+//  3: 'fourth',
+// }
 // *****************************************
-console.log(arr.length); // 4
+// console.log(arr.length); // 4
 // check if push works 
 // arr.push('fifth');
 // console.log(arr);
 // check if pop works
-// arr.pop();
-// console.log(arr);
+arr.pop();
+console.log(arr);
 // test get(index)
-// console.log(arr.get(2)); // third
+console.log(arr.get(1)); // third
 // test delete 
-// arr.delete(2);
-// console.log(arr);
+arr.delete(1);
+console.log(arr);
