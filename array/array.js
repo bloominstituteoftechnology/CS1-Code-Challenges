@@ -33,6 +33,12 @@ class Array {
     delete this.state[this.nextIndex];
   }
 
+  // todo: get(...args)
+  get(isIndex) {
+    if (!this.state[isIndex]) return "nope";
+    return this.state[isIndex];
+  }
+
   // delete value at Key# (i.e. array "index"), then replace Key[n] with value at Key[n+1]
   // use current this.nextIndex (or last existing index?) to exit the shifting?
   // set nextIndex to last Key#
@@ -47,10 +53,6 @@ class Array {
   }
 
   // Helper functions
-  get(isIndex) {
-    if (!this.state[isIndex]) return "nope, nuthin' there";
-    return this.state[isIndex];
-  }
   getAllValues() {
     return Object.values(this.state);
   }
@@ -72,12 +74,12 @@ test.push('salad');
 console.log('TEST# 3 - Array() instance contains:', test);
 test.push('iced tea');
 console.log('TEST# 4 - Array() instance contains:', test);
-console.log(`TEST# 5: Q: to eat?          A: ${test.get(0)}`);
-console.log(`TEST# 6: Q: a side?          A: ${test.get(1)}`);
-console.log(`TEST# 7: Q: to drink?        A: ${test.get(2)}`);
-console.log(`TEST# 8: Q: anything else?   A: ${test.get(3)}`);
+console.log(`TEST# 5: Q: to eat?            A: ${test.get(0)}`);
+console.log(`TEST# 6: Q: a side?            A: ${test.get(1)}`);
+console.log(`TEST# 7: Q: to drink?          A: ${test.get(2)}`);
+console.log(`TEST# 8: Q: want some sodaPOP? A: ${test.get(3)}`);
 test.pop();
-console.log(`TEST# 9: Q: just water then? A: ${test.get(2)}`);
+console.log(`TEST# 9: Q: just water then?   A: ${test.get(2)}`);
 console.log(`TEST#10: Q: what's for dinner?\nA: ${test.getAllValues()}`);
 test.push('this');
 test.push('that');
@@ -96,4 +98,3 @@ console.log(`TEST#15: Q: What's the index set to?\nA: The next inde location is:
 test.push('well lookie thar!')
 console.log(`TEST#16: Q: Did I add it to the right place?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
-console.log(test.global;
