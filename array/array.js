@@ -32,11 +32,24 @@ class Array {
     // if (this.state[isIndex]) return this.state[isIndex];
     // return "nope, nuthin' there";
   }
-  delete(killIndex) {
-
+  // will need to delete value at key#, then replace Key[n] with value at Key[n+1]
+  // use current this.index or last existing ondex to exit the shifting?
+  delete(indexValue) {
+    this.state[indexValue] = ''
+    while (indexValue < this.index) {
+      this.state[indexValue] =this.state[indexValue + 1];
+      indexValue++;
+    }
+    this.index = indexValue - 1;
   }
   getAllValues() {
     return Object.values(this.state);
+  }
+  getAllKeys() {
+    return Object.keys(this.state);
+  }
+  getAllKeysAndValues() {
+    return this.state
   }
 };
 
@@ -50,11 +63,27 @@ test.push('salad');
 console.log('TEST# 3 - Array() instance contains:', test);
 test.push('iced tea');
 console.log('TEST# 4 - Array() instance contains:', test);
-console.log('TEST# 5 - Array() instance contains:', test);
-console.log(`TEST# 6: Q: to eat?         A: ${test.get(0)}`);
-console.log(`TEST# 7: Q: a side?         A: ${test.get(1)}`);
-console.log(`TEST# 8: Q: to drink?       A: ${test.get(2)}`);
-console.log(`TEST# 9: Q: anything else?  A: ${test.get(3)}`);
+console.log(`TEST# 5: Q: to eat?          A: ${test.get(0)}`);
+console.log(`TEST# 6: Q: a side?          A: ${test.get(1)}`);
+console.log(`TEST# 7: Q: to drink?        A: ${test.get(2)}`);
+console.log(`TEST# 8: Q: anything else?   A: ${test.get(3)}`);
 test.pop();
-console.log(`TEST#10: Q: just water then? A: ${test.get(2)}`);
-console.log(`TEST#11: Q: what's in there?\nA: ${test.getAllValues()}`);
+console.log(`TEST# 9: Q: just water then? A: ${test.get(2)}`);
+console.log(`TEST#10: Q: what's for dinner?\nA: ${test.getAllValues()}`);
+test.push('this');
+test.push('that');
+test.push('the other thing');
+test.push('something else');
+test.push('another thing');
+test.push('aaaaand another thing');
+console.log(`TEST#11: Q: what all's in there?\nA: ${test.getAllValues()}`);
+console.log(`TEST#12: Q: what all's where in there?\nA: ${test.getAllKeys()}`);
+console.log(`TEST#13: Q: which what all's where in there?\nA: ${test.getAllKeysAndValues()}`);
+console.log(test.getAllKeysAndValues());
+test.delete(5);
+console.log(`TEST#14: Q: did something get deleted?\nA: ${test.getAllKeysAndValues()}`);
+console.log(test.getAllKeysAndValues());
+console.log(`TEST#15: Q: What's the index set to?\nA: ${test.index}`);
+test.push('well lookie thar!')
+console.log(`TEST#16: Q: Did I add it to the right place?\nA: ${test.getAllKeysAndValues()}`);
+console.log(test.getAllKeysAndValues());
