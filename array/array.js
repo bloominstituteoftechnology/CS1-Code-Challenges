@@ -19,8 +19,10 @@ class Array {
   }
 
   pop(){
+    const toReturn = this.length-1;
     delete this[(this.length-1)];
     this.length = this.length-1;
+    return toReturn;
   }
 
   get(index){
