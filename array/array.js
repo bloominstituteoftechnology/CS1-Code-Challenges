@@ -8,9 +8,9 @@
  * How does the time complexity of insertion and deletion compare to that of a linked list?
  */
 
-/* class Array() to construct an object such that key: value pairs are
-    arranged {index: item, index: item, index: item ... }, e.g.
-    {0: 'first item', 1: 'second item', 2: 'third item' ... (n-1): 'last item' }
+/* class Array() to construct an object such that key: value pairs are arranged
+    { index: item,     index: item,      index: item,     ... index: item }, e.g.
+    {0: 'first item', 1: 'second item', 2: 'third item', ... (n-1): 'last item' }
 */
 
 class Array {
@@ -20,12 +20,14 @@ class Array {
     this.nextIndex = 0;
     this.listObject = {};
   }
+  // CONVENTION: INCLUDE A LENGTH PROPERTY
 
   // todo: push(...args)
   push(addItem) {
     this.listObject[this.nextIndex] = addItem;
     this.nextIndex++;
   }
+  // CONVENTION: RETURN THE VALUE WHICH HAS BEEN DELETED
 
   // todo: pop(#) to invoke push() # of times or from a index to the end
   pop() {
