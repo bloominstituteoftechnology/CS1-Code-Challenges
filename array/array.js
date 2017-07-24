@@ -13,7 +13,7 @@
     {0: 'first item', 1: 'second item', 2: 'third item', ... (n-1): 'last item' }
 */
 
-class Array {
+class ObjArray {
   // starts empty
   // todo: set up Array class so it can take initializing value(s), e.g. `Array(...args)`
   constructor() {
@@ -67,15 +67,15 @@ class Array {
 };
 
 // TEST SUITE
-const test  = new Array();
-console.log('TEST# 1 - Array() instance contains:', test);
+const test  = new ObjArray();
+console.log('TEST# 1 - ObjArray() instance contains:', test);
 // console.log(`TEST#1A - Array() instance contains: ${test}`); // ---> :(
 test.push('chzbrgr');
-console.log('TEST# 2 - Array() instance contains:', test);
+console.log('TEST# 2 - ObjArray() instance contains:', test);
 test.push('salad');
-console.log('TEST# 3 - Array() instance contains:', test);
+console.log('TEST# 3 - ObjArray() instance contains:', test);
 test.push('iced tea');
-console.log('TEST# 4 - Array() instance contains:', test);
+console.log('TEST# 4 - ObjArray() instance contains:', test);
 console.log(`TEST# 5: Q: to eat?            A: ${test.get(0)}`);
 console.log(`TEST# 6: Q: a side?            A: ${test.get(1)}`);
 console.log(`TEST# 7: Q: to drink?          A: ${test.get(2)}`);
@@ -91,7 +91,7 @@ test.push('another thing');
 test.push('aaaaand another thing');
 console.log(`TEST#11: Q: what all's in there?\nA: ${test.getAllValues()}`);
 console.log(`TEST#12: Q: what all's where in there?\nA: ${test.getAllKeys()}`);
-console.log(`TEST#13: Q: which what all's where in there?\nA: ${test.getAllKeysAndValues()}`); // <---- how to get the object printed and not the type?
+console.log(`TEST#13: Q: which what all's where in there?\nA: ${test.getAllKeysAndValues()}`); // <---- how to get the object printed and not the type? JSON.stringify()
 console.log(test.getAllKeysAndValues());
 test.delete(5);
 console.log(`TEST#14: Q: did "something" get deleted?\nA: ${test.getAllKeysAndValues()}`);
@@ -113,4 +113,5 @@ test.push('so much stuff!')
 test.push('and even more stuff!')
 test.push('never ending stuff!!!')
 console.log(`TEST#17: Q: Wanna add some more stuff?\nA: ${test.getAllKeysAndValues()}`);
-console.log(JSON.stringify(test.getAllKeysAndValues()));
+console.log(test.getAllKeysAndValues());
+console.log(`Q: easier to read?\nA: ${JSON.stringify(test.getAllKeysAndValues())}`);
