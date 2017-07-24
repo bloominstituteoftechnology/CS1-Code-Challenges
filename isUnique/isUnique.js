@@ -4,6 +4,12 @@
 */
 
 const isUnique = (str) => {
+  const tester = str.split("").sort();
+  let check = true;
+  for (let i = 1; i < tester.length; i++) {
+    if (tester[i] === tester[i-1]) check = false;
+  }
+  return check;
 
 };
 
