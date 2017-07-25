@@ -17,13 +17,19 @@ const strCompression = (string) => {
   });
 
   const newString = JSON.stringify(Object.entries(strMap));
-  const re = /\W/g
+  const re = /[^(\w\d)*]/g
   const rem = newString.replace(re, '');
 
-  if (rem.length < string) return rem;
-  return string;
+
+  if (rem.length < string.length) {
+    return `compressed string: ${rem}`;
+  }
+
+
+    return `compression not necessary: ${string}`;
 }
 const str = 'aaabbbccc'
 const str1 = 'aabbcc'
 console.log(strCompression(str));
+
 console.log(strCompression(str1));
