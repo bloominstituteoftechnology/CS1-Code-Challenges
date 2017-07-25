@@ -24,16 +24,16 @@ const compressor = function(str) {
     }
   }
   const compressed = arr.join('');
-
-  // return original string if compressing made a longer string
-  if (str.length <= compressed.length) return `inadequate algorithm`;
-  return compressed;
+  // // return original string if compressing made a longer string
+  // if (str.length <= compressed.length) return `inadequate algorithm`;
+  // return compressed;
+  // ternary
+  return str.length <= compressed.length ? str : compressed
 };
-
 
 // TEST SUITE
 const test = compressor('aabcccccaaa'); // ---> a2b1c5a3
 console.log(test);
-console.log(compressor('abca'));        // ---> inadequate algorithm
-console.log(compressor('aabbcc'));      // ---> inadequate algorithm
+console.log(compressor('abca'));        // ---> abca: inadequate compression algorithm
+console.log(compressor('aabbcc'));      // ---> aabbcc: inadequate compression algorithm
 console.log(compressor('aabbccc'));     // ---> a2b2c3
