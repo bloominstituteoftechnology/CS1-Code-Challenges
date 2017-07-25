@@ -11,5 +11,18 @@
 **/
 
 const binarySearch = (nums, target) => {
+  let high = nums.length - 1;
+  let low = 0;
+  let middle;
 
+  while (low < high) {
+    middle = Math.floor((low + high) / 2);
+    if (target === nums[middle]) return middle;
+    else if (target > nums[middle]) {
+      low = middle + 1;
+    } else {
+      high = middle - 1;
+    }
+  }
+  return 'not found';
 };
