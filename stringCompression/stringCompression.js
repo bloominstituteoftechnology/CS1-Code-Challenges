@@ -9,7 +9,11 @@
 
 
 const compressor = function(str) {
-  // halt if compressing would make a longer string
+  // is there a simple check prevent the algorithm from running
+  // if it would make a longer string? Seems like not having to
+  // calculate the algorithm first to then evaluate if it
+  // made the string longer would make for a much better
+  // Order of Complexity...?
 
   // compression algorithm
   const arr = [];
@@ -22,11 +26,17 @@ const compressor = function(str) {
       count = 1
     }
   }
-  return arr;
+  const compressed = arr.join('');
+
+  // halt if compressing would make a longer string
+  if (str.length <= compressed.length) return `inadequate algorithm`;
+  return compressed;
 };
 
 
 // TEST SUITE
 const test = compressor('aabcccccaaa'); // ---> a2b1c5a3
 console.log(test);
-console.log(compressor('abca'));        // ---> a1b1c1a1
+console.log(compressor('abca'));        // ---> inadequate algorithm
+console.log(compressor('aabbcc'));      // ---> inadequate algorithm
+console.log(compressor('aabbccc'));     // ---> inadequate algorithm
