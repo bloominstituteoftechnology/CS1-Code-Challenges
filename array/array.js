@@ -8,62 +8,57 @@
  * How does the time complexity of insertion and deletion compare to that of a linked list?
  */
 
-/* An array is defined as a collection of data items that can be selected by indices
- * computed at runtime.  For best performance, an array should have constant time
- * lookup.  However, this probably requires the use of pointers, which JS does not
- * have.  So, this array is arranged as a linked list.  The class contains two property
- * items: a value, and a next element.  The push() method adds an item onto the end
- * of the linked list, while the pop() method removes a link to the final item.  The
- * get() method counts items sequentially to return the requested index, while the
- * delete() method does the same, but simply deletes the item and sets the next element
- * property to the deleted items next element property.  The class also contains three
- * convenience functions, list(), which lists all of the data items in insertion order,
- * find(), which uses a callback to find a data item, and last(), which is used as the
- * callback function for the push() and pop() methods.  In this implementation, the
- * complexity of insertion and deletion are equivalent to that of a linked list.
+/*
+ * I think property accesses in an object are based upon a hash, and so would be
+ * constant time accesses.  Push and pop would be constant time accesses in a linked
+ * list.  However, searching for an item in a linked list is linear, whereas it would
+ * be constant time in an object.  Deleting an item in a linked list is a constant time
+ * operation, whereas it would be a linear operation in an object.  Tradeoffs.
  */
 
 class Array {
-  constructor (value = null) {
-    this.first = null;
-    this.last = null;
-    this.next = null;
-    this.prior = null;
-    this.value = value;
+  constructor(value) {
+    this.length = 0;
+    this.arrayObj = {};
   }
 
-  list (e = this.first, i = 0) {
-    if (e) {
-      console.log(`index: '${i}'\tvalue: '${e.value}'`);
-      return this.list(e.next, ++i);
-    }
-    return;
+  lastIndex() {
+    return this.length - 1;
   }
 
-  push (value) {
-    const newElement = new Array(value);
+  nextIndex() {
+    this.length++;
+    return this.lastIndex();
+  }
 
-    if (!this.first && !this.last) {
-      this.first = newElement;
-      this.last = newElement;
-    } else if (this.first === this.last) {
-      this.first.next = newElement;
-      this.last = newElement;
-      newElement.prior = this.first;
-    } else {
-      this.last.next = newElement;
-      newElement.prior = this.last;
-      this.last = newElement;
-    }
+  reduceIndex() {
+    this.length--;
+    return this.length;
+  }
+
+  push(value) {
+    this.arrayObj[this.nextIndex()] = value;
   }
 
   pop() {
-    let popped = null;
-    if (this.last) {
-      popped = this.last.value;
-      this.last = this.last.prior;
+    const value = this.arrayObj[this.lastIndex()];
+    delete this.arrayObj[this.reduceIndex()];
+    return value;
+  }
+
+  get(index) {
+    return this.arrayObj[index]
+  }
+
+  delete(index) {
+    let value;
+    if ((value = this.arrayObj[index])) {
+      for (let i = index; i < this.length - 1; i++) {
+        this.arrayObj[i] = this.arrayObj[i + 1];
+      }
+      this.pop();
     }
-    return popped;
+    return value;
   }
 }
 
@@ -72,4 +67,11 @@ myArray.push('first');
 myArray.push('second');
 myArray.push('third');
 myArray.push('fourth');
-myArray.list();
+console.log(myArray);
+console.log(myArray.pop());
+console.log(myArray);
+console.log(myArray.get(2));
+console.log(myArray.get(3));
+console.log(myArray.get(0));
+console.log(myArray.delete(1));
+console.log(myArray);
