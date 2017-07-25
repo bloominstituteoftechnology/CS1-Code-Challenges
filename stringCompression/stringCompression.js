@@ -28,7 +28,7 @@ const compressor = function(str) {
   }
   const compressed = arr.join('');
 
-  // halt if compressing would make a longer string
+  // return original string if compressing made a longer string
   if (str.length <= compressed.length) return `inadequate algorithm`;
   return compressed;
 };
