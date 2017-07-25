@@ -28,14 +28,15 @@
      return this.array[index];
    }
    delete(index) {
-     console.log(index);
-     delete this.array[index];
-
-     this.key -= 1;
+    delete this.array[index];
+     for (let i = index; i < this.key; i++) {
+       this.array[i] = this.array[i + 1];
+     }
+     this.key--;
    }
  }
 
- let a = new Array();
+ const a = new Array();
  a.push(5);
  a.push(53);
  a.push(54);
