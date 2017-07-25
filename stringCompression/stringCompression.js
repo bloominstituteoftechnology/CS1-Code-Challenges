@@ -39,4 +39,4 @@ const test = compressor('aabcccccaaa'); // ---> a2b1c5a3
 console.log(test);
 console.log(compressor('abca'));        // ---> inadequate algorithm
 console.log(compressor('aabbcc'));      // ---> inadequate algorithm
-console.log(compressor('aabbccc'));     // ---> inadequate algorithm
+console.log(compressor('aabbccc'));     // ---> a2b2c3
