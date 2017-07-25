@@ -5,7 +5,10 @@
  * For division just drop the remainder.
  */
  const multiply = (x, y) => {
-   return x
+     if (x === 1)
+      return(y)
+   else
+      return(y + multiply(x-1, y));
  };
  const divide = (x, y) => {
    return x / y
