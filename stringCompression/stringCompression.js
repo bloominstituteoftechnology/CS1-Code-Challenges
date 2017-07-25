@@ -5,9 +5,6 @@
 // your method should return the original string.
 // You can assume the string has only uppercase and lowercase letters (a - z).
 
-
-
-
 const compressor = function(str) {
   // is there a simple check prevent the algorithm from running
   // if it would make a longer string? Seems like not having to
