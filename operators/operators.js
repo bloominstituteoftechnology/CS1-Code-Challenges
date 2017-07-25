@@ -35,3 +35,6 @@
     answer -= b;
   }
  }
+
+
+ // console.log(modulo(23, 4));
