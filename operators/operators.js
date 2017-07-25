@@ -5,45 +5,44 @@
  * For division just drop the remainder.
  */
 function multiply(x,y){
-	let acc = 0;
-	if (x === 0 || y === 0) {
-	  return 0;
-	}
+let acc = 0;
+if (x === 0 || y === 0) {
+  return 0;
+}
   for (let i = 0;i < y; i++) {
-	  acc = acc + x;
-	}
+  acc = acc + x;
+}
   return acc;
 }
 
 function divide(x,y){
   let acc = x;
-	counter = 0;
-	if (y === 0) {
-	  return undefined;
-	} else if (x === 0) {
-	  return 0;
-	}
-	while (acc >= y) {
-	  acc = acc - y;
-		counter ++;
-	}
-	return counter;
+  counter = 0;
+  if (y === 0) {
+    return undefined;
+  } else if (x === 0) {
+    return 0;
+  }
+  while (acc >= y) {
+    acc = acc - y;
+    counter ++;
+  }
+  return counter;
 }
 
 function modulo(x,y){
   let acc = x;
-	counter = 0;
-	if (y === 0) {
-	  return undefined;
-	} else if (x === 0) {
-	  return 0;
-	}
-	while (acc >= y) {
-	  acc = acc - y;
-		counter ++;
-	}
-	return acc;
-  
+  counter = 0;
+  if (y === 0) {
+    return undefined;
+  } else if (x === 0) {
+    return 0;
+  }
+  while (acc >= y) {
+    acc = acc - y;
+    counter ++;
+  }
+  return acc;
 }
 
 // *************Tests*******************
