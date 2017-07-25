@@ -4,6 +4,7 @@
 // The output should be 1, 2, 3, .... 10. Right now it just prints 11.
 // I've been asked this three times in separate interviews.
 
+<<<<<<< HEAD
 // for (var i = 1; i <= 10; i++) {
 // 	(function(i){
 // 		setTimeout(function() {
@@ -18,3 +19,12 @@ for (let i = 0; i <= 10; i++) {
 	}, 100);
 }
 
+=======
+for (var i = 1; i <= 10; i++) {
+	setTimeout(function() {
+		// From looking at the code you would assume it would print 1 - 10
+		// It doesn't.  Why?  How can you make it print 1 - 10.
+		console.log(i);
+	}, 0);
+}
+>>>>>>> 5acf0e95f99ed3ead584c2efaea885fed40ed6ba
