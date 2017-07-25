@@ -11,5 +11,21 @@
  *    */
 
 const evenOccurence = (arr) => {
-  // Your code here.
+  let newObj = {};
+  arr.forEach(num => {
+    newObj[num] = newObj[num] + 1 || 1;
+  });
+  
+  for (let i = 0; i < arr.length; i++) {
+    let current = arr[i];
+    
+    if (newObj[current] % 2 === 0) {
+      return current;
+    }
+  }
+  return null;
 };
+
+
+
+console.log(evenOccurence([1,7,2,4,5,1,6,8,9,6,4,1]));
