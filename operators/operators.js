@@ -11,8 +11,11 @@
       return(y + multiply(x-1, y));
  };
  const divide = (x, y) => {
-   return x / y
- };
+   if (y === 1)
+    return(x)
+ else
+    return(x + divide(x-1, (-y));
+};
  const modulo = (x, y) => {
    return x % y
  };
