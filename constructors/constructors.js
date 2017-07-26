@@ -107,7 +107,7 @@ console.log(npc);
 const zarthonFleven = new Humanoid('Zarthon Fleven');
 console.log(zarthonFleven);
 
-const ladyBug = new Animal('Lady Bug');
+const ladyBug = new Animal('Sir Ladybug');
 console.log(ladyBug);
 
 const sunFlower = new Plant('Sun Flower');
