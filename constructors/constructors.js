@@ -40,7 +40,7 @@ class Humanoid extends NPC {
     super(props);
     this.state.languages = [];
     this.state.armor = '';
-    this.state.numberOfShoes = '';
+    this.state.numberOfShoes = 2;
   }
 };
 class Animal extends NPC {
