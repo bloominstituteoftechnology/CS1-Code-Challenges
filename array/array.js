@@ -1,9 +1,39 @@
-/* Make a class called Array.
- * It should have the methods push, pop, get(index), and delete(index).
- * get and delete should accept an index and get or remove the item at that index.
- * Make sure to shift the array items after deleting an item.
- * In your implementation use a JS object to build the array.
- * Do NOT use an array as the underlying data structure, that's cheating :)
- * How do these operations compare to that of a linked list?
- * How does the time complexity of insertion and deletion compare to that of a linked list?
- */
+class Array {
+  constructor() {
+    this.arr = {};
+    this.length = 0;
+  }
+  push(item) {
+    this.arr[this.length] = item;
+    this.length++;
+  }
+  pop() {
+    const byebye = this.arr[this.length - 1];
+    delete this.arr[this.length - 1];
+    this.length--;
+    return byebye;
+  }
+  getIndex(hi) {
+    return this.arr[hi];
+  }
+  deleteIndex(bye) {
+    delete this.arr[bye];
+    for (let i = bye; i < this.length; i++) {
+    	this.arr[i] = this.arr[i + 1];
+    }
+    this.length--;
+  }
+}
+
+// const myArr = new Array();
+// myArr;
+// myArr.push(7);
+// myArr.push(6);
+// myArr.push(5);
+// myArr.push(4);
+// myArr.getIndex(0);
+// myArr;
+// myArr.pop();
+// myArr;
+// myArr.deleteIndex(1);
+// myArr;

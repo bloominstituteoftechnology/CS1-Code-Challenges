@@ -1,11 +1,5 @@
-/* 
-* Implement an algorithm to determine if a string has all unique characters.
-* Extra Credit - Answer this question - What if you cannot use additional data structures?
-*/
-
-const isUnique = (str) => {
-
-};
+// one liner -> BABAM!!! (please see playground.js for a full synopsis)
+const isUnique = str => new Set(str).size === str.split('').length;
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
 console.log(isUnique('abcdefga')); // false
