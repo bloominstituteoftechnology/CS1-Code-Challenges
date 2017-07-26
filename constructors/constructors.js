@@ -38,48 +38,62 @@ class NPC {
 class Humanoid extends NPC {
   constructor(props) {
     super(props);
+    this.state.languages: []
+    this.state.armor: '',
+    this.state.numberOfShoes: '',
   }
 }
 class Animal extends NPC {
   constructor(props) {
     super(props);
+    this.state.claws: true,
+    this.state.magic: false
   }
 }
 class Plant extends NPC {
   constructor(props) {
     super(props);
+    this.state.medicinal: true,
+    this.state.poisonous: true,
+    this.state.edible: false,
   }
 }
 // * Humanoid -> Human, Elf, Orc
 class Human extends Humanoid { // Human props relative to roll of dice
   constructor(props) {
     super(props);
+    this.state.languages: ['common']
   }
 }
 class Elf extends Humanoid {
   constructor(props) {
     super(props);
+    this.state.languages: ['common', 'elvish']
   }
 }
 class Orc extends Humanoid {
   constructor(props) {
     super(props)
+    this.state.languages: ['orcish']
   }
 }
 // * Animal -> Bear, Wolf
 class Bear extends Animal {
   constructor(props) {
     super(props)
+    this.state.height: {feet: 6, inches: 6}
   }
 }
 class Wolf extends Animal {
   constructor(props) {
     super(props)
+    this.state.packStatus: {alpha: false, beta: true, omega: false}
   }
 }
 // * Plant -> FleshEatingDaisy
 class FleshEatingDaisy {
   constructor(props) {
     super(props)
+    this.state.odor: {delightful: false, deadly: false, pernicious: true}
   }
 }
