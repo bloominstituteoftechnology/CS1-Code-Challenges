@@ -1,20 +1,3 @@
-/*
- * Create a function that returns the largest prime palindrome less than 1000.
- * Hint: it's 929
- * You will first want to determine if the number is a palindrome and then determine if it is prime.
- * A palindrome is a number that is the same forwards and backwards: 121, 323, 123454321, etc.
- * Extra credit: Modify the function to look for the largest prime palindrome less than any provided number.
- * Extra credit 2: How can you improve the time complexity?  (Google: Sieve of Eratosthenes)
- */
-
-// returns largest prime palindrome
-// I: end of range from 0
-// O: largest integer that is both prime and a palindrome
-const largestPrimePalindrome = function(num) {
-  const x = findPrimePals(findPrimes(num))
-  return x[x.length - 1];
-}
-
 // I: a sorted array of prime numbers, smallest to largest
 // O: array of prime palindromes
 const findPrimePals = function(primeArr) {
@@ -110,17 +93,12 @@ const numToStr = function(num) {
 
 // // findPrimes TEST SUITE
 // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127]
-// console.log(`Q: what are the primes from 0 to 127?\nA: ${findPrimes(127)}`);
-// // console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(104729)}`); // <--- 10,000 prime numbers!!!!
-// console.log(`Q: How many prime numbers between zero and 104,729?\nA: ${findPrimes(104729).length}`);
+console.log(`Q: what are the primes from 0 to 127?\nA: ${findPrimes(127)}`);
+// console.log(`Q: what are the primes from 0 to 121?\nA: ${findPrimes(104729)}`); // <--- 10,000 prime numbers!!!!
+console.log(findPrimes(104729).length);
 
-// // findPrimePals TEST SUITE
-// // [11, 101, ...]
-// console.log(`Q: Is findPrimePals(findPrimes(127)) an instance of an array?\nA: ${findPrimePals(findPrimes(127)) instanceof Array}`); // <--- true
-// console.log(`Q: what are the prime palindromes from 0 to 127?\nA: ${findPrimePals(findPrimes(127))}`); // <--- 2,3,5,7,11,101
-// console.log(`Q: what are the prime palindromes from 0 to 1000?\nA: ${findPrimePals(findPrimes(1000))}`); // <--- 2,3,5,7,11,101,131,151,181,191,313,353,373,383,727,757,787,797,919,929
-
-// largestPrimePalindrome TEST SUITE
-console.log(`Q: What is the largest prime palindrome less than 1000?\nA: ${largestPrimePalindrome(1000)}`);
-
-// THIS COULD< OF COURSE< BE SIGNIFICANTLY REFACTORED...
+// findPrimePals TEST SUITE
+// [11, 101, ...]
+console.log(`Q: Is findPrimePals(findPrimes(127)) an instance of an array?\nA: ${findPrimePals(findPrimes(127)) instanceof Array}`); // <--- true
+console.log(`Q: what are the prime palindromes from 0 to 127?\nA: ${findPrimePals(findPrimes(127))}`); // <--- 2,3,5,7,11,101
+console.log(`Q: what are the prime palindromes from 0 to 1000?\nA: ${findPrimePals(findPrimes(1000))}`); // <--- 2,3,5,7,11,101,131,151,181,191,313,353,373,383,727,757,787,797,919,929

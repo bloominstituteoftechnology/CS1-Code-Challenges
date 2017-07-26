@@ -22,3 +22,111 @@
  * This is how you would structure the game objects in an actual game
  * application in Unity or another similar framework.
  */
+
+class NPC {
+  constructor(props) {
+    this.state = {
+      name: props,
+      weapon: '',
+      health: '',
+      strength: '',
+      _level: 1, // <--- private? Only the DM can establish characters above level 1
+    }
+  }
+};
+// * NPC -> Humanoid, Animal, Plant
+class Humanoid extends NPC {
+  constructor(props) {
+    super(props);
+    this.state.languages = [];
+    this.state.armor = '';
+    this.state.numberOfShoes = '';
+  }
+};
+class Animal extends NPC {
+  constructor(props) {
+    super(props);
+    this.state.claws = true;
+    this.state.magic = false;
+  }
+}
+class Plant extends NPC {
+  constructor(props) {
+    super(props);
+    this.state.medicinal = true;
+    this.state.poisonous = true;
+    this.state.edible = false;
+  }
+}
+// * Humanoid -> Human, Elf, Orc
+class Human extends Humanoid { // Human props relative to roll of dice
+  constructor(props) {
+    super(props);
+    this.state.health = Math.floor(Math.random() * 100);
+    this.state.strength = Math.floor(Math.random() * 100);
+    this.state.languages = ['common'];
+  }
+}
+class Elf extends Humanoid {
+  constructor(props) {
+    super(props);
+    this.state.languages = ['common', 'elvish'];
+  }
+}
+class Orc extends Humanoid {
+  constructor(props) {
+    super(props);
+    this.state.languages = ['orcish'];
+  }
+}
+// * Animal -> Bear, Wolf
+class Bear extends Animal {
+  constructor(props) {
+    super(props);
+    this.state.height = {feet: 6, inches: 6};
+  }
+}
+class Wolf extends Animal {
+  constructor(props) {
+    super(props);
+    this.state.packStatus = {alpha: false, beta: true, omega: false};
+  }
+}
+// * Plant -> FleshEatingDaisy
+class FleshEatingDaisy extends Plant{
+  constructor(props) {
+    super(props);
+    this.state.odor = {delightful: false, deadly: false, pernicious: true};
+  }
+}
+
+// TEST SUITE
+const npc = new NPC('first');
+console.log(npc);
+
+const zarthonFleven = new Humanoid('Zarthon Fleven');
+console.log(zarthonFleven);
+
+const ladyBug = new Animal('Lady Bug');
+console.log(ladyBug);
+
+const sunFlower = new Plant('Sun Flower');
+console.log(sunFlower);
+
+const bob = new Human('Bob');
+console.log(bob);
+
+const velaria = new Elf('Velaria');
+console.log(velaria);
+
+const graarg = new Orc('Graarg');
+console.log(graarg);
+
+const paul = new Bear('Paul');
+console.log(paul);
+
+const simonLeBon = new Wolf('Simon Le Bon');
+console.log(simonLeBon);
+
+const foofie = new FleshEatingDaisy('Foofie the Flesh Eating Daisy');
+console.log(foofie);
