@@ -22,3 +22,64 @@
  * This is how you would structure the game objects in an actual game
  * application in Unity or another similar framework.
  */
+
+class NPC {
+  constructor(props) {
+    this.state = {
+      name: '',
+      weapon: '',
+      health: '',
+      strength: '',
+      level: '',
+    }
+  }
+}
+// * NPC -> Humanoid, Animal, Plant
+class Humanoid extends NPC {
+  constructor(props) {
+    super(props);
+  }
+}
+class Animal extends NPC {
+  constructor(props) {
+    super(props);
+  }
+}
+class Plant extends NPC {
+  constructor(props) {
+    super(props);
+  }
+}
+// * Humanoid -> Human, Elf, Orc
+class Human extends Humanoid { // Human props relative to roll of dice
+  constructor(props) {
+    super(props);
+  }
+}
+class Elf extends Humanoid {
+  constructor(props) {
+    super(props);
+  }
+}
+class Orc extends Humanoid {
+  constructor(props) {
+    super(props)
+  }
+}
+// * Animal -> Bear, Wolf
+class Bear extends Animal {
+  constructor(props) {
+    super(props)
+  }
+}
+class Wolf extends Animal {
+  constructor(props) {
+    super(props)
+  }
+}
+// * Plant -> FleshEatingDaisy
+class FleshEatingDaisy {
+  constructor(props) {
+    super(props)
+  }
+}
