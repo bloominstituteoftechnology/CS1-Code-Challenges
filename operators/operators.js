@@ -5,6 +5,10 @@
  * For division just drop the remainder.
  */
 
+// Edge cases: multiply by zero
+//             divide by zero
+//             negative numbers
+
 const multiply = function(a, b) {
   const arr = new Array(b).fill(a);
   const product = arr.reduce((a, b) => a + b, 0);
