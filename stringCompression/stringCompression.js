@@ -4,6 +4,7 @@
 // If the "compressed" string would not become smaller than the original string,
 // your method should return the original string.
 // You can assume the string has only uppercase and lowercase letters (a - z).
+<<<<<<< HEAD
 
 const compressString = (string) => {
   let compressed = '';
@@ -27,3 +28,5 @@ const compressString = (string) => {
   return compressed;
 
 }
+=======
+>>>>>>> 1bcb6c512a16ec1dd67aba5336fc162ff18799f6
