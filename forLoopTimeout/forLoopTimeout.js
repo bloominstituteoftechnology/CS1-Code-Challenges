@@ -4,10 +4,14 @@
 // The output should be 1, 2, 3, .... 10. Right now it just prints 11.
 // I've been asked this three times in separate interviews.
 
+function setTimeoutFunk(i) {
+  setTimeout(function() {
+    console.log(i);
+  }, 0);
+}
+
 for (var i = 1; i <= 10; i++) {
-	setTimeout(function() {
+	setTimeoutFunk(i);
 		// From looking at the code you would assume it would print 1 - 10
-		// It doesn't.  Why?  How can you make it print 1 - 10.
-		console.log(i);
-	}, 0);
+		// It doesn't.  Why?  How can you make it print 1 - 10
 }
