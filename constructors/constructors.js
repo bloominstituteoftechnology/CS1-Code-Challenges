@@ -70,7 +70,7 @@ class Human extends Humanoid { // Human props relative to roll of dice
 class Elf extends Humanoid {
   constructor(props) {
     super(props);
-    this.state.languages = ['common', 'elvish'];
+    this.state.languages.push('common', 'elvish'); // not sure which is a better way...? maybe an object instead w/fluent/literate/illiterate/rudimentary/etc?
   }
 }
 class Orc extends Humanoid {
