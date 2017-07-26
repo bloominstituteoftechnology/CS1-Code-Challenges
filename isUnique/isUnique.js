@@ -4,7 +4,14 @@
 */
 
 const isUnique = (str) => {
-
+  const arr = str.split("");
+  for (let i = 0; i < arr.length; i++) {
+    let comp = arr[i];
+    for (let j = i++; j < arr.length; j++) {
+      if (arr[i] === arr[j]) return false;
+    }
+  }
+  return true;
 };
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true
