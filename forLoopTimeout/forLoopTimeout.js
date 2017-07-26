@@ -5,9 +5,14 @@
 // I've been asked this three times in separate interviews.
 
 for (var i = 1; i <= 10; i++) {
-	setTimeout(function() {
-		// From looking at the code you would assume it would print 1 - 10
-		// It doesn't.  Why?  How can you make it print 1 - 10.
-		console.log(i);
-	}, 0);
+  // console.log(i);
+    var wrap = function(i) {
+      setTimeout(function() { console.log(i); }, 0);
+    }
+    wrap(i);
+// 	setTimeout(function() { console.log(i); }, 0);
 }
+
+// so the problem is that once setTimeout is executed i will point
+// to 11 each time. To fix that you need to wrap setTimeout in
+// a function taking i as a parameter to pass it into setTimeout.
