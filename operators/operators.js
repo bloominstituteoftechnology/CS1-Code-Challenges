@@ -38,6 +38,4 @@ const modulo = (x, y) => {
   return absX;
 };
 
-  };
-
-  console.log(divide(100,5));
+console.log(divide(100,5));
