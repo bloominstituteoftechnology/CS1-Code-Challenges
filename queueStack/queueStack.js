@@ -7,10 +7,10 @@
    constructor() {
      this.storage = [];
    }
-   get size() { return this.storage.length }
-   add(anItem) { return this.storage.push(anItem) }
-   remove() { return this.storage.pop() }
-   get show() { return this.storage }
+   get size() { this.storage.length }
+   add(anItem) { this.storage.push(anItem) }
+   remove() { this.storage.pop() }
+   get show() { this.storage }
  }
 
  // TEST SUITE
