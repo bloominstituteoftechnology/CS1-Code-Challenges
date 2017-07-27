@@ -7,10 +7,11 @@
    constructor() {
      this.storage = [];
    }
-   get size() { this.storage.length }
-   add(anItem) { this.storage.push(anItem) }
-   remove() { this.storage.pop() }
-   get show() { this.storage }
+   get size() { return this.storage.length }
+   add(anItem) { return this.storage.push(anItem) }
+  //  set add(anItem) { this.storage.push(anItem) }
+   remove() { return this.storage.pop() }
+   get show() { return this.storage }
  }
 
  // TEST SUITE
@@ -18,7 +19,8 @@
  console.log(test);            // ---> PhatStack { storage: [] }
  console.log(test.size);       // ---> 0 ...or, without "get" ---> [Function: size]
  // console.log(test.size());     // ---> TypeError ...or, without "get" ---> 0
- test.add('stuff');             // add an item
+ test.add('stuff');             // add an item without setter
+ // test.add = 'stuff';           // WHY DOES THIS KILL MY get METHODS?????????????????????
  console.log(test.size);       // ---> 1
  console.log(test.show);       // ---> [ 'stuff' ]
  console.log(test.storage);    // ---> [ 'stuff' ] SAME
