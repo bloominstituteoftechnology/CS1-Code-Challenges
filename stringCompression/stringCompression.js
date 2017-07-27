@@ -6,27 +6,45 @@
 // You can assume the string has only uppercase and lowercase letters (a - z).
 
 const strCompression = (string) => {
-  const strMap = {};
-  const strArray = str.split('')
-  strArray.forEach((letter) => {
-    if (strMap[letter]) {
-      strMap[letter] += 1;
+  function stringCompression(string) {
+  const arr = [];
+  let count = 1;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === string[(i + 1)]) {
+      count++;
     } else {
-      strMap[letter] = 1;
+      arr.push(string[i]);
+      arr.push(count);
+      count = 1;
     }
-  });
-
-  const newString = JSON.stringify(Object.entries(strMap));
-  const re = /[^(\w\d)*]/g
-  const rem = newString.replace(re, '');
-
-
-  if (rem.length < string.length) {
-    return `compressed string: ${rem}`;
   }
-
-
-    return `compression not necessary: ${string}`;
+  if (arr.concat('').length < string.length) {
+    return arr.join('');
+  }
+  return string;
+};
+  // not working
+  // const strMap = {};
+  // const strArray = str.split('')
+  // strArray.forEach((letter) => {
+  //   if (strMap[letter]) {
+  //     strMap[letter] += 1;
+  //   } else {
+  //     strMap[letter] = 1;
+  //   }
+  // });
+  //
+  // const newString = JSON.stringify(Object.entries(strMap));
+  // const re = /[^(\w\d)*]/g
+  // const rem = newString.replace(re, '');
+  //
+  //
+  // if (rem.length < string.length) {
+  //   return `compressed string: ${rem}`;
+  // }
+  //
+  //
+  //   return `compression not necessary: ${string}`;
 }
 const str = 'aaabbbccc'
 const str1 = 'aabbcc'
