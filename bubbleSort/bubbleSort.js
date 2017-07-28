@@ -2,6 +2,7 @@ const bubbleSort = (arr) => {
   // compare first array element to second
   let first = arr[0];
   let second = arr[1];
+  // swap if 1st is greater than 2nd
   if (first > second) {
     arr[0] = second;
     arr[1] = first;
