@@ -9,9 +9,9 @@ const multiply = (x, y) => {
   if (y === 0) {
     return 0
   }
-  var product = x;
+  let product = x;
   while(y > 1) {
-    total += x;
+    product += x;
     y--
   }
   return product;
