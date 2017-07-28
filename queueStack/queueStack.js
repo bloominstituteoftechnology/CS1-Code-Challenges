@@ -8,7 +8,7 @@ class PhatStack {
     this.storage = [];
   }
   get size() { return this.storage.length }
-  set add(anItem) { this.storage.push(anItem) }
+  set add(anItem) { this.storage.push(anItem) } // <---------- USING THE SETTER
   remove() { return this.storage.pop() }
   get show() { return this.storage }
 }
@@ -21,11 +21,12 @@ class TwoStackQueueKungFu {
   set enqueue(something) {this.input.add = something}
 
   dequeue() {
-    // console.log(this.output.size);
     if (this.output.size === 0) {
       while (this.input.size) {
-        this.output.storage.push(this.input.storage.pop());
-        // console.log(this.output.storage);
+        this.output.storage.push(this.input.storage.pop()); // <---- THIS WORKS
+        // // WHY DOES CALLING THE PhatStack Setter Method NOT WORK? //////////
+        // // Error msg: "this.output.add is not a function"
+        // this.output.add(this.input.remove()); // <--- Setter method syntax
       }
     }
     console.log(testq.output.storage);
@@ -35,32 +36,32 @@ class TwoStackQueueKungFu {
   get showOutput() { return this.output.storage }
 }
 
-// QUEUE W/2 STACKS TEST SUITE
-const testq = new TwoStackQueueKungFu();
-console.log(testq);            // ---> TwoStackQueueKungFu { storage: [] }
-testq.enqueue = 'not';
-testq.enqueue = 'first';
-testq.enqueue = 'in';
-testq.enqueue = 'last';
-testq.enqueue = 'out';
-console.log(testq);            // ---> [ 'not', 'first', 'in', 'last', 'out' ]
-// console.log(testq.show);
-console.log(testq.dequeue());  // ---> not
-console.log(testq.dequeue());  // ---> first
-console.log(testq.dequeue());  // ---> in
-console.log(testq.dequeue());  // ---> last
-console.log(testq.dequeue());  // ---> out
-console.log(testq);            // ---> input and output: []
-testq.enqueue = 'first';
-testq.enqueue = 'in';
-testq.enqueue = 'first';
-testq.enqueue = 'out';
-console.log(testq);            // ---> [ 'first', 'in', 'first', 'out' ]
-console.log(testq.dequeue());  // ---> first
-console.log(testq.dequeue());  // ---> in
-console.log(testq.dequeue());  // ---> first
-console.log(testq.dequeue());  // ---> out
-console.log(testq);            // --->
+// // QUEUE W/2 STACKS TEST SUITE
+// const testq = new TwoStackQueueKungFu();
+// console.log(testq);            // ---> TwoStackQueueKungFu { storage: [] }
+// testq.enqueue = 'not';
+// testq.enqueue = 'first';
+// testq.enqueue = 'in';
+// testq.enqueue = 'last';
+// testq.enqueue = 'out';
+// console.log(testq);            // ---> [ 'not', 'first', 'in', 'last', 'out' ]
+// // console.log(testq.show);
+// console.log(testq.dequeue());  // ---> not
+// console.log(testq.dequeue());  // ---> first
+// console.log(testq.dequeue());  // ---> in
+// console.log(testq.dequeue());  // ---> last
+// console.log(testq.dequeue());  // ---> out
+// console.log(testq);            // ---> input and output: []
+// testq.enqueue = 'first';
+// testq.enqueue = 'in';
+// testq.enqueue = 'first';
+// testq.enqueue = 'out';
+// console.log(testq);            // ---> [ 'first', 'in', 'first', 'out' ]
+// console.log(testq.dequeue());  // ---> first
+// console.log(testq.dequeue());  // ---> in
+// console.log(testq.dequeue());  // ---> first
+// console.log(testq.dequeue());  // ---> out
+// console.log(testq);            // --->
 
 
 // // STACK TEST SUITE
