@@ -23,4 +23,22 @@
 
 const bubbleSort = (arr) => {
   //code here
+  let n = arr.length;
+  let temp;
+  
+    for(let i = 0; i < n; i++) {
+        for(let j = 1; j < (n - i); j++) {
+
+            if (arr[j - 1] > arr[j]) {
+                temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+            }
+
+        }
+    }
+  console.log(arr);
 };
+
+bubbleSort([2, 1, 3]);
+bubbleSort([4, 9, 3]);
