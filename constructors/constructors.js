@@ -23,47 +23,41 @@
  * application in Unity or another similar framework.
  */
 
- class NPC {
-  constructor() {
-    this.stats = {
-      health: 5,
-      strength: 5,
-      defense: 5,
-      speed: 5,
-      intelligence: 5
-    };
+class NPC {
+  constructor(options) {
+    this.hp = options.hp;
+    this.str = options.str;
+    this.def = options.def;
+    this.spd = options.spd;
   }
- }
+}
 
-  class Human {
-  constructor() {
-    this.job = {
-
-    };
-    this.stats = {
-      health: 10,
-      strength: 10,
-      defense: 10,
-      speed: 10,
-      intelligence: 10
-    };
+class Humanoid extends NPC {
+  constructor(options) {
+    super(options);
+    this.job = options.job;
   }
- }
+}
 
-   class Soldier extends Human {
-  constructor() {
-    super()
-      this.job.job = soldier
-      this.stats = {
-        health: 20
-        strength: 15
-        defense: 15
-        speed: 15
-        intelligence: 10
-      };
-    };
+class Human extends Humanoid {
+  constructor(options) {
+    super(options);
+    this.race = options.race;
   }
- }
+}
 
- Jeff = new Soldier();
- console.log(Jeff); 
+class Soldier extends Human {
+  constructor(options) {
+    super(options);
+    this.hp += 10;
+    };
+}
+
+ const jeff = new Soldier({
+  hp: 10,
+  str: 10,
+  def: 10,
+  spd: 10,
+  job: 'Baker'
+ });
+ console.log(jeff); 
