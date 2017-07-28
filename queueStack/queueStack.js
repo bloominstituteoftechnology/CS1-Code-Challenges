@@ -15,33 +15,52 @@ class PhatStack {
 
 class TwoStackQueueKungFu {
   constructor() {
-    this.lifo = new PhatStack();
-    this.fifo = new PhatStack();
+    this.input = new PhatStack();
+    this.output = new PhatStack();
   }
-  set enqueue(something) {this.lifo.add = something}
+  set enqueue(something) {this.input.add = something}
 
   dequeue() {
-    console.log(this.fifo.size);
-    if (this.fifo.size === 0) {
-      while (this.lifo.size) {
-        this.fifo.storage.push(this.lifo.storage.pop());
-        console.log(this.fifo.storage);
+    // console.log(this.output.size);
+    if (this.output.size === 0) {
+      while (this.input.size) {
+        this.output.storage.push(this.input.storage.pop());
+        // console.log(this.output.storage);
       }
     }
-    return this.fifo;
+    console.log(testq.output.storage);
+    return this.output.storage.pop();
   };
+
+  get showOutput() { return this.output.storage }
 }
 
-// TEST SUITE
+// QUEUE W/2 STACKS TEST SUITE
 const testq = new TwoStackQueueKungFu();
 console.log(testq);            // ---> TwoStackQueueKungFu { storage: [] }
+testq.enqueue = 'not';
 testq.enqueue = 'first';
 testq.enqueue = 'in';
 testq.enqueue = 'last';
 testq.enqueue = 'out';
-console.log(testq);            // ---> [ 'first', 'in', 'last', 'out' ]
-testq.dequeue();
-console.log(testq);            // ---> [ 'first', 'in', 'last', 'out' ]
+console.log(testq);            // ---> [ 'not', 'first', 'in', 'last', 'out' ]
+// console.log(testq.show);
+console.log(testq.dequeue());  // ---> not
+console.log(testq.dequeue());  // ---> first
+console.log(testq.dequeue());  // ---> in
+console.log(testq.dequeue());  // ---> last
+console.log(testq.dequeue());  // ---> out
+console.log(testq);            // ---> input and output: []
+testq.enqueue = 'first';
+testq.enqueue = 'in';
+testq.enqueue = 'first';
+testq.enqueue = 'out';
+console.log(testq);            // ---> [ 'first', 'in', 'first', 'out' ]
+console.log(testq.dequeue());  // ---> first
+console.log(testq.dequeue());  // ---> in
+console.log(testq.dequeue());  // ---> first
+console.log(testq.dequeue());  // ---> out
+console.log(testq);            // --->
 
 
 // // STACK TEST SUITE
