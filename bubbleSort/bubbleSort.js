@@ -1,18 +1,21 @@
 const bubbleSort = (arr) => {
-  // compare first array element to second
-  let first = arr[0];
-  let second = arr[1];
-  // swap if 1st is greater than 2nd
-  if (first > second) {
-    arr[0] = second;
-    arr[1] = first;
+  for (let i = 0; i < arr.length; i++) {
+    // compare first array element to second
+    let first = arr[i];
+    let second = arr[i + 1];
+    // swap if 1st is greater than 2nd
+    if (first > second) {
+      arr[i] = second;
+      arr[i + 1] = first;
+    }
+    console.log(arr);
   }
   return arr;
 };
 
 
-console.log(bubbleSort([ 2, 1, 3 ]))
-
+console.log('TEST01: ', bubbleSort([ 2, 1, 3 ])) // ---> [ 1, 2, 3 ]
+console.log('TEST02: ', bubbleSort([ 2, 1, 5, 4, 3 ])) // --->
 
 
 
