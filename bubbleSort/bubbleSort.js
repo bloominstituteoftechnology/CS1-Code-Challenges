@@ -24,25 +24,3 @@ const bubbleSort = (arr) => {
 console.log('TEST01: ', bubbleSort([ 2, 1, 3 ])) // ---> [ 1, 2, 3 ]
 console.log('TEST02: ', bubbleSort([ 2, 1, 5, 4, 3 ])) // ---> [ 1, 2, 3, 4, 5 ]
 console.log('TEST03: ', bubbleSort([ 99, 34, 87, 135, 8, 3, 7, 99, 101, 102345, 3657, 2, 1, 5, 4, 3 ])) // ---> [ 1, 2, 3, 4, 5 ]
-
-
-// const bubbleSort = (arr) => {
-//   for (let i = 0; i < arr.length; i++) {
-//     let modify = 0;
-//     let current = arr[i];
-//     let next = arr[i + 1];
-//     while (next !== undefined) {
-//       console.log(`BEFORE: current index value: ${current}; next index: ${next}`);
-//       if (next < current) {
-//           arr[i] = next;
-//           arr[i = 1] = current;
-//           console.log(`AFTER: current index value: ${current}; next index: ${next}`);
-//           modify++;
-//       }
-//     if (modify !== 0) {
-//       // bubbleSort(arr);
-//       console.log('more to sort', arr)
-//     }
-//     }
-//   } return arr;
-// };
