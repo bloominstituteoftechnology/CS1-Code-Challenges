@@ -1,4 +1,7 @@
 const bubbleSort = (arr) => {
+  // mod var to track if sorting done
+  let modify = 0;
+  // compare first/second pairs per each index - maybe current/next is a better name?
   for (let i = 0; i < arr.length; i++) {
     // compare first array element to second
     let first = arr[i];
@@ -7,8 +10,9 @@ const bubbleSort = (arr) => {
     if (first > second) {
       arr[i] = second;
       arr[i + 1] = first;
+      modify++;
     }
-    console.log(arr);
+    console.log(arr, modify);
   }
   return arr;
 };
