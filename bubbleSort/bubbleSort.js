@@ -12,15 +12,18 @@ const bubbleSort = (arr) => {
       arr[i + 1] = first;
       modify++;
     }
-    console.log(arr, modify);
+    // console.log(arr, modify);
+    if (modify !== 0) {
+      bubbleSort(arr)
+    }
   }
   return arr;
 };
 
 
 console.log('TEST01: ', bubbleSort([ 2, 1, 3 ])) // ---> [ 1, 2, 3 ]
-console.log('TEST02: ', bubbleSort([ 2, 1, 5, 4, 3 ])) // --->
-
+console.log('TEST02: ', bubbleSort([ 2, 1, 5, 4, 3 ])) // ---> [ 1, 2, 3, 4, 5 ]
+console.log('TEST03: ', bubbleSort([ 99, 34, 87, 135, 8, 3, 7, 99, 101, 102345, 3657, 2, 1, 5, 4, 3 ])) // ---> [ 1, 2, 3, 4, 5 ]
 
 
 // const bubbleSort = (arr) => {
