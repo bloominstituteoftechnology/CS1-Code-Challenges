@@ -17,7 +17,18 @@
 		 }
 		 return this.stack.pop();
 	 }
-	 size() {
-		 this.size = 0;
-	 }
+     size() {
+       this.size = 0;
+     }
  }
+
+ const stack = new Stack;
+
+stack.add(25);
+stack.add(5);
+stack.add(2);
+stack.add(252);
+stack.add(255);
+console.log(stack);
+stack.remove()
+console.log(stack);
