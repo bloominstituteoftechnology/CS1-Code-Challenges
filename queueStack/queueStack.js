@@ -1,7 +1,7 @@
 /**
  * Write a stack class. Once you're done,
  * implement a queue using two stacks.
-    Stack=(First In Last Out) & Queue=(First In First Out)
+    Stack=(Last In First Out) & Queue=(First In First Out)
 */
 class PhatStack {
   constructor() {
@@ -13,40 +13,36 @@ class PhatStack {
   get show() { return this.storage }
 }
 
-class TwoStackQueueKungFu extends PhatStack {
+class TwoStackQueueKungFu {
   constructor() {
-    super();// dooper
+    this.lifo = new PhatStack();
+    this.fifo = new PhatStack();
   }
-  enqueue(something) {this.add = [something]}
-  dequeue() {return this.storage.shift();} // HOW TO IMPLEMENT WITH TWO STACKS???????
+  set enqueue(something) {this.lifo.add = something}
+
+  dequeue() {
+    console.log(this.fifo.size);
+    if (this.fifo.size === 0) {
+      while (this.lifo.size) {
+        this.fifo.storage.push(this.lifo.storage.pop());
+        console.log(this.fifo.storage);
+      }
+    }
+    return this.fifo;
+  };
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // TEST SUITE
 const testq = new TwoStackQueueKungFu();
 console.log(testq);            // ---> TwoStackQueueKungFu { storage: [] }
-console.log(testq.size);        // ---> 0  (inherited method)
-console.log(testq.show);       // ---> [] (inherited method)
-testq.add = 'first';
-console.log(testq.size);        // ---> 1
-console.log(testq.show);        // ---> [ 'first' ]
-testq.add = 'in';
-testq.add = 'last';
-testq.add = 'out';
-console.log(testq);
-console.log(testq.show);        // ---> [ 'first', 'in', 'last', 'out' ]
+testq.enqueue = 'first';
+testq.enqueue = 'in';
+testq.enqueue = 'last';
+testq.enqueue = 'out';
+console.log(testq);            // ---> [ 'first', 'in', 'last', 'out' ]
 testq.dequeue();
-console.log(testq.show);        // ---> [ 'first', 'in', 'last', 'out' ]
+console.log(testq);            // ---> [ 'first', 'in', 'last', 'out' ]
+
 
 // // STACK TEST SUITE
 // const test = new PhatStack(); // a new instance of the class
