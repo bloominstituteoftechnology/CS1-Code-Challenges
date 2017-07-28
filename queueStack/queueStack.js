@@ -21,15 +21,30 @@ class TwoStackQueueKungFu extends PhatStack {
   dequeque() {return this.storage.shift();} // HOW TO IMPLEMENT WITH TWO STACKS???????
 }
 
+
+
+
+
+
+
+
+
+
+
+
 // TEST SUITE
 const testq = new TwoStackQueueKungFu();
 console.log(testq);            // ---> TwoStackQueueKungFu { storage: [] }
-console.log(testq.size)        // ---> 0  (inherited method)
-console.log(testq.show)        // ---> [] (inherited method)
-testq.add = 'cute'
-console.log(testq.size)        // ---> 1
-console.log(testq.show)        // ---> [ 'cute' ]
-
+console.log(testq.size);        // ---> 0  (inherited method)
+console.log(testq.show);       // ---> [] (inherited method)
+testq.add = 'first';
+console.log(testq.size);        // ---> 1
+console.log(testq.show);        // ---> [ 'first' ]
+testq.add = 'in';
+testq.add = 'last';
+testq.add = 'out';
+console.log(testq); 
+console.log(testq.show);        // ---> [ 'first', 'in', 'last', 'out' ]
 
 // // STACK TEST SUITE
 // const test = new PhatStack(); // a new instance of the class
