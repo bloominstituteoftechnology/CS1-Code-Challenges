@@ -16,8 +16,9 @@ class PhatStack {
 class TwoStackQueueKungFu extends PhatStack {
   constructor() {
     super();// dooper
+
   }
-  enqueue(something) {this.add = [something]}
+  enqueue(something) {this.add(something)}
   dequeque() {return this.storage.shift();} // HOW TO IMPLEMENT WITH TWO STACKS???????
 }
 
@@ -37,13 +38,13 @@ const testq = new TwoStackQueueKungFu();
 console.log(testq);            // ---> TwoStackQueueKungFu { storage: [] }
 console.log(testq.size);        // ---> 0  (inherited method)
 console.log(testq.show);       // ---> [] (inherited method)
-testq.add = 'first';
+testq.enqueue = 'first';
 console.log(testq.size);        // ---> 1
 console.log(testq.show);        // ---> [ 'first' ]
-testq.add = 'in';
-testq.add = 'last';
-testq.add = 'out';
-console.log(testq); 
+testq.enqueue = 'in';
+testq.enqueue = 'last';
+testq.enqueue = 'out';
+console.log(testq);
 console.log(testq.show);        // ---> [ 'first', 'in', 'last', 'out' ]
 
 // // STACK TEST SUITE
