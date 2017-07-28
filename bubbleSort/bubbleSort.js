@@ -1,8 +1,10 @@
 const bubbleSort = (arr) => {
   // compare first array element to second
-  if (arr[0] > arr[1]) {
-    arr[0] = arr[1];
-    arr[1] = arr[0];
+  let first = arr[0];
+  let second = arr[1];
+  if (first > second) {
+    arr[0] = second;
+    arr[1] = first;
   }
   return arr;
 };
