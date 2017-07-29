@@ -4,7 +4,7 @@
 - You will only need to run this step once 
 
 
-1. git remote add upstream https://github.com/ryanhca/CS1-Code-Challenges.git
+1. git remote add upstream https://github.com/LambdaSchool/CS1-Code-Challenges.git
 
 - To get the changes to the repo each day run this
 
