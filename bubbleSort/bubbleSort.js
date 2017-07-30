@@ -81,6 +81,7 @@ console.log(`TEST #6   SORTED:  ${bubbleSort(test6)}\n`);
 ANALYSIS:
 1. Order of complexity: Quadratic with a recursive call to a for loop?
 2. Other edge cases?
+  -     `if (current > next)` should I and how would I check for the undefined value of array[n + 1]?
 3. This algorithm modifies the original array. How to not alter the original?
   - let sorting = arr.slice(0);
   - Tried this and replacing subsequent arr variables, but it made an unending loop?
