@@ -77,11 +77,27 @@ console.log(`TEST #6   SORTED:  ${bubbleSort(test6)}\n`);
 
 
 /*
+
 ANALYSIS:
-1. This algorithm modifies the original array. How to not alter the original?
+1. Order of complexity: Quadratic with a recursive call to a for loop?
+2. Other edge cases?
+3. This algorithm modifies the original array. How to not alter the original?
   - let sorting = arr.slice(0);
   - Tried this and replacing subsequent arr variables, but it made an unending loop?
-2. Order of complexit: Quadratic with a recursive call to a for loop?
-3. Edge cases? Negative numbers, decimals, irrationals, expressions?
+  - slice makes a non destructive copy... WHY? OH, WHY??????
+    ```console
+    $  node
+      > x = [1, 2, 3, 4]
+      [ 1, 2, 3, 4 ]
+      > y = x.slice(0)
+      [ 1, 2, 3, 4 ]
+      > y[1] = 99
+      99
+      > x
+      [ 1, 2, 3, 4 ]
+      > y
+      [ 1, 99, 3, 4 ]
+    ```
+  - splice made it so nothing returns... :\
 
 */
