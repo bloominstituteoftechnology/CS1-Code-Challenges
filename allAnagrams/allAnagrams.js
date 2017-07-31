@@ -15,9 +15,36 @@
 // OUTPUT:   array of string permutations
 
 // SOLUTION: slice off the first letter, swap the next two letters, recombine the swapped letters with the first letter... Hmmm...
+              slice vs splice? slice doesn't change original, splice does.
 
 */
 
-cont allAnagrams = (str) => {
-
+const allAnagrams = (str) => {
+  x = []
+  if (str.length === 0) {
+    x.push(str);
+    return x;
+  };
+  if (str.length === 1) {
+    x.push(str);
+    return `one character is already all anagram permutations: ${x}`;
+  };
+  if (str.length === 2 && str[0] != str [1]) {
+    str[0] = str[1];
+    str[1] = str[0];
+    x.push(str);
+    return `swapped: ${x}`;
+  } else {
+    x.push(str);
+    return `there's nothing to do with: ${x}`;
+  };
 }
+
+// TEST SUITE
+// Empty string or one character
+const emptyString = ''
+console.log(allAnagrams(emptyString));
+console.log(allAnagrams('a'));
+// Two character string
+console.log(allAnagrams('aa'));
+console.log(allAnagrams('ab'));
