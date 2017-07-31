@@ -41,9 +41,10 @@ const allAnagrams = (str) => {
 }
 
 // TEST SUITE
-// Empty string or one character
+// Empty string
 const emptyString = ''
 console.log(allAnagrams(emptyString));
+// One character
 console.log(allAnagrams('a'));
 // Two character string
 console.log(allAnagrams('aa'));
