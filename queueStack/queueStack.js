@@ -3,7 +3,7 @@
  * implement a queue using two stacks.
  */
 class Stack {
-  constructor(node) {
+  constructor() {
     this.stack = [],
     this.length = 0
   }
@@ -12,6 +12,9 @@ class Stack {
     this.length++;
   }
   remove() {
+    if (this.stack.length === 0) {
+      return null;
+    }
     this.length--;
     return this.stack.pop();
   }
@@ -21,8 +24,8 @@ class Stack {
 }
 
 class Queue {
-  constructor(node) {
-    this.in = new Stack(node),
+  constructor() {
+    this.in = new Stack(),
     this.out = new Stack(),
     this.length = 0;
   }
@@ -30,14 +33,24 @@ class Queue {
     this.in.add(node);
     this.length++;
   }
+  // remove doesn't work --> look at why
   remove(){
     if (this.out.size === 0) {
       while (this.in.size > 0){
         this.out.add(this.in.remove());
       }
-    this.length--,
-    this.out.remove;
+    this.length--;
+    return this.out.remove();
     }
+  }
+  // dequeue does work --> Tai's lecture
+  dequeue() {
+    if (this.out.length === 0) {
+      for (let i = 0; i < this.in.length; i++){
+        this.out.add(this.in.remove());
+      }
+    }
+    return this.out.remove()
   }
 }
 
