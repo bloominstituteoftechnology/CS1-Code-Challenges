@@ -1,4 +1,4 @@
-// Code Challenge # 17
+// Code Challenge # 16
 
 /**
  * Given a single input string, write a function that produces all possible anagrams
