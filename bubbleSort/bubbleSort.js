@@ -55,24 +55,24 @@ console.log(`TEST #3 UNSORTED:  ${test3}`);
 console.log(`TEST #3   SORTED:  ${bubbleSort(test3)}\n`);
 // ---> [ 1, 2, 3, 3, 4, 5, 7, 8, 34, 87, 99, 99, 101, 135, 3657, 102345 ]
 
-// EDGE CASE HANDLING?
-// NEGATIVE INTEGERS
-const test4 = [ 3, 2, 1, -1, 0 ]
-console.log(`TEST #4 UNSORTED:  ${test4}`);
-console.log(`TEST #4   SORTED:  ${bubbleSort(test4)}\n`);
-// ---> [ -1, 0, 1, 2, 3 ]
-
-// DECIMALS
-const test5 = [ 3.2, -2.5, 1, -1, 0.32 ]
-console.log(`TEST #5 UNSORTED:  ${test5}`);
-console.log(`TEST #5   SORTED:  ${bubbleSort(test5)}\n`);
-// ---> [ -2.5, -1, 0.32, 1, 3.2 ]
-
-// IRRATIONALS & EXPRESSIONS
-const test6 = [ Math.PI, -2.5, 1, ( Math.E - 1 ), 0.32 ]
-console.log(`TEST #6 UNSORTED:  ${test6}`);
-console.log(`TEST #6   SORTED:  ${bubbleSort(test6)}\n`);
-// ---> [ -2.5, 0.32, 1, 1.718281828459045, 3.141592653589793 ]
+// // EDGE CASE HANDLING?
+// // NEGATIVE INTEGERS
+// const test4 = [ 3, 2, 1, -1, 0 ]
+// console.log(`TEST #4 UNSORTED:  ${test4}`);
+// console.log(`TEST #4   SORTED:  ${bubbleSort(test4)}\n`);
+// // ---> [ -1, 0, 1, 2, 3 ]
+//
+// // DECIMALS
+// const test5 = [ 3.2, -2.5, 1, -1, 0.32 ]
+// console.log(`TEST #5 UNSORTED:  ${test5}`);
+// console.log(`TEST #5   SORTED:  ${bubbleSort(test5)}\n`);
+// // ---> [ -2.5, -1, 0.32, 1, 3.2 ]
+//
+// // IRRATIONALS & EXPRESSIONS
+// const test6 = [ Math.PI, -2.5, 1, ( Math.E - 1 ), 0.32 ]
+// console.log(`TEST #6 UNSORTED:  ${test6}`);
+// console.log(`TEST #6   SORTED:  ${bubbleSort(test6)}\n`);
+// // ---> [ -2.5, 0.32, 1, 1.718281828459045, 3.141592653589793 ]
 
 
 
