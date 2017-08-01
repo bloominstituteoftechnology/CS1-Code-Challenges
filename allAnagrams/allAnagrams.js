@@ -17,6 +17,8 @@
 // SOLUTION: slice off the first letter, swap the next two letters, recombine the swapped letters with the first letter... Hmmm...
               slice vs splice? slice doesn't change original, splice does.
 
+// After looking at brute solutions, it seems there is a factorial operation going on here such that a string of 5 characters would have 5! solutions...
+// hmmm!
 */
 
 const allAnagrams = (str) => {
