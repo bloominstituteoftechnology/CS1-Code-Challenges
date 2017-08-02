@@ -12,5 +12,29 @@
 
 const insertionSort = (array) => {
   // Your code goes here. Feel free to add helper functions if needed.
+  let tempNum;
+  if (array[1] < array[0]) {
+    tempNum = array[1];
+    array[1] = array [0];
+    array[0] = tempNum;
+  }
+  for (i = 2; i < array.length; i++) {
+    tempNum = array[i];
+    let j = 0;
+    let x = i;
+    let y = i - 1;
+    while (j <= i) {
+      if (array[i] < array[j]) {
+        while (y >= j) {
+          array[x] = array [y];
+          x--;
+          y--;
+        }
+        array[j] = tempNum;
+      } else {
+        j++
+      }
+    }
+  }
   return array;
 };
