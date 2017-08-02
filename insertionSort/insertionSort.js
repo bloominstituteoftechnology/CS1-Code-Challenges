@@ -12,5 +12,18 @@
 
 const insertionSort = (array) => {
   // Your code goes here. Feel free to add helper functions if needed.
+  for (let i = 0; i < array.length; i++) {
+    let tmp = array[i]; //4
+    let j = i - 1; // 3
+
+    while (j >= 0 && array[j] > tmp) {
+      array[j + 1] = array[j];
+      j--; // j = 2
+    }
+    array[j + 1] = tmp;
+  }
   return array;
 };
+
+const array = [2, 1, 3, 7, 4, 2, 9, 3, 8];
+console.log(insertionSort(array));
