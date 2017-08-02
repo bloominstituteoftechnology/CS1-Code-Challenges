@@ -13,10 +13,11 @@
 
 const insertionSort = (array) => {
   for(let i = 0; i < array.length; i++) {
+    // console.log('step', i, array);
     let temp = array[i];
     let j = i - 1;
     while (j >= 0 && array[j] > temp) {
-      console.log(temp, array);
+      // console.log('step', i, j, array);
       array[j + 1] = array[j];
       j--;
     }
@@ -28,4 +29,4 @@ const insertionSort = (array) => {
 
 // TEST SUITE
 // console.log(insertionSort([2, 1, 3, 7, 4, 2, 9, 3, 8])); // yields [1, 2, 2, 3, 3, 4, 7, 8, 9]
-console.log(insertionSort([9, 8, 7, 6, 5, 4, 3, 2, 1])); // yields [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log("Tada:", insertionSort([9, 8, 7, 6, 5, 4, 3, 2, 1, ])); // yields [1, 2, 2, 3, 3, 4, 7, 8, 9]
