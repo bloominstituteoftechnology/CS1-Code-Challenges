@@ -19,46 +19,58 @@
 
 // After looking at brute solutions, it seems there is a factorial operation going on here such that a string of 5 characters would have 5! solutions...
 // hmmm!
+// get the first letter and use the length of the string to slice the remainder of the string, as the for loop continues
 */
 
+
+
+
 const allAnagrams = (str) => {
-  arr = str.split('');
 
+  if (str.length < 2) return str;
 
+  const result = [];
 
-  return str, arr;
+  for (let i = 0; i < str.length; i++) {
+    let firstLetter = str[i];
+    let restOfString = str.slice(0, i) + str.slice(i + 1, str.length);
+
+    for (let sub of allAnagrams(restOfString)) {
+      result.push(firstLetter + sub);
+    }
+  }
+  return result;
 }
 
-// const allAnagrams = (str) => {
-//   x = []
-//   if (str.length === 0) {
-//     x.push(str);
-//     return x;
-//   };
-//   if (str.length === 1) {
-//     x.push(str);
-//     return `one character is already all anagram permutations: ${x}`;
-//   };
-//   if (str.length === 2 && str[0] != str [1]) {
-//     str[0] = str[1];
-//     str[1] = str[0];
-//     x.push(str);
-//     return `I took your ${str} and swapped it: ${x}`; // <--- oh, ha... yeah...
-//   } else {
-//     x.push(str);
-//     return `there's nothing to do with: ${x}`;
-//   };
-// }
+console.log(allAnagrams('abc'));
 
-// TEST SUITE
-// Empty string
-const emptyString = ''
-console.log(allAnagrams(emptyString));
-// One character
-console.log(allAnagrams('a'));
-// Two character string
-console.log(allAnagrams('aa'));
-console.log(allAnagrams('ab'));
+
+
+
+
+
+
+
+// const result = [], temp = [];
+//
+// allAnagrams = (str) => {
+//   const chars = str.split('');
+//
+//   for (let i = 0; i < chars.length; i++) {
+//     const subStr = chars.splice(i, 1);
+//     temp.push(subStr);
+//     if (chars.length == 0)
+//       result[result.length] = temp.join('');
+//     allAnagrams(chars.join(''));
+//     chars.splice(i, 0, subStr);
+//     temp.pop();
+//   }
+//   return result
+// };
+//
+//
+// console.log(allAnagrams('abc'));
+
 
 
 // FACTORIAL
