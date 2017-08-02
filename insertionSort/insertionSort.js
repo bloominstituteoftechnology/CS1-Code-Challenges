@@ -5,6 +5,7 @@
  * It takes each element from the input and finds the spot, up to the current point,
  * where that element belongs. It does this until it gets to the end of the array.
  * https://en.wikipedia.org/wiki/Insertion_sort
+  - complexity O(n^2)
  * https://www.khanacademy.org/computing/computer-science/algorithms#insertion-sort
  **/
 
