@@ -20,6 +20,8 @@
 // After looking at brute solutions, it seems there is a factorial operation going on here such that a string of 5 characters would have 5! solutions...
 // hmmm!
 // get the first letter and use the length of the string to slice the remainder of the string, as the for loop continues
+
+// To deduplicate, just new Set(array of anagrams)
 */
 
 
