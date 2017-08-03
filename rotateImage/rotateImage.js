@@ -45,6 +45,27 @@ console.log(rotateImage([
 ]
 ));
 
+// Not quite
+const rotateImageInPlace = (arr) => {
+  const len = arr.length;
+  // rotation = Array(len).fill().map(()=> []);
+  for (let col = 0; col < len; col++) {
+    for (let row = 0; row < len; row ++) {
+      arr[col].push(arr[row][col]);
+    }
+  }
+  return arr;
+}
+
+// 4x4 array
+console.log(rotateImageInPlace([
+  [ 0, 1, 2, 3 ],
+  [ 0, 1, 2, 3 ],
+  [ 0, 1, 2, 3 ],
+  [ 0, 1, 2, 3 ]
+]
+));
+
 /*
 INPUT: (9x9 image matrix)
 const exampleImageArray = [
