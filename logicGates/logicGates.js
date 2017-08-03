@@ -26,8 +26,7 @@ const NAND = (x, y) => {
 	// You can use whatever JS operators that you would like: &&, ||, !
   if ( !(x && y) ) {
     return 1;
-  }
-  return 0;
+  } return 0;
 };
 console.log('NAND');
 console.log(NAND(true, true));   // ---> 0
@@ -55,8 +54,16 @@ console.log(NOT(false));   // ---> 1
 const AND = (x, y) => {
 	// Do not use &&, ||, or !
 	// You can use any of the functions that you have already written
-  
+  if (NAND(x, y)) {
+    return 0;
+  } return 1;
 };
+console.log('AND');
+console.log(AND(true, true));   // ---> 1
+console.log(AND(true, false));  // ---> 0
+console.log(AND(false, true));  // ---> 0
+console.log(AND(false, false)); // ---> 0
+
 
 // INclusive OR
 // T || T ---> T
