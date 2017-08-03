@@ -24,12 +24,16 @@
 // !(F && F) ---> T
 const NAND = (x, y) => {
 	// You can use whatever JS operators that you would like: &&, ||, !
-  if (!(x && y)) {
-    return
+  if ( !(x && y) ) {
+    return 1;
   }
+  return 0;
 };
 
-console.log(NAND(1, 0));
+console.log(NAND(true, true));   // ---> 0
+console.log(NAND(true, false));  // ---> 1
+console.log(NAND(false, true));  // ---> 1
+console.log(NAND(false, false)); // ---> 1
 
 
 // Not operator
