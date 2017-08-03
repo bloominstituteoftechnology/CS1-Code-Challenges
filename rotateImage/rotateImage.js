@@ -7,6 +7,9 @@
 // corresponding index value in an array, so row 1-9 col (index) 0 become an array,
 // then row1-9 col (index) 1 and so on.
 
+
+// this seems to only work for square matrixes
+// no idea how I'd do it in place
 const rotateImage = (arr) => {
   const len = arr.length;
   rotation = Array(len).fill().map(()=> []);
@@ -18,6 +21,7 @@ const rotateImage = (arr) => {
   return rotation;
 }
 
+// 10x10 array
 console.log(rotateImage([
   [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
   [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
@@ -28,6 +32,16 @@ console.log(rotateImage([
   [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
   [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
   [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+  [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+]
+));
+
+// 4x4 array
+console.log(rotateImage([
+  [ 0, 1, 2, 3 ],
+  [ 0, 1, 2, 3 ],
+  [ 0, 1, 2, 3 ],
+  [ 0, 1, 2, 3 ]
 ]
 ));
 
