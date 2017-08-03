@@ -11,14 +11,25 @@
  * All functions should return a 1 for true and a 0 for false.
  */
 
-// (Not And) operator
-// T !&& T ---> T
-// T !&& F ---> F
-// F !&& T ---> F
-// F !&& F ---> F
+// phi AND psi
+// (T && T) ---> T
+// (T && F) ---> F
+// (F && T) ---> F
+// (F && F) ---> F
+//
+// NOT (phi AND psi) operator
+// !(T && T) ---> F
+// !(T && F) ---> T
+// !(F && T) ---> T
+// !(F && F) ---> T
 const NAND = (x, y) => {
 	// You can use whatever JS operators that you would like: &&, ||, !
+  if (!(x && y)) {
+    return
+  }
 };
+
+console.log(NAND(1, 0));
 
 
 // Not operator
