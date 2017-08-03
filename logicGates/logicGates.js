@@ -10,10 +10,10 @@
  */
 
 // (Not And) operator
-// T !&& T
-// T !&& F
-// F !&& T
-// F !&& F
+// T !&& T ---> T
+// T !&& F ---> F
+// F !&& T ---> F
+// F !&& F ---> F
 const NAND = (x, y) => {
 	// You can use whatever JS operators that you would like: &&, ||, !
 };
