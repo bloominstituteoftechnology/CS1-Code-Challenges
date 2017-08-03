@@ -1,6 +1,4 @@
-// cc19 logicGates
-
-/*
+/* cc19 logicGates
  * For this coding challenge you will be recreating low level logic gates.
  * You will first create the NAND function and then you will create
  * NOT, OR, AND, and XOR all using the NAND function that you created.
@@ -46,7 +44,7 @@ console.log('NOT')
 console.log(NOT(true));   // ---> 0
 console.log(NOT(false));   // ---> 1
 
-// AND
+// phi AND psi
 // T && T ---> T
 // T && F ---> F
 // F && T ---> F
@@ -65,7 +63,7 @@ console.log(AND(false, true));  // ---> 0
 console.log(AND(false, false)); // ---> 0
 
 
-// INclusive OR
+// INclusive OR: phi OR psi
 // T || T ---> T
 // T || F ---> T
 // F || T ---> T
@@ -84,7 +82,7 @@ console.log(OR(false, true));  // ---> 1
 console.log(OR(false, false)); // ---> 0
 
 
-// EXclusive OR
+// EXclusive OR: phi XOR psi
 // T X T ---> F
 // T X F ---> T
 // F X T ---> T
