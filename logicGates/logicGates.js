@@ -83,10 +83,10 @@ console.log(OR(false, false)); // ---> 0
 
 
 // EXclusive OR: phi XOR psi
-// T X T ---> F
-// T X F ---> T
-// F X T ---> T
-// F X F ---> F
+// T XOR T ---> F
+// T XOR F ---> T
+// F XOR T ---> T
+// F XOR F ---> F
 const XOR = (x, y) => {
 	// Do not use ||, &&, or !
 	// You can use any of the functions that you have already written
