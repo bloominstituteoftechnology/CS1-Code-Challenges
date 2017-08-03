@@ -73,7 +73,16 @@ console.log(AND(false, false)); // ---> 0
 const OR = (x, y) => {
 	// Do not use ||, &&, or !
 	// You can use any of the functions that you have already written
+  if (x) return 1;
+  if (y) return 1;
+  return 0;
 };
+console.log('OR');
+console.log(OR(true, true));   // ---> 1
+console.log(OR(true, false));  // ---> 1
+console.log(OR(false, true));  // ---> 1
+console.log(OR(false, false)); // ---> 0
+
 
 // EXclusive OR
 // T X T ---> F
@@ -83,4 +92,11 @@ const OR = (x, y) => {
 const XOR = (x, y) => {
 	// Do not use ||, &&, or !
 	// You can use any of the functions that you have already written
+  if (x === y) return 0;
+  return 1;
 };
+console.log('XOR');
+console.log(XOR(true, true));   // ---> 0
+console.log(XOR(true, false));  // ---> 1
+console.log(XOR(false, true));  // ---> 1
+console.log(XOR(false, false)); // ---> 0
