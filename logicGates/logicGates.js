@@ -29,7 +29,7 @@ const NAND = (x, y) => {
   }
   return 0;
 };
-
+console.log('NAND');
 console.log(NAND(true, true));   // ---> 0
 console.log(NAND(true, false));  // ---> 1
 console.log(NAND(false, true));  // ---> 1
@@ -41,7 +41,11 @@ console.log(NAND(false, false)); // ---> 1
 // !F --> T
 const NOT = (n) => {
 	// Do not use !, &&, or ||
+  return (NAND(n, n));
 };
+console.log('NOT')
+console.log(NOT(true));   // ---> 0
+console.log(NOT(false));   // ---> 1
 
 // AND
 // T && T ---> T
@@ -51,6 +55,7 @@ const NOT = (n) => {
 const AND = (x, y) => {
 	// Do not use &&, ||, or !
 	// You can use any of the functions that you have already written
+  
 };
 
 // INclusive OR
