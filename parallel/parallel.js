@@ -35,10 +35,24 @@
  *  (results) => {
  *    // the results array will equal ['one','two'] even though
  *    // the second function had a shorter timeout.
-      console.log(results); // ['one', 'two']
+ *   console.log(results); // ['one', 'two']
  * });
  *
  *
  */
 
 // uhh....
+
+parallel(
+  // PARAMETER 1
+  [ function(callback){
+      setTimeout(function() { callback('one'); }, 200);
+    },
+    function(callback){
+      setTimeout(function(){ callback('two'); }, 100);
+    }],
+  // PARAMETER 2 - optional callback
+  // the results array will equal ['one','two'] even though
+  // the second function had a shorter timeout.
+  (results) => { console.log(results); } // ~~> ['one', 'two']
+);
