@@ -9,6 +9,11 @@
  * All functions should return a 1 for true and a 0 for false.
  */
 
+/* TODO:
+  1. refactor with ternary operator
+  2. complete each with NAND
+*/
+
 // phi AND psi
 // (T && T) ---> T
 // (T && F) ---> F
@@ -34,8 +39,8 @@ console.log(NAND(false, false)); // ---> 1
 
 
 // Not operator
-// !T --> F
-// !F --> T
+// !T ---> F
+// !F ---> T
 const NOT = (n) => {
 	// Do not use !, &&, or ||
   return (NAND(n, n));
