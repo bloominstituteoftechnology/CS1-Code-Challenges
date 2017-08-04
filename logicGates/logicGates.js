@@ -11,23 +11,28 @@
 
 const NAND = (x, y) => {
 	// You can use whatever JS operators that you would like: &&, ||, !
+  return !(x && y)
 };
 
 const NOT = (n) => {
 	// Do not use !, &&, or ||
+  return NAND(n, n);
 };
 
 const AND = (x, y) => {
 	// Do not use &&, ||, or !
 	// You can use any of the functions that you have already written
+  return NOT(NAND(x, y));
 };
 
 const OR = (x, y) => {
 	// Do not use ||, &&, or !
 	// You can use any of the functions that you have already written
+  return NAND(NOT(x, x), NOT(y, y))
 };
 
 const XOR = (x, y) => {
 	// Do not use ||, &&, or !
 	// You can use any of the functions that you have already written
+  
 };
