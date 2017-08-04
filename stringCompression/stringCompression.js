@@ -5,5 +5,11 @@
 // your method should return the original string.
 // You can assume the string has only uppercase and lowercase letters (a - z).
 const stringCompression = (str) => {
-
+  let charcounts = 0;
+  let currentchar = null;
+  let compressedStr = '';
+  while (compressedStr < str) {
+    
+  }
+  return str;
 }

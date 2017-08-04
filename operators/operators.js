@@ -10,15 +10,17 @@
    else
       return(y + multiply(x-1, y));
  };
- const divide = (x, y) => {
-   if (y === 1)
-    return(x)
- else
-    return(x + divide(x-1, (-y));
+
+const divide = (x, y) => {
+  if (x === y) 
+   return (1);
+  else  {
+    return  (y - divide (x-1, y));
+  }
 };
  const modulo = (x, y) => {
    return x % y
  };
  console.log(multiply (5,4));
- console.log(divide (10, 5));
+ console.log(divide (20, 5));
  console.log(modulo (10, 3));

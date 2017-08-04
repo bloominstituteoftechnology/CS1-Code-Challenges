@@ -9,27 +9,32 @@
  */
  class Array {
    constructor() {
-     const array = [];
+     this.array = {};
+     this.length = 0;
    }
 
    push() {
-     return this.index++;
+     this.array[this.length];
+     this.length++;
    }
    pop() {
-     return this.index--;
+     delete this.array[this.length-1];
+     this.index--;
+     return this.array[this.length-1];
    }
    get(index) {
      return this.array[index];
    }
    delete(index) {
-     if (this.index === index) {
-       this.index = this.index - 1;
+     delete this.array[index];
+     for (let i = index; i <= this.length; i++) {
+       this.array[i] = this.array[i + 1];
      }
-     return this.array.shift();
+     this.length--;
    }
  }
 
- const array = new Array;
+ const array = new Array(3);
  array.push(1);
  array.push(3);
  array.push(5);
