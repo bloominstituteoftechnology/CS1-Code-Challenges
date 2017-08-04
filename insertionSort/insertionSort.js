@@ -12,5 +12,22 @@
 
 const insertionSort = (array) => {
   // Your code goes here. Feel free to add helper functions if needed.
+  // if (array.length === 0) {
+  //   return 'Nothing to sort, the array is empty'
+  // };
+  for(let i = 1; i < array.length; i++) {
+    let key = array[i];
+    let j = i - 1;
+    while (j >= 0 && array[j] > key) {
+      array[j+1] = array[j];
+      j = j -1;
+    }
+    array[j + 1] = key;
+   // console.log(array);
+  }
   return array;
 };
+
+console.log(insertionSort([2, 1, 3, 7, 4, 2, 9, 3, 8])); // [ 1, 2, 2, 3, 3, 4, 7, 8, 9 ]
+console.log(insertionSort([])); // []
+console.log(insertionSort([1])); // [ 1 ]
