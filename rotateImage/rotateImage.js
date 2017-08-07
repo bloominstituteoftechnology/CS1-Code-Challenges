@@ -7,7 +7,7 @@
 
 // going to have to map. 
 
-const rotate90 = (matrix) => {
+const rotateImage = (matrix) => {
   const rotated = [];
   for (let i = matrix.length - 1; i > - 1; i--) {
     for (let j = 0; j < matrix[i].length; j++) {
@@ -23,4 +23,4 @@ const rotate90 = (matrix) => {
 
 let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-console.log(rotate90(matrix));
+console.log(rotateImage(matrix));
