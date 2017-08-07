@@ -14,10 +14,12 @@
 
 const rockPaperScissors = () => {
 	// TODO: your solution here
-  const hand = {0: 'rock',
-                1: 'paper',
-                2: 'scissor'}
-  const hand = ['rock', 'paper', 'scissor']
+  // const hand = {0: 'rock',
+  //               1: 'paper',
+  //               2: 'scissor'}
+  const hand = ['rock', 'paper', 'scissor'] // hand.length = 3
+  let rounds = 3
+  const totalPossibleCombos = hand.length ** rounds
 
 };
 
