@@ -41,41 +41,45 @@
  *
  */
 
-// uhh....
-const parallel = (...args, cb) => {
-  return (cb(args));
-}
+// // uhh....
+// const parallel = (...args, cb) => {
+//   return (cb(args));
+// }
 
 // const parallel = (cb, ...args) => {
 //   return (cb(args));
 // }
 
+const parallel = (cb, ...args) => {
+  return (args(cb));
+}
 
-parallel(
-  // PARAMETER 1
-  [ function(callback){
-      setTimeout(function() { callback('one'); }, 200);
-    },
-    function(callback){
-      setTimeout(function() { callback('two'); }, 100);
-    }],
-  // PARAMETER 2 - optional callback
-  // the results array will equal ['one','two'] even though
-  // the second function had a shorter timeout.
-  (results) => { console.log(results); } // ~~> ['one', 'two']
-);
 
 // parallel(
-//   // PARAMETER 2 - optional callback
-//   // the results array will equal ['one','two'] even though
-//   // the second function had a shorter timeout.
-//   (results) => { console.log(results); } // ~~> ['one', 'two']
-//   ,
 //   // PARAMETER 1
 //   [ function(callback){
 //       setTimeout(function() { callback('one'); }, 200);
 //     },
 //     function(callback){
 //       setTimeout(function() { callback('two'); }, 100);
-//     }]
-//   );
+//     }],
+//   // PARAMETER 2 - optional callback
+//   // the results array will equal ['one','two'] even though
+//   // the second function had a shorter timeout.
+//   (results) => { console.log(results); } // ~~> ['one', 'two']
+// );
+
+parallel(
+  // PARAMETER 2 - optional callback
+  // the results array will equal ['one','two'] even though
+  // the second function had a shorter timeout.
+  (results) => { console.log(results); } // ~~> ['one', 'two']
+  ,
+  // PARAMETER 1
+  [ function(callback){
+      setTimeout(function() { callback('one'); }, 200);
+    },
+    function(callback){
+      setTimeout(function() { callback('two'); }, 100);
+    }]
+  );
