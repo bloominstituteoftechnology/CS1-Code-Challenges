@@ -10,6 +10,22 @@
  *              ...etc...
  *                   */
 
-const rockPaperScissors = () => {
+const rockPaperScissors = (numOfRounds) => {
 	// TODO: your solution here
+	const choices = ['rock', 'paper', 'scissors'];
+	const outcome = [];
+	const possibleCombos = (roundsRemaining, gamesPlayed) => {
+		if(roundsRemaining === 0) {
+			outcome.push(gamesPlayed);
+			return;
+		}
+		for(let i = 0; i < choices.length; i++) {
+			const oneChoice = choices[i];
+			possibleCombos(roundsRemaining - 1, gamesPlayed.concat(oneChoice));
+		}
+	}
+	possibleCombos(numOfRounds, []);
+	return outcome;
 };
+
+console.log(rockPaperScissors(3));
