@@ -28,8 +28,8 @@ const test = (arr) => {
   const result = [];
 
   for (let i = 0; i < arr.length; i++) {
-    let firstElement = arr[i];
-    let restOfArray = arr.slice(0, i) + arr.slice(i + 1, arr.length);
+    let firstElement = arr.shift();
+    let restOfArray = arr
 
     for (let sub of test(restOfArray)) {
       result.push(firstElement, sub);
