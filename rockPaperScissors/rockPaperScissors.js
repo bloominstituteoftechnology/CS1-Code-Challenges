@@ -12,4 +12,16 @@
 
 const rockPaperScissors = () => {
 	// TODO: your solution here
+  const choices = ['rock', 'paper', 'scissors']
+  const results = []
+  for (let i = 0; i < choices.length; i++) {
+      for (let j = 0; j < choices.length; j++) {
+        for (let k =0; k < choices.length; k++) {
+          results.push([].concat(choices[i], choices[j], choices[k]));
+        }
+      }
+    }
+  return results;
 };
+
+// work on recursive solution 
