@@ -1,4 +1,4 @@
-
+// cc22 quickSort
 /*
  * Implement the quick sort sorting algorithm. Assume the input is an array of integers.
  * https://en.wikipedia.org/wiki/Quicksort
