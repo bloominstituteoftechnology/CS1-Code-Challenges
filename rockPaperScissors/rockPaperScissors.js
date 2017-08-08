@@ -15,12 +15,9 @@ const rockPaperScissors = () => {
   let choicearr = ["rock", "paper", "scissors"];
   arr = [];
   for (let i = 0; i < choices; i++) {
-    let temp = [choicearr[i]];
     for (let j = 0; j < choices; j++) {
-      temp.push(choicearr[j]);
       for (let k = 0; k < choices; k++) {
-        temp.push(choicearr[k]);
-        arr.push(temp);
+        arr.push([choicearr[i],choicearr[j],choicearr[k]]);
       }
     }
   }
@@ -29,3 +26,8 @@ const rockPaperScissors = () => {
 };
 
 console.log(rockPaperScissors());
+
+
+const rpsRecursion = () => {
+
+}
