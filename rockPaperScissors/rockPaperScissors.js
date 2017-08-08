@@ -39,35 +39,3 @@ const test = (arr) => {
 }
 
 console.log(test(['rock', 'paper', 'scissor']));
-
-//
-// const allAnagrams = (str) => {
-//
-//   if (str.length < 2) return str;
-//
-//   const result = [];
-//
-//   for (let i = 0; i < str.length; i++) {
-//     let firstLetter = str[i];
-//     let restOfString = str.slice(0, i) + str.slice(i + 1, str.length);
-//
-//     for (let sub of allAnagrams(restOfString)) {
-//       result.push(firstLetter + sub);
-//     }
-//   }
-//   return result;
-// }
-//
-//
-// const allAnagrams = (str, start = '') => {
-//   if (str.length === 1) return [start + str];
-//   const anagrams = [];
-//
-//   for (let i = 0; i < str.length; i++) {
-//     const result = allAnagrams(str.substr(0, i) + str.substr(i + 1), str[i]);
-//     for (let j = 0; j < result.length; j++) {
-//       anagrams.push(start + result[j]);
-//     }
-//   }
-//   return anagrams;
-// };
