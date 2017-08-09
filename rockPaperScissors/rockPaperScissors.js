@@ -11,12 +11,11 @@
  *                   */
 
 const rockPaperScissors = () => {
-  let choices = 3;
-  let choicearr = ["rock", "paper", "scissors"];
+  const choicearr = ["rock", "paper", "scissors" /*,"lizard", "spock" */];
   arr = [];
-  for (let i = 0; i < choices; i++) {
-    for (let j = 0; j < choices; j++) {
-      for (let k = 0; k < choices; k++) {
+  for (let i = 0; i < choicearr.length; i++) {
+    for (let j = 0; j < choicearr.length; j++) {
+      for (let k = 0; k < choicearr.length; k++) {
         arr.push([choicearr[i],choicearr[j],choicearr[k]]);
       }
     }
@@ -28,6 +27,22 @@ const rockPaperScissors = () => {
 console.log(rockPaperScissors());
 
 
-const rpsRecursion = () => {
+// const rpsrecursion = (rounds) => {
+//   const results = [];
+//   const choices = ['scissors', 'rock', 'paper'];
+//   const findChoices = (roundsLeft, roundsPlayed) => {
+//     if (roundsLeft === 0) {s
+//       results.push(roundsPlayed);
+//       return;
+//     }
+//     for (let i = 0; i < choices.length; i++) {
+//       const choice = choices[i];
+//       findChoices(roundsLeft - 1, roundsPlayed.concat(choice));
+//     }
+//   };
+//   findChoices(rounds, []);
+  
+//   return results;
+// };
 
-}
+// console.log(rpsrecursion(3));
