@@ -1,4 +1,4 @@
-/*
+/* cc23 selectionSort
  * Sort an array of numbers using selection sort.
  * https://en.wikipedia.org/wiki/Selection_sort
  * https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting
