@@ -22,6 +22,7 @@
 */
 
 const bubbleSort = (arr) => {
+<<<<<<< HEAD
   const newArr = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
@@ -38,3 +39,7 @@ const bubbleSort = (arr) => {
 
 
 console.log(bubbleSort([2, 1, 3,]));
+=======
+  //code here
+};
+>>>>>>> 2ec0f8f1aa03bf71d9f3199f67f17c873cbdef74
