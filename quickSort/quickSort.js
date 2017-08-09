@@ -5,23 +5,21 @@
  * https://www.khanacademy.org/computing/computer-science/algorithms#quick-sort
  */
 const quickSort = (nums) => {
-  if (nums.length < 2) { // BASE CASE
+  // BASE CASE
+  if (nums.length < 2) {
     return nums;
-  }
-  // const pivot = nums[Math.floor(nums.length / 2)],
+  }               /* v */
   const pivot = nums[0],
         lessThan = [],
         greaterThan = [];
-
-  for (let i = 0; i < nums.length; i++) {
+            /* v */
+  for (let i = 1; i < nums.length; i++) {
     if (nums[i] < pivot) {
       lessThan.push(nums[i]);
-      // console.log('less than array: ', lessThan)
     } else greaterThan.push(nums[i]);
-      // console.log('GRTR than array: ', greaterThan)
   };
-  // console.log(lessThan, pivot, greaterThan)
-  return quickSort(lessThan).concat(quickSort(greaterThan));
+  // Binary tree recursion? BigO((n^2)^2)
+  return quickSort(lessThan).concat(pivot, quickSort(greaterThan));
 };
 
 
@@ -32,5 +30,5 @@ const quickSort = (nums) => {
 //       z = [5,6,7];
 // console.log(x.concat(y, z));
 
-// console.log(quickSort([ 9, 8, 7, 555, 632, 345, 4, 3, 2, 1]));
-console.log(quickSort([ 4, 5, 6, 3, 2 ]));
+console.log(quickSort([ 9, 8, 7, 555, 632, 345, 4, 3, 2, 1]));
+console.log(quickSort([ 4, 6, 5, 3, 2 ]));
