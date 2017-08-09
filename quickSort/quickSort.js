@@ -28,7 +28,7 @@ const quickSort = (nums) => {
 // const x = [1,2,3],
 //       y = 4
 //       z = [5,6,7];
-// console.log(x.concat(y, z));
+// console.log(x.concat(y, z)); // ~~~> [ 1, 2, 3, 4, 5, 6, 7 ]
 
 console.log(quickSort([ 9, 8, 7, 555, 632, 345, 4, 3, 2, 1]));
 console.log(quickSort([ 4, 6, 5, 3, 2 ]));
