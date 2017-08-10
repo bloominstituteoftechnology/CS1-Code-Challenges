@@ -8,12 +8,6 @@
 
 const selectionSort = (arr) => {
 
-  const exch = (i, j) => {
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-  }
-
   const n = arr.length;
 
   for (let i = 0; i < n; i++) {
@@ -22,20 +16,25 @@ const selectionSort = (arr) => {
     for (let j = i + 1; j < n; j++) {
       if (arr[j] < arr[min]) min = j;
     }
-    exch(i, min);
+    arr = exch(arr, i, min);
   }
 
   return arr;
 };
 
-const randomize = (arr) => {
-  for (let i = arr.length; i--; i > 1) {
+function exch (a, i, j) {
+  const temp = a[i];
+  a[i] = a[j];
+  a[j] = temp;
+  return a;
+}
+
+const randomize = (a) => {
+  for (let i = a.length; i--; i > 1) {
     const j = Math.floor(Math.random() * i);
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+    a = exch(a, i, j);
   }
-  return arr;
+  return a;
 }
 
 const r_arr = randomize([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
