@@ -7,6 +7,9 @@
  */
 
 const selectionSort = (arr) => {
+  const less = (x, y) => {
+    return x <= y;
+  }
 
   const exch = (i, j) => {
     const temp = arr[i];
