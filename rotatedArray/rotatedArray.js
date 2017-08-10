@@ -39,24 +39,34 @@ const rotatedArraySearch = (arr, queryNum) => {
   console.log(`TOTAL number of array elements: ${len}`);
   if (!(queryNum >= low && high >= queryNum)) {
     console.log(null);
+    console.log('\n');
   } else {
     if ((len - queryNum) <= lowIndex) {
-      console.log(arr[lowIndex - (len - queryNum)]);
+      console.log(`${arr[lowIndex - (len - queryNum)]}\n`);
       return arr[lowIndex - (len - queryNum)];
     } else {
-      console.log(arr[len - queryNum]);
+      console.log(`${arr[lowIndex + queryNum]}\n`);
       return arr[len - queryNum];
     };
   };
 };
 
-// TEST SUITE
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], -1);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 0);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 1);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 2);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 3);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 4);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 5);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 6);
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 7);
+// // TEST SUITE
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], -1);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 0);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 1);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 2);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 3);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 4);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 5);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 6);
+// rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 7);
+
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 1);
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 2);
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 3);
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 4);
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 5);
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 6);
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 7);
+rotatedArraySearch([4, 5, 6, 7, 2, 3], 8);
