@@ -11,5 +11,31 @@
  *                   */
 
 const rockPaperScissors = () => {
-	// TODO: your solution here
+  // TODO: your solution here
+  const r = 'rock';
+  const p = 'paper';
+  const s = 'scissors';
+  const origArr = [r,p,s];
+  console.log(origArr);
+  const allCombos = [];
+  for (let i = 0; i < 1; i++) {
+    const singleCombo = [];
+    singleCombo.push(origArr[i]);
+    singleCombo.push(origArr[i]);
+    singleCombo.push(origArr[i]);
+    allCombos.push(singleCombo);
+    singleCombo.pop();
+    singleCombo.pop();
+    singleCombo.pop();
+    for (let j = 0; j < 1; j++) {
+      singleCombo.push(origArr[i]);
+      singleCombo.push(origArr[i]);
+      singleCombo.push(origArr[j]);
+      console.log(singleCombo);
+      allCombos.push(singleCombo);
+    }
+  }
+  console.log(allCombos);
 };
+
+rockPaperScissors();

@@ -8,13 +8,13 @@
 const stringCompression = (str) => {
   let newString = '';
   for (let i = 0; i < str.length;) {
-    const letter = str.charAt(i);
+    const letter = str[i];
     let numLetter = 0;
     do {
       numLetter++;
       i++;
     }
-    while (str.charAt(i) === letter);
+    while (str[i] === letter);
     newString += letter + numLetter;
   }
   if (newString.length >= str.length) {
