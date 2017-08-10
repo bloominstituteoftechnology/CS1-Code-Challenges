@@ -21,10 +21,11 @@
  4) arr[n+1] is the low value of the range
  5) query integer is outside range, return null
  5) index position of arr[n+1] is the offset where [n+1] minus offset = 0
- 6) not sure how to quickly return
+ 6) not sure how to quickly return the index...
 */
 
 const rotatedArraySearch = (arr, queryNum) => {
+  const len = arr.length;
   let i, high, low, highIndex, lowIndex;
   // search for the first pair where arr[n] > arr[n+1]
   for (let i = 0; i < arr.length; i++) {
@@ -32,11 +33,30 @@ const rotatedArraySearch = (arr, queryNum) => {
       [high, low, highIndex, lowIndex] = [arr[i], arr[i + 1], i, i + 1];
     }
   };
-  // console.log(`HI value: ${high}, is at index: ${highIndex}\nLO value: ${low}, is at index: ${lowIndex}`);
-  if (queryNum >= low && high >= queryNum) {
-    console.log( 'poop');
-  } else { return null; }
+  console.log(arr, queryNum)
+  console.log(`HI value: ${high}, is at index: ${highIndex}`)
+  console.log(`LO value: ${low}, is at index: ${lowIndex}`)
+  console.log(`TOTAL number of array elements: ${len}`);
+  if (!(queryNum >= low && high >= queryNum)) {
+    console.log(null);
+  } else {
+    if ((len - queryNum) <= lowIndex) {
+      console.log(arr[lowIndex - (len - queryNum)]);
+      return arr[lowIndex - (len - queryNum)];
+    } else {
+      console.log(arr[len - queryNum]);
+      return arr[len - queryNum];
+    };
+  };
 };
 
 // TEST SUITE
-rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], -6);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], -1);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 0);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 1);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 2);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 3);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 4);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 5);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 6);
+rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 7);
