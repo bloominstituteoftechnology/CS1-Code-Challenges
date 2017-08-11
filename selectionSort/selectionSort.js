@@ -7,6 +7,7 @@
  */
 
 const selectionSort = (arr) => {
+<<<<<<< HEAD
   // const sortedArr = [];
   let index;
   for (let i = 0; i < arr.length; i++) {
@@ -19,4 +20,7 @@ const selectionSort = (arr) => {
     [arr[i], arr[index]] = [arr[index], arr[i]];
   }
   return arr;
+=======
+
+>>>>>>> 9429740ef0bb6a7c9e352e877fccbfa19d2cae8d
 };
