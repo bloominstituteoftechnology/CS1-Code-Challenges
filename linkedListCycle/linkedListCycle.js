@@ -29,3 +29,31 @@
  * Constraint 3: Do not mutate the original nodes in any way
  * Hint: Search for Floyd's Tortoise and Hare algorithm.
  */
+
+ class Node {
+  constructor(value) {
+    this.head = value;
+    this.next = null;
+  }
+}
+
+const findLoop = (list) => {
+  let turtle = list.head;
+  let hare = list.head;
+  while(turtle && hare && hare.next) {
+    turtle = turtle.next;
+    hare = hare.next.next
+    if( turtle === hare) {
+      return true
+    }
+  }
+  return false;
+};
+
+const nodeA = new Node('A')
+const nodeB = nodeA.next = new Node('B');
+const nodeC = nodeB.next = new Node('C');
+const nodeD = nodeC.next = new Node('D');
+const nodeE = nodeD.next = new Node('E');
+nodeE.next = nodeB;
+console.log(findLoop(nodeA));
