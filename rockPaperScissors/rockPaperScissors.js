@@ -10,6 +10,21 @@
  *              ...etc...
  *                   */
 
-const rockPaperScissors = () => {
+const rockPaperScissors = (rounds, options) => {
 	// TODO: your solution here
+  rounds = rounds || 3;
+  options = options || ['rock', 'paper', 'scissor'];
+  const results = [];
+  const permutations = (roundsSoFar, roundsLeft) => {
+    if (roundsLeft === 0) {
+      results.push(roundsSoFar);
+    }
+    for(let i = 0; i < options.length; i++) {
+      permutations(roundsSoFar.concat(options[i]), roundsLeft-1);
+    }
+  };
+  permutations([], rounds);
+  return results;	
 };
+
+console.log(rockPaperScissors());

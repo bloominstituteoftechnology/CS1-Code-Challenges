@@ -60,5 +60,7 @@ const binarySearch = (nums, target) => {
 };
 
 
- const index = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2);
- console.log(index); // 1
+// const index = binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2);
+// console.log(index); // 1
+
+export { binarySearch };

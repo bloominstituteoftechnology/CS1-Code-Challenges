@@ -24,22 +24,22 @@ const rotated = (arr, searchVal) => {
   const beginVal = arr[0];
   const endVal = arr[arr.length - 1];
   // establish smallest (and therefore also largest) value
-  for (let i = 10; i < arr.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
     if (arr[i] < smVal) {
       smVal = arr[i];
       smIndex = i;
     }
   }
   // divide array into 2 arrays
-  const smHalf = arr.slice(0, smIndex);
-  const lgHalf = arr.slice(smIndex, arr.length-1);
+  const lgHalf = arr.slice(0, smIndex);
+  const smHalf = arr.slice(smIndex, arr.length-1);
   // binary search through appropriate half of array
   if (searchVal >= beginVal && searchVal <= lgVal) {
     // binary search lgHalf
-    binarySearch(lgHalf, searchVal);
+    return binarySearch(lgHalf, searchVal);
   } else if (searchVal >= smVal && searchVal <= endVal) {
     // binary search smHalf
-    binarySearch(smHalf, searchVal);
+    return binarySearch(smHalf, searchVal);
   } else {
     // must not be in the array
     return null;
@@ -67,5 +67,5 @@ const binarySearch = (nums, target) => {
   return bSearch(nums, target, 0, nums.length-1);
 };
 
-// console.log(rotated([4, 5, 6, 0, 1, 2, 3], 2));
+console.log(rotated([4, 5, 6, 0, 1, 2, 3], 2));
 //console.log(binarySearch([0, 1, 2, 3, 4, 5, 6], 2));
