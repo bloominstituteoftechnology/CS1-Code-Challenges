@@ -1,4 +1,4 @@
-/*
+/* cc25 linkedListCycles
  * Create a function that returns true if a linked list contains a cycle, or false if it terminates
  *
  * Usually we assume that a linked list will end with a null next pointer, for example:
