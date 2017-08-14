@@ -12,19 +12,19 @@
 
 const rockPaperScissors = (rounds, options) => {
 	// TODO: your solution here
-  rounds = rounds || 3;
-  options = options || ['rock', 'paper', 'scissor'];
+  // arguments[0] = rounds || 3;
+  // arguments[1] = options || ['rock', 'paper', 'scissor'];
   const results = [];
-  const permutations = (roundsSoFar, roundsLeft) => {
+  const permutations = (playsSoFar, roundsLeft) => {
     if (roundsLeft === 0) {
-      results.push(roundsSoFar);
+      results.push(playsSoFar);
     }
     for(let i = 0; i < options.length; i++) {
-      permutations(roundsSoFar.concat(options[i]), roundsLeft-1);
+      permutations(playsSoFar.concat(options[i]), roundsLeft-1);
     }
   };
   permutations([], rounds);
   return results;	
 };
 
-console.log(rockPaperScissors());
+console.log(rockPaperScissors(3, ['rock', 'paper', 'scissor']));

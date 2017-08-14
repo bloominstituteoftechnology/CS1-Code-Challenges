@@ -29,3 +29,46 @@
  * Constraint 3: Do not mutate the original nodes in any way
  * Hint: Search for Floyd's Tortoise and Hare algorithm.
  */
+
+// Start T and H at first node
+// If H reaches end, no loop
+// Move H once
+// If H reaches end, no loop
+// Move T and H once
+// If T & H on same spot, it's a loop
+// go to step 2
+
+const hasCycle = (node) => {
+  let T = node;
+  let H = node;
+  const isEnd = (H) => {
+    if (H.next === null) {
+      return false;
+    }
+  };
+  while (true) {
+    isEnd(H);
+    H = H.next;
+    isEnd(H);
+    H = H.next;
+    T = T.next;
+    if (H === T) {
+      return true;
+    }
+  };
+}
+
+class Node {
+  constructor(options) {
+    this.value = options.value;
+    this.next = null;
+  }
+}
+const nodeA = new Node('A');
+const nodeB = nodeA.next = new Node('B');
+const nodeC = nodeB.next = new Node('C');
+const nodeD = nodeC.next = new Node('D');
+const nodeE = nodeD.next = new Node('E');
+hasCycle(nodeA); // => false
+// nodeE.next = nodeB;
+// hasCycle(nodeA); // => true
