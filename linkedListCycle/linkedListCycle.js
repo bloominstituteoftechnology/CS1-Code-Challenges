@@ -30,7 +30,7 @@
  * Hint: Search for Floyd's Tortoise and Hare algorithm.
  */
 
- class Node {
+class Node {
   constructor(value) {
     this.head = value;
     this.next = null;
@@ -38,8 +38,8 @@
 }
 
 const findLoop = (list) => {
-  let turtle = list.head;
-  let hare = list.head;
+  let turtle = list;
+  let hare = list;
   while(turtle && hare && hare.next) {
     turtle = turtle.next;
     hare = hare.next.next
@@ -56,4 +56,4 @@ const nodeC = nodeB.next = new Node('C');
 const nodeD = nodeC.next = new Node('D');
 const nodeE = nodeD.next = new Node('E');
 nodeE.next = nodeB;
-console.log(findLoop(nodeA));
+console.log(findLoop(nodeA)); // --> true
