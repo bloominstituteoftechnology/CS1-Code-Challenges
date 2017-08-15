@@ -3,6 +3,7 @@ body {
   text-align: center;
 }
 .flex-container {
+  background: #CABA77;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -28,6 +29,8 @@ body {
   font-weight: bold;
   font-size: 3em;
   text-align: center;
+
+  border-radius: 20%;
 }
 .blue {
   background: #1280FF;
