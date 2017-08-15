@@ -1,0 +1,18 @@
+.square {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    -webkit-justify-content: center;
+    justify-content: center;
+} 
+
+.squares {
+    background-color: #FF0000;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+.clicked {
+  background: #0000FF;
+}

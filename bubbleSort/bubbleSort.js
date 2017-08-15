@@ -22,5 +22,25 @@
 */
 
 const bubbleSort = (arr) => {
-  //code here
+  if(arguments.length === 0 || !Array.isArray(arr)) {
+    return 'Invalid input array';
+  }
+  for(let i = (arr.length - 1); i >= 0; i--) {
+    for(let j = (arr.length - 1); j > 0; j--) {
+      if (arr[j] < arr[j - 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j - 1];
+        arr[j - 1] = temp;
+      }
+    }
+  }
+  return arr;
 };
+
+console.log(bubbleSort([1, 2, 3]));  // [1, 2, 3]
+console.log(bubbleSort([2, 1, 3]));  // [1, 2, 3]
+console.log(bubbleSort([])); // Invalid input array
+console.log(bubbleSort({foo: 123})); // Invalid input array
+console.log(bubbleSort('foobar')); // Invalid input array
+console.log(bubbleSort(undefined)); // Invalid input array
+console.log(bubbleSort([161, 48, 56, 545, 2, 77])); // [2, 48, 56, 77, 161, 545]
