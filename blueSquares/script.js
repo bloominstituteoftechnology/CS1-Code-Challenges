@@ -1,36 +1,11 @@
 $(document).ready(function() {
-    $('.flex-item').click(function() {
-        $(this).toggleClass('clicked');
-    });
+
+  for (let i = 1; i <= 12; i++) {
+    $('.flex-container').append(`<li class="flex-item">${i}</li>`);
+  };
+
+  $('.flex-item').click(function() {
+      $(this).toggleClass('blue');
+  });
+
 });
-
-
-// $("#test").toggle(function() {
-//     $(this).css("background", "red");
-// },
-// function() {
-//     $(this).css("background", "");
-// });
-
-
-// $("#flex-item-1").on("mousedown", function() {
-//     $(this).toggleClass('back-red');
-// })
-// .on("mouseup", function(e) {
-//     $(this).toggleClass('back-red');
-// });
-//
-//
-// $(document).ready(function(){
-//   $('.flex-item').click(function(){
-//     $(this).toggleClass('blue-box');
-//   });
-//   $('.box').mouseenter(function(){
-//     $(this).addClass('animated pulse');
-//   }).mouseleave(function(){
-//     $(this).removeClass('animated pulse');
-//    });
-//  });
-
-
-// https://www.w3schools.com/jquery/jquery_get_started.asp
