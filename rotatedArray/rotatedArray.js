@@ -14,3 +14,31 @@
  *
  * Target time complexity: O(log(n))
  */
+// the iterative way to do it...
+//  const rotatedArraySearch = (arr, item) => {
+//      return arr.indexOf(item);
+
+//  };
+
+const rotatedArraySearch = (arr, number) => {
+  let low = 0;
+  let high = arr.length - 1;
+  while (low <= high) {
+    const middle = Math.floor((low + high) / 2);
+    if (arr[middle] = number) return middle;
+    if (arr[low] <= arr[middle]) {
+      if( arr[low] <= number && number < arr[middle]) {
+        high = middle - 1;
+      } else {
+        low = middle + 1;
+      }
+    } else {
+      if (arr[middle] < number && number <= arr[high]) {
+        low = mid + 1;
+      } else {
+        high = mid -1;
+      }
+    }
+  }
+  return null;
+};
