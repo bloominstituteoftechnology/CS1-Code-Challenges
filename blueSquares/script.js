@@ -1,5 +1,6 @@
+
 $(document).ready(function(){
-  
-     // jQuery methods go here...
-  
+  $('.flex-item').click(function() {
+    $(this).css('background-color', 'blue');
+    });
   });
