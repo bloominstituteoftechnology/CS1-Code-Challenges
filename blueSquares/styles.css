@@ -1,13 +1,6 @@
-@import "compass/css3";
-
 body {
   background: whitesmoke;
 }
-
-/*#test {
-  background-color: pink;
-}*/
-
 .flex-container {
   padding: 0;
   margin: 0;
@@ -22,7 +15,6 @@ body {
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
-
 .flex-item {
   background: tomato;
   padding: 5px;
@@ -36,17 +28,6 @@ body {
   font-size: 3em;
   text-align: center;
 }
-
-.flex-item-1 {
-  background: tomato;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
+.clicked {
+  background: #1212FF;
 }
