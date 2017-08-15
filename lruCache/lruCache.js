@@ -1,4 +1,4 @@
-/*
+/* cc27 lruCache
  * Design and implement a LRU, or Least Recently Used, cache.
  *
  * An LRU cache gives O(1) get(key) and set(key, val) operations,
@@ -39,7 +39,7 @@ class LRUCacheItem {
 
 class LRUCache {
   constructor(limit = 10) {
-    
+
   }
 
   size() {
@@ -177,4 +177,3 @@ class List {
     if (this.prev) this.prev.next = this.next;
     if (this.next) this.next.prev = this.prev;
   }
-
