@@ -29,8 +29,14 @@
  * Constraint 3: Do not mutate the original nodes in any way
  * Hint: Search for Floyd's Tortoise and Hare algorithm.
  */
+class Node {
+  constructor(node) {
+    this.value = node;
+    this.next = null;
+  }
+}
 
- const cycleDetect = (node) => {
+ const hasCycle = (node) => {
    let slow, fast;
 
    if (!node || !node.next) return false;
