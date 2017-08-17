@@ -31,14 +31,14 @@ class SetOfStacks {
     this.limit = limit;
     this.storage = [];
     this.size = 0;
-    this.stack = new Stack();
+    // this.stack = new Stack();
   }
   size() {
     return this.size;
   }
   add(aStack) {
     if (this.size === this.limit) {
-      return new SetOfStacks.add(aStack);
+      return new SetOfStacks.add(aStack); // <~~~ Nope
     } else {
       this.size++;
       return this.storage.push(aStack);
@@ -53,3 +53,17 @@ class SetOfStacks {
     }
   }
 };
+
+// TEST SUITE
+pancake1 = new Stack();
+pancake2 = new Stack();
+pancake3 = new Stack();
+pancake4 = new Stack();
+pancakeSet = new SetOfStacks();
+console.log(pancake1);
+console.log(pancakeSet);
+pancakeSet.add(pancake1);
+pancakeSet.add(pancake2);
+pancakeSet.add(pancake3);
+console.log(pancakeSet);
+pancakeSet.add(pancake4);
