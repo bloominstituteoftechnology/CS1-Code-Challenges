@@ -1,8 +1,55 @@
 /* cc28 stackOfPlates
- * Stack of Plates: Imagine a (literal) stack of plates. If the stack gets too high, it might topple.
- * Therefore, in real life, we would likely start a new stack when the previous stack exceeds some threshold.
- * Implement a data structure SetOfStacks that mimics this.
- * SetOfStacks should be composed of several stacks and should create a new stack once the previous one exceeds capacity.
- * SetOfStacks.push() and SetOfStacks.pop() should behave identically to a single stack
- * (that is, pop( ) should return the same values as it would if there were just a single stack).
+ * Stack of Plates: Imagine a (literal) stack of plates.
+                    If the stack gets too high, it might topple.
+                    Therefore, in real life, we would likely start a new stack
+                    when the previous stack exceeds some threshold.
+ * 1) Implement a data structure SetOfStacks that mimics this.
+ * 2) SetOfStacks should be composed of several stacks and
+      should create a new stack once the previous one exceeds capacity.
+ * 3) SetOfStacks.push() and SetOfStacks.pop() should behave identically to a single stack
+      (that is, pop( ) should return the same values as it would if there were just a single stack).
  */
+
+class Stack {
+  constructor() {
+    this.storage = [];
+  }
+  get size() {
+    return this.storage.length;
+  }
+  add(anItem) {
+    return this.storage.push(anItem);
+  }
+  remove() {
+    if (this.storage.length === 0) return null;
+    return this.storage.pop();
+  }
+};
+
+class SetOfStacks {
+  constructor(limit = 3) {
+    this.limit = limit;
+    this.storage = [];
+    this.size = 0;
+    this.stack = new Stack();
+  }
+  size() {
+    return this.size;
+  }
+  add(aStack) {
+    if (this.size === this.limit) {
+      return new SetOfStacks.add(aStack);
+    } else {
+      this.size++;
+      return this.storage.push(aStack);
+    }
+  }
+  remove() {
+    if (this.storage.length === 0) {
+      return null;
+    } else {
+      this.size--
+      return this.storage.pop();
+    }
+  }
+};
