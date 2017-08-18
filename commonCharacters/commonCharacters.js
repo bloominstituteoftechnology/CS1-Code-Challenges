@@ -6,3 +6,7 @@
  * Example: commonCharacters('acexivou', 'aegihobu')  *
  * Returns: 'aeiou'
 */
+/*  INPUT: 2 strings
+  FUNCTION: split, remove white space, Set to make unique, compare if match, add to return
+    OUTPUT: 1 string
+*/
