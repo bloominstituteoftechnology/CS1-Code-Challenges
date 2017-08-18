@@ -36,15 +36,15 @@ class SetOfStacks {
   size() {
     return this.size;
   }
-  add(aStack) {
+  push(aStack) {
     if (this.size === this.limit) {
-      return new SetOfStacks.add(aStack); // <~~~ Nope
+      return new SetOfStacks.push(aStack); // <~~~ Nope
     } else {
       this.size++;
       return this.storage.push(aStack);
     }
   }
-  remove() {
+  pop() {
     if (this.storage.length === 0) {
       return null;
     } else {
