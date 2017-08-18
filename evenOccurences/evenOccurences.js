@@ -11,5 +11,20 @@
  *    */
 
 const evenOccurence = (arr) => {
+<<<<<<< HEAD
+const times = {};
+arr.forEach(occ => {
+  times[occ] = (times[occ] || 0) +1
+});
+for (var key in times) {
+    if (times[key] % 2 === 0) {
+      return Number(key);
+    }
+}
+}
+
+
+=======
   // Your code here.
 };
+>>>>>>> 8d23114950bc32b7ff6d09ce23a7a0e570007020
