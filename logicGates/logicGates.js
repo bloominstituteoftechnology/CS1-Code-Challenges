@@ -8,6 +8,7 @@
  * https://en.wikipedia.org/wiki/NAND_logic#NAND
  * All functions should return a 1 for true and a 0 for false.
  */
+ // not finished
 
 const NAND = (x, y) => {
 	// You can use whatever JS operators that you would like: &&, ||, !
@@ -34,5 +35,5 @@ const OR = (x, y) => {
 const XOR = (x, y) => {
 	// Do not use ||, &&, or !
 	// You can use any of the functions that you have already written
-  
+
 };

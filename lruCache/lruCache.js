@@ -30,6 +30,8 @@
  * You will need a doubly-linked list (provided).
  */
 
+ // not finished
+
 
 class LRUCacheItem {
   constructor(val, key, node) {
@@ -39,7 +41,7 @@ class LRUCacheItem {
 
 class LRUCache {
   constructor(limit = 10) {
-    
+
   }
 
   size() {
@@ -177,4 +179,3 @@ class List {
     if (this.prev) this.prev.next = this.next;
     if (this.next) this.next.prev = this.prev;
   }
-
