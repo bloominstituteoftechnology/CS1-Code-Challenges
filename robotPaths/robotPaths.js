@@ -30,3 +30,4 @@ const makeBoard = (n) => {
 };
 
 // write your code here for t
+console.log(makeBoard(5));
