@@ -30,3 +30,32 @@ const makeBoard = (n) => {
 };
 
 // write your code here for t
+
+const countRobotPaths = (size = 5) => {
+  const aBoard = makeBoard(size);
+  let paths = 0;
+
+  const moveRobot = (x=0, y=0) => {
+    if (x === size - 1 && y === size - 1) {
+      paths++;
+      return;
+    }
+    if (x < 0 || x === size || y < 0 || y === size || aBoard.hasBeenVisited(x, y)) return;
+    aBoard.toggle(x, y);
+    moveRobot(x + 1, y);
+    moveRobot(x - 1, y);
+    moveRobot(x, y + 1);
+    moveRobot(x, y - 1);
+    aBoard.toggle(x, y);
+    return;
+  }
+
+  moveRobot();
+  return paths;
+}
+
+console.log(`Robot paths: size=5 number= ${countRobotPaths()}`);
+console.log(`Robot paths: size=6 number= ${countRobotPaths(6)}`);
+console.log(`Robot paths: size=4 number= ${countRobotPaths(4)}`);
+console.log(`Robot paths: size=3 number= ${countRobotPaths(3)}`);
+console.log(`Robot paths: size=2 number= ${countRobotPaths(2)}`);
