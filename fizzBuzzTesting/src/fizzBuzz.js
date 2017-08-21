@@ -23,3 +23,5 @@
  }
 
  module.exports = { fizzBuzz };
+
+console.log(fizzBuzz(44));
