@@ -8,8 +8,8 @@
 */
 
 const commonCharacters = (str1, str2) => {
-  let answerSet = new Set();
   let tempSet = new Set();
+  let ansStr = '';
   for (let i = 0; i < str2.length; i++) {
     if (str2[i] !== ' ') {
       tempSet.add(str2[i]);
@@ -17,8 +17,8 @@ const commonCharacters = (str1, str2) => {
   }
   for (let i = 0; i < str1.length; i++) {
     if (tempSet.has(str1[i])) {
-      answerSet.add(str1[i]);
+      ansStr += str1[i];
     }
   }
-  return answerSet;
+  return ansStr;
 };
