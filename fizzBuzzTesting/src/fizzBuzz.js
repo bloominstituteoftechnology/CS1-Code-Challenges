@@ -22,6 +22,6 @@
    } return num;
  }
 
- module.exports = { fizzBuzz };
+ // console.log(fizzBuzz(44));
 
-console.log(fizzBuzz(44));
+ module.exports = { fizzBuzz };
