@@ -29,12 +29,36 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has
 const commonCharacters = (str1, str2) => {
-  const set1 = new Set(str1);
-  const set2 = new Set(str2);
+  // const str1 = str11.replace(' ', '');
+  // console.log(str1);
+  // console.log(str1);
+  // const str2 = str22.replace(' ', '');
+  const arr1 = str1.replace(' ', '').split('');
+  const arr2 = str2.replace(' ', '').split('');
+  console.log(arr1);
+  console.log(arr2);
+  const set1 = new Set(arr1);
+  console.log(set1);
+  const set2 = new Set(arr2);
+  console.log(set2);
   const intersection = [...set1].filter(letter => set2.has(letter));
   const result = intersection.join('');
   return result;
 };
 
 
-console.log(commonCharacters('acexivou', 'aegihobu')); // ~~~> 'aeiou'
+// console.log(commonCharacters('acexivou', 'aegihobu')); // ~~~> 'aeiou'
+console.log(commonCharacters('ac     e x i v o u', 'a e g i h o b u')); // ~~~> 'aeiou'
+
+
+// Lois's solution
+// const commonCharacters = (str1, str2) => {
+//   let tempSet = new Set(str2);
+//   let ansStr = '';
+//   for (let i = 0; i < str1.length; i++) {
+//     if (tempSet.has(str1[i]) && str1[i] !== ' ') {
+//       ansStr += str1[i];
+//     }
+//   }
+//   return ansStr;
+// };
