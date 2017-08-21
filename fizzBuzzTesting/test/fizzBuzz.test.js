@@ -26,7 +26,7 @@ describe('FizzBuzz Test', () => {
     it('should return a `Number` when conditions are not met', () => {
       assert.typeOf(fizzBuzz(4), 'number');
     });
-    it('should return the same number when conditions are not met', () => {
+    it('should return the given argument when conditions are not met', () => {
       expect(fizzBuzz(44).to.equal(44));
     });
 
