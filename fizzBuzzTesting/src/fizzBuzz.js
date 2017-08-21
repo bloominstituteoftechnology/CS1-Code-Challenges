@@ -8,20 +8,25 @@
  * The main focus of this challenge is the testing aspect of it.
  */
 
- function fizzBuzz(num) {
-   // if num is divisible by 3 return 'fizz'
-   // if num is divisible by 5 return 'buzz'
-   // if num is divisible by 3 & 5 return 'fizzbuzz'
-   // otherwise return num
-   if (num % 3 === 0 && num % 5 === 0) {
-     return 'fizzbuzz';
-   } else if (num % 5 === 0) {
-     return 'buzz';
-   } else if (num % 3 === 0) {
-     return 'fizz';
-   } return num;
- }
+const fizzBuzz = (num) => {
+// if num is divisible by 3 return 'fizz'
+// if num is divisible by 5 return 'buzz'
+// if num is divisible by 3 & 5 return 'fizzbuzz'
+// otherwise return num
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (num % 5 === 0) {
+    return 'buzz';
+  } else if (num % 3 === 0) {
+    return 'fizz';
+  } return num;
+};
 
- // console.log(fizzBuzz(44));
+/* eslint no-console: 0 */
+// TEST SUITE:
+// console.log(fizzBuzz(6));  // ~~~> 'fizz'
+// console.log(fizzBuzz(10)); // ~~~> 'buzz'
+// console.log(fizzBuzz(15)); // ~~~> 'fizzbuzz'
+// console.log(fizzBuzz(44)); // ~~~> '44'
 
- module.exports = { fizzBuzz };
+module.exports = { fizzBuzz };
