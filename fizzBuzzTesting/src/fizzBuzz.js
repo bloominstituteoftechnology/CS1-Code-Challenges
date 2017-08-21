@@ -22,11 +22,11 @@ const fizzBuzz = (num) => {
   } return num;
 };
 
-/* eslint no-console: 0 */
 // TEST SUITE:
-// console.log(fizzBuzz(6));  // ~~~> 'fizz'
-// console.log(fizzBuzz(10)); // ~~~> 'buzz'
-// console.log(fizzBuzz(15)); // ~~~> 'fizzbuzz'
-// console.log(fizzBuzz(44)); // ~~~> '44'
+/* eslint no-console: 0 */
+console.log(fizzBuzz(6));  // ~~~> 'fizz'
+console.log(fizzBuzz(10)); // ~~~> 'buzz'
+console.log(fizzBuzz(15)); // ~~~> 'fizzbuzz'
+console.log(fizzBuzz(44)); // ~~~> '44'
 
 module.exports = { fizzBuzz };
