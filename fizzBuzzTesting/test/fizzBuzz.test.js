@@ -19,7 +19,7 @@ describe('FizzBuzz Test', () => {
     });
   });
 
-  describe('#2: fizzBuzz return values', () => {
+  describe('#2: fizzBuzz return value types', () => {
     it('should return a `String` when conditions are met', () => {
       assert.typeOf(fizzBuzz(15), 'string');
       assert.typeOf(fizzBuzz(9), 'string');
@@ -36,7 +36,7 @@ describe('FizzBuzz Test', () => {
     });
   });
 
-  describe('fizz', () => {
+  describe('#3: fizz', () => {
     // console.log(fizzBuzz(9));
     it('should return `fizz` when the argument % 3 === 0', () => {
       assert.equal(fizzBuzz(6), 'fizz');
@@ -45,18 +45,18 @@ describe('FizzBuzz Test', () => {
     });
   });
 
-  describe('buzz', () => {
+  describe('#4: buzz', () => {
     // console.log(fizzBuzz(10));
-    it('should return `buzz` when the argument % 3 === 0', () => {
+    it('should return `buzz` when the argument % 5 === 0', () => {
       assert.equal(fizzBuzz(10), 'buzz');
       // expect(fizzBuzz(10).to.equal('buzz'));
       // expect(fizzBuzz(10).to.be('buzz'));
     });
   });
 
-  describe('fizz and buzz', () => {
+  describe('#5: fizzbuzz', () => {
     // console.log(fizzBuzz(15));
-    it('should return `fizzbuzz` when the argument % 3 === 0', () => {
+    it('should return `fizzbuzz` when the argument % 3 ===0 && % 5 === 0', () => {
       assert.equal(fizzBuzz(15), 'fizzbuzz');
       // expect(fizzBuzz(15).to.equal('fizzbuzz'));
       // expect(fizzBuzz(15).to.be('fizzbuzz'));
