@@ -32,7 +32,8 @@ const commonCharacters = (str1, str2) => {
   const set1 = new Set(str1);
   const set2 = new Set(str2);
   const intersection = [...set1].filter(letter => set2.has(letter));
-  return intersection;
+  const result = intersection.join('');
+  return result;
 };
 
 
