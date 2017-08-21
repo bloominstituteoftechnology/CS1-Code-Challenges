@@ -8,7 +8,11 @@
  * The main focus of this challenge is the testing aspect of it.
  */
 
+const assert = require('chai').assert;
+
 const fizzBuzz = (num) => {
-
+  if (num % 3 === 0 && num % 5 === 0) return 'fizzBuzz';
+  if (num % 3 === 0) return 'fizz';
+  if (num % 5 === 0) return 'buzz';
+  return num;
 };
-
