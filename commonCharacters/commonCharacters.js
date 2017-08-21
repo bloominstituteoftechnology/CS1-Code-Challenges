@@ -8,15 +8,10 @@
 */
 
 const commonCharacters = (str1, str2) => {
-  let tempSet = new Set();
+  let tempSet = new Set(str2);
   let ansStr = '';
-  for (let i = 0; i < str2.length; i++) {
-    if (str2[i] !== ' ') {
-      tempSet.add(str2[i]);
-    }
-  }
   for (let i = 0; i < str1.length; i++) {
-    if (tempSet.has(str1[i])) {
+    if (tempSet.has(str1[i]) && str1[i] !== ' ') {
       ansStr += str1[i];
     }
   }
