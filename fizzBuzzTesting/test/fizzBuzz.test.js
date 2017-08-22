@@ -23,7 +23,7 @@ describe('fizzBuzz', () =>{
       expect(fizzBuzz(45)).to.be.a(fizzbuzz);
     });
     it('should return num if not divisible by either 3 or 5', () =>{
-      expect(fizzBuzz(12)).to.be(fizz);
+      expect(fizzBuzz(7)).to.be(7);
     });
   });
 
