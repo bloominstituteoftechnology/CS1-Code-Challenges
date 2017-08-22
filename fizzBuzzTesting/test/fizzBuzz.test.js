@@ -6,8 +6,8 @@ const sinon = require('sinon');
 
 const expect = chai.expect;
 
+/* global describe it */
 describe('FizzBuzz Test', () => {
-
   const fizzBuzz = fizzBuzzScript.fizzBuzz;
 
   describe('#1: fizzBuzz imports from the script file and ', () => {
