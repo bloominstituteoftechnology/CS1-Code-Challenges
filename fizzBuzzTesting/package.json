@@ -1,6 +1,11 @@
 {
   "name": "fizzbuzztesting",
   "version": "1.0.0",
+  "eslintConfig": {
+    "env": {
+      "mocha": true
+    }
+  },
   "description": "fizz buzz fizzbuzz",
   "main": "fizzBuzz.js",
   "scripts": {
