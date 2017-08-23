@@ -8,22 +8,30 @@ OUTPUT: array containing start and end indices of longest run
 const longestRun = (str) => {
   const len = str.length;
   let count = 0;
+  let highestCount = 0;
   let i = 0;
   let startIndex;
   let endIndex;
+  let result = [ startIndex, endIndex ];
   for (i; i < len; i++) {
-    if (i === i + 1 && count === 0) {
+    if (str[i] !== str[i + 1]) {
+      count = 0;
+    } else if (str[i] === str[i + 1] && count === 0) {
       startIndex = i;
       count++;
-    } else if (i === i + 1) {
+    } else if (str[i] === str[i + 1]) {
       count++;
-    } else if (i !== i + 1 && count !== 0) {
+    } else if (str[i] !== str[i + 1] && count !== 0) {
       endIndex = i;
+      if (count > highestCount) {
+        [ count, highestCount ] = [ 0, count ];
+        result = [ startIndex, endIndex ];
+      }
     } else {
       count = 0;
     }
   }
-  return [ startIndex, endIndex ];
+  return result;
 };
 
 // TEST SUITE
