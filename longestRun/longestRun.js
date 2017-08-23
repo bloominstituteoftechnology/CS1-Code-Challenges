@@ -5,19 +5,19 @@ OUTPUT: array containing start and end indices of longest run
         (first if more than one, [ 0, 0 ] if none)
 */
 
-const longestRun = (string) => {
+const longestRun = (str) => {
   let current = [0, 0];
   let longest = [0, 0];
   let i = 1;
-  for(i; i < string.length; i++) {
-    if (string[i - 1] === string[i]) {
+  const len = str.length;
+
+  for (i; i < len; i++) {
+    if (str[i - 1] === str[i]) {
       current[1] = i;
       if (current[1] - current[0] > longest[1] - longest[0]) {
         longest = current;
       }
-    } else {
-      current = [i, i];
-    }
+    } else current = [i, i];
   }
   return longest;
 };
