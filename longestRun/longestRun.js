@@ -11,17 +11,16 @@
 
 const longestRun = (str) => {
   const ansArr = [0, 0];
-  const strArr = Array.from(str);
   let longestRunCount = 0;
   let letterCount = 0;
   let tempIndex;
-  for (let i = 0; i < strArr.length; i++) {
-    if (strArr[i] === strArr[i + 1] && strArr[i] !== strArr[i - 1]) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1] && str[i] !== str[i - 1]) {
       tempIndex = i;
       letterCount = 1;
-    } else if (strArr[i] === strArr[i + 1]) {
+    } else if (str[i] === str[i + 1]) {
       letterCount++;
-    } else if (letterCount === longestRunCount && strArr[i + 1] === undefined && strArr[i] === strArr[i - 1]) {
+    } else if (letterCount === longestRunCount && str[i + 1] === undefined && str[i] === str[i - 1]) {
         ansArr[0] = tempIndex;
         ansArr[1] = i;
     } else {
