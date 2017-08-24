@@ -39,6 +39,7 @@ class LRUCacheItem {
 
 class LRUCache {
   constructor(limit = 10) {
+<<<<<<< HEAD
     this.limit = limit;
     this.size = 0;
     this.list = new List();
@@ -75,6 +76,21 @@ class LRUCache {
     this.list.push(key, val);
     this.storage[key] = this.list.tail;
     this.size++;
+=======
+    
+  }
+
+  size() {
+
+  }
+
+  get(key) {
+
+  }
+
+  set(key, val) {
+
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
   }
 }
 
@@ -89,6 +105,7 @@ class ListNode {
     this.val = val;
     this.next = next || null;
   }
+<<<<<<< HEAD
 
   // Insert a value right after the node.
   insertAfter(val) {
@@ -108,6 +125,8 @@ class ListNode {
     if (this.prev) this.prev.next = this.next;
     if (this.next) this.next.prev = this.prev;
   }
+=======
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
 }
 
 class List {
@@ -117,7 +136,11 @@ class List {
   }
 
   // Insert at the front of the list
+<<<<<<< HEAD
   unshift(val) {
+=======
+  shift(val) {
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
     if (!this.head) {
       this.head = new ListNode(null, val, this.tail);
     } else if (!this.tail) {
@@ -131,7 +154,11 @@ class List {
   }
 
   // Remove from the front of the list
+<<<<<<< HEAD
   shift() {
+=======
+  unshift() {
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
     if (!this.head) {
       if (!this.tail) return null;
       return this.pop();
@@ -161,7 +188,11 @@ class List {
   pop() {
     if (!this.tail) {
       if (!this.head) return null;
+<<<<<<< HEAD
       return this.shift();
+=======
+      return this.unshift();
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
     } else {
       const tail = this.tail;
       this.tail = this.tail.prev;
@@ -177,13 +208,21 @@ class List {
     } else {
       node.delete();
     }
+<<<<<<< HEAD
     this.unshift(node.val);
+=======
+    this.shift(node.val);
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
   }
 
   // Move a node to the end of the List
   moveToEnd (node) {
     if (node === this.head) {
+<<<<<<< HEAD
       this.shift();
+=======
+      this.unshift();
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
     } else {
       node.delete();
     }
@@ -200,4 +239,27 @@ class List {
     }
     return result;
   }
+<<<<<<< HEAD
 }
+=======
+
+  // Insert a value right after the node.
+  insertAfter(val) {
+    const next = this.next;
+    this.next = new ListNode(this, val, next);
+    if (next) next.prev = this.next;
+  }
+
+  // Insert a value right before the node.
+  insertBefore(val) {
+    const prev = this.prev;
+    this.prev = new ListNode(prev, val, this);
+    if (prev) prev.next = this.prev;
+  }
+
+  delete() {
+    if (this.prev) this.prev.next = this.next;
+    if (this.next) this.next.prev = this.prev;
+  }
+
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c

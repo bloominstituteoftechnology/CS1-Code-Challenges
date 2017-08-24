@@ -7,6 +7,7 @@
  * Before you write your function write automated tests to test this function.
  * The main focus of this challenge is the testing aspect of it.
  */
+<<<<<<< HEAD
 const assert = require('chai').assert;
 const funcs = require('./fizzBuzz');
 
@@ -56,3 +57,10 @@ describe('fizzBuzz Functions', () => {
     });
   })
 });
+=======
+
+const fizzBuzz = (num) => {
+
+};
+
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c

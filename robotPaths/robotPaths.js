@@ -29,6 +29,7 @@ const makeBoard = (n) => {
   return board;
 };
 
+<<<<<<< HEAD
 // write your code here for t
 
 const robotPath = (n) => {
@@ -51,3 +52,6 @@ const traverse = (i, j) => {
   }
 }
 };
+=======
+// write your code here for t
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c

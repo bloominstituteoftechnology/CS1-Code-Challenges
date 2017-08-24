@@ -7,6 +7,7 @@
  * Returns: 'aeiou'
 */
 
+<<<<<<< HEAD
 // const commonChars = (str1, str2) => {
 //   newStr = '';
 //   for (let i = 0; i < str1.length; i++) {
@@ -33,3 +34,5 @@ const commonCharacters = (str1, str1) => {
   }
   return str;
 };
+=======
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c
