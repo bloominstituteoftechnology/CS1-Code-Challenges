@@ -20,6 +20,7 @@ const vowelCount = (str) => {
 //   .filter(vowel => 'aeiouAEIOU'.includes(vowel)).length;
 
 // // version 3: Big O?
+// // per: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 // const vowelCount = str =>
 //   (str.match(/[aeiou]/gi) == null) ? 0 : str.match(/[aeiou]/gi).length;
 
