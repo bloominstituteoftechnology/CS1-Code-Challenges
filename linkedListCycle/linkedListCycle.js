@@ -46,7 +46,7 @@ const hasCycle = (node) => {
       return false;
     }
   };
-  while (true) {
+  while (T && H && H.next) {
     isEnd(H);
     H = H.next;
     isEnd(H);
@@ -56,11 +56,12 @@ const hasCycle = (node) => {
       return true;
     }
   };
+  return false;
 }
 
 class Node {
-  constructor(options) {
-    this.value = options.value;
+  constructor(node) {
+    this.value = node;
     this.next = null;
   }
 }
@@ -70,5 +71,5 @@ const nodeC = nodeB.next = new Node('C');
 const nodeD = nodeC.next = new Node('D');
 const nodeE = nodeD.next = new Node('E');
 hasCycle(nodeA); // => false
-// nodeE.next = nodeB;
-// hasCycle(nodeA); // => true
+nodeE.next = nodeB;
+hasCycle(nodeA); // => true
