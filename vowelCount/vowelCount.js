@@ -3,9 +3,11 @@
  * Example: 'Hello World!' -> 3
  */
 
+// version 1: O(2n)?
 const vowelCount = (str) => {
   count = 0
   for (i = 0; i < str.length; i++) {
+    // lowercase vowel only
     if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
       count++;
     }
@@ -13,4 +15,15 @@ const vowelCount = (str) => {
   return count;
 }
 
+// // version 2: Big O?
+// const vowelCount = str => Array.from(str)
+//   .filter(vowel => 'aeiouAEIOU'.includes(vowel)).length;
+
+// // version 3: Big O?
+// const vowelCount = str =>
+//   (str.match(/[aeiou]/gi) == null) ? 0 : str.match(/[aeiou]/gi).length;
+
+
 console.log(vowelCount('Hello World!')); // ~~~> 3
+console.log(vowelCount('The quick brown fox jumped over the lazy dog.')); // ~~~> 12
+console.log(vowelCount('Four score and twenty years ago... Our forefathers All In United')); // ~~~> 21
