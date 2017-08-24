@@ -6,3 +6,6 @@
  * Extra credit: Modify the function to look for the largest prime palindrome less than any provided number.
  * Extra credit 2: How can you improve the time complexity?  (Google: Sieve of Eratosthenes)
  */
+const larPriPal = (num) => {
+  
+}

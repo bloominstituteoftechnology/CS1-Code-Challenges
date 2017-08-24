@@ -22,3 +22,98 @@
  * This is how you would structure the game objects in an actual game
  * application in Unity or another similar framework.
  */
+ class NPC {
+  constructor(options) {
+    this.strength = options.strength;
+    this.speed = options.speed;
+    this.hp = options.hp;
+    this.agility = options.agility;
+    this.magicAbility = options.magicAbility;
+  }
+ }
+
+ class Humanoid extends NPC{
+   constructor(options) {
+     super(options);
+     this.weight = options.weight;
+     this.eyeColor = options.eyeColor;
+   }
+ }
+
+ class Human extends Humanoid {
+   constructor(options) {
+     super(options);
+     this.job = options.job;
+   }
+ }
+
+ class Soldier extends Human {
+   constructor(props) {
+     super(props);
+     this.ability = options.ability;
+   }
+ }
+
+ class Peasant extends Human {
+   constructor(props) {
+     super(props);
+     this.clan = options.clan;
+   }
+ }
+
+ class Bandit extends Human {
+   constructor(props) {
+     super(props);
+     this.stealth = options.stealth;
+   }
+ }
+
+ class Elf extends Humanoid {
+   constructor(props) {
+     super(props);
+     this.spellStrength = options.spellStrength;
+   }
+ }
+
+ class Orc extends Humanoid {
+   constructor(props) {
+     super(props);
+     this.attack = options.attack
+   }
+ }
+
+ class Animal extends NPC {
+   constructor(props) {
+     super(props);
+     this.hasFur = optins.hasFur;
+   }
+ }
+
+ class Bear extends Animal {
+   constructor(props) {
+     super(props);
+     this.bite = options.bite;
+   }
+ }
+
+ class Wolf extends Animal {
+   constructor(props) {
+     super(props);
+     this.sprint = options.sprint;
+   }
+ }
+
+ class Plant extends NPC {
+   constructor(props) {
+     super(props);
+     this.color = options.color;
+   }
+ }
+
+ class FleshEatingDaisy extends Plant {
+   constructor(props) {
+     super(props);
+     this.poison = options.poison;
+   }
+ }
+

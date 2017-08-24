@@ -11,5 +11,19 @@
  *                   */
 
 const rockPaperScissors = () => {
-	// TODO: your solution here
+	const result = [];
+	const choices = ['rock', 'paper', 'scissors'];
+	const foundChoices = (rouondsLeft, roundsPlayed) => {
+		if (roundsLeft === 0) {
+			results.push(roundsPlayed);
+			return;
+		}
+		for (let i = 0; i < choices.length, i++) {
+			const choice = choices[i];
+			foundChoices(roundsLeft - 1, roundsPlayed.concat(choice));
+		}
+	};
+	findChoices(rounds, []);
+
+	return results;
 };

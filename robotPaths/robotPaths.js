@@ -29,4 +29,29 @@ const makeBoard = (n) => {
   return board;
 };
 
+<<<<<<< HEAD
 // write your code here for t
+
+const robotPath = (n) => {
+const board = makeBoard(n);
+let pathCounter = 0;
+
+const traverse = (i, j) => {
+  if (i === n -1 && j === n -1 ) {
+    pathCounter ++;
+    return;
+  }
+  if (i < 0 || j < 0 || i >= n || j >= n) return;
+  if (board.hasBeenVisited(i, j)) return;
+  else {
+    board.toggle(i, j);
+    traverse(i, j + 1);
+    traverse(i + 1, j);
+    traverse(i - 1, j);
+    board.toggle(i, j);
+  }
+}
+};
+=======
+// write your code here for t
+>>>>>>> a06f5c6c1a89c7c0e8d015d76b97203e150af56c

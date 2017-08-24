@@ -4,6 +4,16 @@
 // The output should be 1, 2, 3, .... 10. Right now it just prints 11.
 // I've been asked this three times in separate interviews.
 
+<<<<<<< HEAD
+// The problem is that the funciton is being called within the for loop, when the for loop should be
+// within the function.
+
+setTimeout(function() {
+  for (var i = 1; i <= 10; i++) {
+	console.log(i), 0;
+  }
+});
+=======
 for (var i = 1; i <= 10; i++) {
 	setTimeout(function() {
 		// From looking at the code you would assume it would print 1 - 10
@@ -11,3 +21,4 @@ for (var i = 1; i <= 10; i++) {
 		console.log(i);
 	}, 0);
 }
+>>>>>>> 238b11c88d5db894b319f306212134ed60f996d8
