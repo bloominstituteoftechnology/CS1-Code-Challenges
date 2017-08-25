@@ -7,7 +7,7 @@
 const vowelCount = (str) => {
   count = 0
   for (i = 0; i < str.length; i++) {
-    // lowercase vowel only
+    // lowercase vowels only
     if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
       count++;
     }
