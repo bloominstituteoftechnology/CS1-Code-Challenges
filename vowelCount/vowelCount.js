@@ -3,7 +3,7 @@
  * Example: 'Hello World!' -> 3
  */
 
-// version 1: O(2n)?
+// // version 1: O(n) but is it O(2 + n^2) because the if() condition is an array?
 const vowelCount = (str) => {
   count = 0
   for (i = 0; i < str.length; i++) {
@@ -24,7 +24,7 @@ const vowelCount = (str) => {
 // const vowelCount = str =>
 //   (str.match(/[aeiou]/gi) == null) ? 0 : str.match(/[aeiou]/gi).length;
 
-
+console.log(vowelCount('qwrtypsdfghjklzxcvbnm')) // ~~~> 0
 console.log(vowelCount('Hello World!')); // ~~~> 3
 console.log(vowelCount('The quick brown fox jumped over the lazy dog.')); // ~~~> 12
 console.log(vowelCount('Four score and twenty years ago... Our forefathers All In United')); // ~~~> 21
