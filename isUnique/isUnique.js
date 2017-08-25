@@ -4,7 +4,15 @@
 */
 
 const isUnique = (str) => {
-
+  let tempStr = {};
+  for (let i = 0; i < str.length; ++i) {
+    const res = str[i];
+    if (tempStr[res])
+      return false;
+    else
+      tempStr[res] = true;
+    }
+    return true;
 };
 
 console.log(isUnique('abcdhijklmnopqrstuv')); // true

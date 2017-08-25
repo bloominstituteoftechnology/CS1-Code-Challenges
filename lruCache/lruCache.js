@@ -39,11 +39,13 @@ class LRUCacheItem {
 
 class LRUCache {
   constructor(limit = 10) {
-    
+    this.size = 0;
+    this.limit = limit;
+    this.list = new List();
   }
 
   size() {
-
+    return this.size;
   }
 
   get(key) {
@@ -51,7 +53,7 @@ class LRUCache {
   }
 
   set(key, val) {
-
+   
   }
 }
 
@@ -75,7 +77,7 @@ class List {
   }
 
   // Insert at the front of the list
-  shift(val) {
+  unshift(val) {
     if (!this.head) {
       this.head = new ListNode(null, val, this.tail);
     } else if (!this.tail) {
@@ -89,7 +91,7 @@ class List {
   }
 
   // Remove from the front of the list
-  unshift() {
+  shift() {
     if (!this.head) {
       if (!this.tail) return null;
       return this.pop();
@@ -177,4 +179,4 @@ class List {
     if (this.prev) this.prev.next = this.next;
     if (this.next) this.next.prev = this.prev;
   }
-
+}
