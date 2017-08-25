@@ -21,6 +21,8 @@ const vowelCount = (str) => {
 
 // // version 3: Big O?
 // // per: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+// // g	Global search.
+// // i	Case-insensitive search.
 // const vowelCount = str =>
 //   (str.match(/[aeiou]/gi) == null) ? 0 : str.match(/[aeiou]/gi).length;
 
