@@ -70,6 +70,6 @@ const nodeB = nodeA.next = new Node('B');
 const nodeC = nodeB.next = new Node('C');
 const nodeD = nodeC.next = new Node('D');
 const nodeE = nodeD.next = new Node('E');
-hasCycle(nodeA); // => false
+console.log(hasCycle(nodeA)); // => false
 nodeE.next = nodeB;
-hasCycle(nodeA); // => true
+console.log(hasCycle(nodeA)); // => true

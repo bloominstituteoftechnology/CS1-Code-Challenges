@@ -16,15 +16,18 @@ const rockPaperScissors = (rounds, options) => {
   // arguments[1] = options || ['rock', 'paper', 'scissor'];
   const results = [];
   const permutations = (playsSoFar, roundsLeft) => {
-    if (roundsLeft === 0) {
+//    console.log(roundsLeft);
+    if (roundsLeft <= 0) {
       results.push(playsSoFar);
-    }
-    for(let i = 0; i < options.length; i++) {
-      permutations(playsSoFar.concat(options[i]), roundsLeft-1);
+    } else {
+      for(let i = 0; i < options.length; i++) {
+//        console.log(i);
+        permutations(playsSoFar.concat(options[i]), roundsLeft-1);
+      }
     }
   };
   permutations([], rounds);
-  return results;	
+  return results;
 };
 
 console.log(rockPaperScissors(3, ['rock', 'paper', 'scissor']));
