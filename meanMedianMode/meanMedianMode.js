@@ -23,6 +23,7 @@ const meanMedianMode = (arr) => {
   // MEDIAN
   // https://www.mathsisfun.com/definitions/median.html
   // of sorted arr of nums, middle term
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
     // if even number of terms, average of two middle terms
     // if odd, middle term
   const median = (arr) => {
