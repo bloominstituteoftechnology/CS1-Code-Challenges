@@ -41,7 +41,7 @@ const meanMedianMode = (arr) => {
   // const mode =
   return [`Number of numbers:${numOfNums}, Total: ${total}, Mean: ${mean}, Median: ${median(arr)}`];
   // return [`Number of numbers:${numOfNums}, Total: ${total}, Mean: ${mean}, Median: ${median}, Mode: ${mode}.`];
-  // return [ mean, median, mode ];
+  // return { mean, median, mode };
 };
 
 // TEST SUITE
