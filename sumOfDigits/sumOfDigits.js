@@ -1,4 +1,4 @@
-/* cc36 sumOfDigits - https://repl.it/student/submissions/1448100
+/* cc36 sumOfDigits - https://repl.it/student/submissions/1448448
 Write a function called sumOfDigits that given a positive integer, returns the sum of its digits.
 Assume all numbers will be positive.
 
