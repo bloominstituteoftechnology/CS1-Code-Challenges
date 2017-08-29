@@ -22,7 +22,7 @@ false
 
 function isArmstrongNumber(n) {
   // number of terms in integer => exponential value
-  stringNum = String(n);
+  stringNum = String(n); // ~~~~> also toString()
   // console.log(stringNum);
   exponent = stringNum.length;
   // console.log(exponent);
