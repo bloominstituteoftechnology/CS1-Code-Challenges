@@ -22,7 +22,9 @@ const mean = (arr) => {
 }
 
 const median = (arr) => {
-  const orderedArr = arr.sort();
+  const orderedArr = arr.sort((a, b) {
+    return a - b;
+  });
   if (arr.length % 2 !== 0) {
     return orderedArr[Math.floor(arr.length / 2)];
   }
