@@ -2,7 +2,7 @@
 
 function commonElements(arr1, arr2) {
   const matches = [];
-  arr1.forEach(element => {
+  arr1.forEach((element) => {
     if (arr2.includes(element)) matches.push(element);
   });
   return matches;
