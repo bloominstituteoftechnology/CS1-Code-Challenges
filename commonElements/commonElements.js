@@ -15,7 +15,7 @@ Output Example:
 */
 
 function commonElements(arr1, arr2) {
-  let common = [];
+  const common = [];
   let i;
   const len = arr1.length;
   for (i = 0; i < len; i++) {

@@ -1,0 +1,12 @@
+{
+  "name": "cs1-code-challenges",
+  "version": "0.0.1",
+  "description": "LambdaSchool CS1 Code Challenges",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
