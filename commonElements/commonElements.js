@@ -31,6 +31,7 @@ function commonElements(arr1, arr2) {
   // return common;
 }
 
+/* eslint no-console: 0 */
 // TEST SUITE
 console.log(commonElements([1, 2, 3, 4], [3, 4, 5, 6])); // ~~~> [3, 4]
 console.log(commonElements(['a', 'b', 'c'], ['x', 'y', 'z', 'a'])); // ~~~> ['a']
