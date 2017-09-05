@@ -10,3 +10,21 @@ function reverseList(node) {
   }
   return previous;
 }
+
+// class Node {
+//   constructor(value) {
+//     this.value = value;
+//     this.next = null;
+//   }
+// }
+//
+// const nodeA = new Node('A');
+// const nodeB = new Node('B');
+// const nodeC = new Node('C');
+// nodeD
+// nodeE
+//
+// nodeA.next = nodeB;
+// nodeB.next = nodeC;
+//
+// reverseList(nodeA);
