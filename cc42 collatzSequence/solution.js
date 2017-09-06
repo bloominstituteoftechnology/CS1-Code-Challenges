@@ -1,3 +1,5 @@
+// https://repl.it/student/assignments/351164/model_solution?fromSubmissionId=1498763
+
 function collatzSequence(n) {
   let m = n;
   const arr = [m];
