@@ -33,17 +33,20 @@
 
 class LRUCacheItem {
   constructor(val, key, node) {
-
+    this.val = val;
+    this.key = key;
+    this.node = node;
   }
 }
 
 class LRUCache {
   constructor(limit = 10) {
-    
+   this.limit = limit;
+   this.size = 0;
   }
 
   size() {
-
+    return this.size;
   }
 
   get(key) {
@@ -66,6 +69,22 @@ class ListNode {
     this.val = val;
     this.next = next || null;
   }
+  // Insert a value right after the node.
+  insertAfter(val) {
+    const next = this.next;
+    this.next = new ListNode(this, val, next);
+    if (next) next.prev = this.next;
+  }
+  // Insert a value right before the node.
+  insertBefore(val) {
+    const prev = this.prev;
+    this.prev = new ListNode(prev, val, this);
+    if (prev) prev.next = this.prev;
+  }
+  delete() {
+    if (this.prev) this.prev.next = this.next;
+    if (this.next) this.next.prev = this.prev;
+  }
 }
 
 class List {
@@ -75,7 +94,7 @@ class List {
   }
 
   // Insert at the front of the list
-  shift(val) {
+  unshift(val) {
     if (!this.head) {
       this.head = new ListNode(null, val, this.tail);
     } else if (!this.tail) {
@@ -89,7 +108,7 @@ class List {
   }
 
   // Remove from the front of the list
-  unshift() {
+  shift() {
     if (!this.head) {
       if (!this.tail) return null;
       return this.pop();
@@ -119,7 +138,7 @@ class List {
   pop() {
     if (!this.tail) {
       if (!this.head) return null;
-      return this.unshift();
+      return this.shift();
     } else {
       const tail = this.tail;
       this.tail = this.tail.prev;
@@ -135,13 +154,13 @@ class List {
     } else {
       node.delete();
     }
-    this.shift(node.val);
+    this.unshift(node.val);
   }
 
   // Move a node to the end of the List
   moveToEnd (node) {
     if (node === this.head) {
-      this.unshift();
+      this.shift();
     } else {
       node.delete();
     }
@@ -158,23 +177,4 @@ class List {
     }
     return result;
   }
-
-  // Insert a value right after the node.
-  insertAfter(val) {
-    const next = this.next;
-    this.next = new ListNode(this, val, next);
-    if (next) next.prev = this.next;
-  }
-
-  // Insert a value right before the node.
-  insertBefore(val) {
-    const prev = this.prev;
-    this.prev = new ListNode(prev, val, this);
-    if (prev) prev.next = this.prev;
-  }
-
-  delete() {
-    if (this.prev) this.prev.next = this.next;
-    if (this.next) this.next.prev = this.prev;
-  }
-
+}
