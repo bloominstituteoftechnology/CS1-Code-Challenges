@@ -29,5 +29,6 @@ const johnC = {
     line2: 'Stoke-on-Trent'
   }
 };
+/* eslint no-console: 0 */
 console.log(deepEquals(johnA, johnB)); // true
 console.log(deepEquals(johnA, johnC)); // false;
