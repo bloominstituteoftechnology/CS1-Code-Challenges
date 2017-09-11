@@ -1,5 +1,6 @@
 // https://repl.it/student/assignments/385242/model_solution?fromSubmissionId=1539350
-// Solution lecture:
+// Solution lecture pt1: https://youtu.be/251rmsXo9lI
+// Solution lecture pt2: https://youtu.be/aPBH-Vde8BU
 
 function deepEquals(obj1, obj2) {
   return JSON.stringify(obj1) === JSON.stringify(obj2);
