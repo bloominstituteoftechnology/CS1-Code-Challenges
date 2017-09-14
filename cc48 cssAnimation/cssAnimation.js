@@ -8,4 +8,5 @@ https://codepen.io/mixelpix/pen/ZXYNxX?editors=1100
 - https://webdesign.tutsplus.com/tutorials/a-beginners-introduction-to-css-animation--cms-21068
 - https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 - https://cssanimation.rocks/portal/
+Jesh's solution: https://codepen.io/anon/pen/QqwXWg
 */
