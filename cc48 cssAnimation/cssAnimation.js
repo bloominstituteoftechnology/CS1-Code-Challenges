@@ -9,4 +9,5 @@ https://codepen.io/mixelpix/pen/ZXYNxX?editors=1100
 - https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 - https://cssanimation.rocks/portal/
 Jesh's solution: https://codepen.io/anon/pen/QqwXWg
+Steve Ocampo: https://codepen.io/anon/pen/OxPYwV?editors=1100
 */
