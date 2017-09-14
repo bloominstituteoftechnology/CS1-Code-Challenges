@@ -24,7 +24,7 @@ function isTwinPrime(n) {
   if (!isPrime(n)) return false;
   const lowerTwin = n + 2;
   const higherTwin = n - 2;
-  if (isPrime(lowerTwin) || isPrime(higherTwin) ) return  true;
+  if (isPrime(lowerTwin) || isPrime(higherTwin)) return true;
 }
 
 /* eslint no-console: 0 */
