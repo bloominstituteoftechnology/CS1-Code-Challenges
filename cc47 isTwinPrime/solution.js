@@ -1,5 +1,5 @@
 // https://repl.it/student/assignments/395908/model_solution?fromSubmissionId=1559885
-//
+// https://youtu.be/wNPKVuKBWxo
 
 function isTwinPrime(n) {
   function isPrime(num) {
