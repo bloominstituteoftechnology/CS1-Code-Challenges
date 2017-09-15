@@ -56,3 +56,4 @@ console.log(romanNumeralize(101)); // ~~~> CI
 console.log(romanNumeralize(499)); // ~~~> CDXCIX
 console.log(romanNumeralize(501)); // ~~~> DI
 console.log(romanNumeralize(1990)); // ~~~> MCMXC
+console.log(romanNumeralize(1999)); // ~~~> MCMXCIX
