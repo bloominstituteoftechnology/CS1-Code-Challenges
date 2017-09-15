@@ -72,5 +72,6 @@ const telephoneWords = function (str) {
   return combinations(target);
 };
 
+/* eslint no-console: 0 */
 // console.log(telephoneWords('45'));
 telephoneWords('45');
