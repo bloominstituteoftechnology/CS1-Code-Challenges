@@ -1,5 +1,5 @@
 // https://youtu.be/w-kcXRj0Tu4
-//
+// https://piazza.com/class/j63w1pdyopf7kj?cid=54
 
 function stackMachine(str) {
   // create function to check that arr[arr.length - 1] and arr[arr.length - 2] are not undefined
