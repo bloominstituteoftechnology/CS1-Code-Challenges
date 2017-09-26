@@ -1,4 +1,4 @@
-/* cc51 combineTwoStrings https://repl.it/student/submissions/1674863
+/* cc51 combineTwoStrings https://repl.it/student/submissions/1677604
 
 Given three strings, str1, str2, str3.
 str3 is said to be a shuffle of str1 and str2 if it can be formed by
