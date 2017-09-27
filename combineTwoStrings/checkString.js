@@ -12,19 +12,60 @@ a valid shuffle of str1 and str2.
 
 */
 
-// NOTE: this fails the final test when two identical characters are in each
-// string; the recursive solutions passes this test.
 function checkString(str1, str2, str3) {
   let i = 0, j = 0, k = 0;
 
-  while (k < str3.length) {
-    const n = str3[k];
+  // Must keep state for case of duplicate characters
+  const initial_state = {
+    str1: str1,
+    i: i,
+    str2: str2,
+    j: j,
+    str3: str3,
+    k: k
+  };
 
-    if      (n === str2[j]) j++;
-    else if (n === str1[i]) i++;
-    else return false;
+  // Use a cache of prior states to prevent infinite loop;
+  // just holds the k value of states that have duplicate characters
+  const state_cache = [];
 
-    k++;
+  // Use a stack to hold states that need to be evaluated
+  const state_arr = [initial_state];
+
+  // Continue looking so long as there is state on the stack
+  while (state_arr.length > 0) {
+    // pop the next state to evaluate
+    const state = state_arr.pop();
+    let {str1, i, str2, j, str3, k} = state;
+
+    while (k < str3.length) {
+      const n = str3[k];
+
+      // if a duplicate is found, place the state on the stack
+      if (str1[i] === str2[j]) {
+        // check if this state has already been found; skip if it has
+        if (!state_cache.includes(k)) {
+          state_arr.push({
+            // Note: need to switch positions to test the second option
+            str1: str2,
+            i: j,
+            str2: str1,
+            j: i,
+            str3: str3,
+            k: k,
+          });
+          state_cache.push(k);
+        }
+      }
+
+      if      (n === str1[i]) i++;
+      else if (n === str2[j]) j++;
+      // a false condition found, but continue looking in different states
+      else if ( state_arr.length ) break;
+      else return false;
+
+      k++;
+    }
   }
   return true;
 }
@@ -45,11 +86,11 @@ function checkString_recursive (str1, str2, str3) {
   return false;
 }
 
-// console.log(checkString('abc', 'def', 'daebfc'));
-// console.log(checkString('abc', 'def', 'adbecf'));
-// console.log(checkString('abc', 'def', 'aaabbb'));
+console.log(checkString('abc', 'def', 'daebfc')); // true
+console.log(checkString('abc', 'def', 'adbecf')); // true
+console.log(checkString('abc', 'def', 'aaabbb')); // false
 
-console.log(checkString('aaa', 'bbb', 'ababab'));
+console.log(checkString('aaa', 'bbb', 'ababab')); // all are true
 console.log(checkString('aaa', 'bbb', 'abbaab'));
 console.log(checkString('aaa', 'bbb', 'aaabbb'));
 console.log(checkString('aaa', 'bbb', 'abbbaa'));
