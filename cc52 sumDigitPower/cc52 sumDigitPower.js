@@ -48,4 +48,4 @@ function sumDigPower(min, max) {
 console.log(digitIndexPower(123)); // ~~> no soup
 console.log(digitIndexPower(135)); // ~~> soup
 console.log(digitIndexPower(89)); // ~~> soup
-console.log(sumDigPower(1, 1000)); // ~~~> [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 89, 135, 175, 518, 598 ] array of matching integers from 1 to 100
+console.log(sumDigPower(1, 1000)); // ~~~> [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 89, 135, 175, 518, 598 ] array of matching integers from 1 to 1000
