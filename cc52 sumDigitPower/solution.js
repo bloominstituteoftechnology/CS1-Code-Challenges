@@ -1,10 +1,10 @@
 //
 //
 
-function sumDigPower (a, b) {
+function sumDigPower(a, b) {
   const arr = [];
   function check(n) {
-    let str = n.toString();
+    const str = n.toString();
     let ans = 0;
     for (let i = 0; i < str.length; i++) {
       ans += Math.pow(str[i], i + 1);
