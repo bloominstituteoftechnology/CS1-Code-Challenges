@@ -13,14 +13,13 @@ Given a range, how many primes within that range have this property?
 */
 
 function primeReduction(a, b) {
-  const answer = [];
   const cache = [];
 
+  // Eratosthenes algorithm to find all primes between 2..n
   const eratosthenes = (n) => {
-    // Eratosthenes algorithm to find all primes between n and m
     let array = [], upperLimit = Math.sqrt(n), output = [];
 
-    // Make an array from m to (n - 1)
+    // Make an array from a to (n - 1)
     for (let i = 0; i < n; i++) {
       array.push(true);
     }
@@ -34,7 +33,7 @@ function primeReduction(a, b) {
       }
     }
 
-    // All array[i] set to true are primes
+    // All array[i] set to true are primes (in range a..b)
     for (let i = 2; i < n; i++) {
       if(array[i]) {
         output.push(i);
@@ -44,25 +43,27 @@ function primeReduction(a, b) {
     return output;
   };
 
+  // array of primes in range 2..b
   const primes = eratosthenes(b);
   
+  // algorithm to find primes with the property
   const reducePrime = (p) => {
-    if (p === 1) return true;
+    if (p === 1)           return true;
     if (cache.includes(p)) return false;
     cache.push(p);
-    const s = p.toString();
-    const sum = s.split('').reduce((acc,c) => {return acc + c * c},0);
+
+    const sum = p.toString().split('').
+          reduce((acc,c) => {return acc + c * c}, 0);
     return reducePrime(sum);
   }
 
-  primes.forEach((p) => {
+  // loop through array of primes, sending each to algorithm
+  return (primes.filter((p) => {
     if (p >= a) {
       cache.length = 0;
-      if (reducePrime(p)) answer.push(p);
+      return reducePrime(p);
     }
-  });
-
-  return answer.length;
+  })).length;
 }
 
 console.log(primeReduction(13,50));
