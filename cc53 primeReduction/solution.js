@@ -40,7 +40,7 @@ function primeReduction(a, b) {
     for (let i = 2; i <= Math.sqrt(n); i++) if (n % i === 0) return false;
     return true;
   }
-  let arr = [];
+  const arr = [];
   function reduction(n) {
     if (arr.includes(n)) {
       arr.length = 0;
