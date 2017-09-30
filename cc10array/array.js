@@ -1,4 +1,5 @@
-/* Make a class called Array.
+/* cc10 array
+ * Make a class called Array.
  * It should have the methods push, pop, get(index), and delete(index).
  * get and delete should accept an index and get or remove the item at that index.
  * Make sure to shift the array items after deleting an item.
@@ -37,7 +38,7 @@ class ObjArray {
 
   // todo: get(...args)
   get(isIndex) {
-    if (!this.listObject[isIndex]) return "nope";
+    if (!this.listObject[isIndex]) return 'nope';
     return this.listObject[isIndex];
   }
 
@@ -46,7 +47,7 @@ class ObjArray {
   // set nextIndex to last Key#
   // todo: delete(indexRange)?
   delete(indexValue) {
-    this.listObject[indexValue] = ''
+    this.listObject[indexValue] = '';
     while (indexValue < this.nextIndex) {
       this.listObject[indexValue] = this.listObject[indexValue + 1];
       indexValue++;
@@ -64,8 +65,9 @@ class ObjArray {
   getAllKeysAndValues() {
     return this.listObject;
   }
-};
+}
 
+/* eslint no-console:0 */
 // TEST SUITE
 const test  = new ObjArray();
 console.log('TEST# 1 - ObjArray() instance contains:', test);
@@ -97,10 +99,10 @@ test.delete(5);
 console.log(`TEST#14: Q: did "something" get deleted?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
 console.log(`TEST#15: Q: What's the index set to?\nA: The next index location is: ${test.nextIndex}`);
-test.push('well lookie thar!')
+test.push('well lookie thar!');
 console.log(`TEST#16: Q: Did I add it to the right place?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
-test.push('more stuff!')
+test.push('more stuff!');
 console.log(`TEST#17: Q: Wanna add some more stuff?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
 test.delete(1);
@@ -108,10 +110,10 @@ test.delete(3);
 test.delete(5);
 console.log(`TEST#18: Q: What just happened???\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
-test.push('even more stuff!')
-test.push('so much stuff!')
-test.push('and even more stuff!')
-test.push('never ending stuff!!!')
+test.push('even more stuff!');
+test.push('so much stuff!');
+test.push('and even more stuff!');
+test.push('never ending stuff!!!');
 console.log(`TEST#17: Q: Wanna add some more stuff?\nA: ${test.getAllKeysAndValues()}`);
 console.log(test.getAllKeysAndValues());
 console.log(`Q: easier to read?\nA: ${JSON.stringify(test.getAllKeysAndValues())}`);
