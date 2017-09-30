@@ -1,2 +1,18 @@
+# npm installs
+*/node_modules
+
+# MongoDB
+*/data
+
+# all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+
+# Ignore vim
+*~
+*.swp
+*.swo
+
+# Ignore macOS
 .DS_Store
-/node_modules
