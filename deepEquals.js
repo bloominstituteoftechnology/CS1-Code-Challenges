@@ -15,16 +15,17 @@ console.log(deepEquals([[0,1],[2,3]],[ [0,1],[2,3]]) === true);
 console.log(deepEquals([[0,1],[2,3]],[ [0,1],[2,4]]) === false);
 
 function tester(fn, truth) {
+    console.log(`testing ${fn}`);
     truth.forEach(e => {
-	const args = e.slice(0, e.length - 2);
+	const args = e.slice(0, e.length - 1);
 	const exp = e[e.length - 1];
-	const ans = fn(args);
+	const ans = fn.apply(null, args);
 	if (deepEquals(ans, exp))
 	    return
 	else {
 	    console.log(`args: ${args}`);
 	    console.log(`expected: ${exp}`);
-	    console.log('got: ${ans}`);
+	    console.log(`got: ${ans}`);
 	}
     });
 }
