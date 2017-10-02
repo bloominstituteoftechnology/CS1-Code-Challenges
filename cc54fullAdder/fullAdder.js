@@ -40,20 +40,16 @@ function halfAdder(a, b) {
 // Full adder is two half adders with OR gate
 // sum of 1st half adder goes into 2nd halfadder "a"
 // carry in goes into 2nd half adder "b"
-function fullAdder(a, b, carryIn) {
-  const halfAdd = halfAdder(a, b);
-  const sum = XOR(carryIn, halfAdd[0]);
-  carryIn = !NAND(carryIn, halfAdd[0]);
-  carryIn = XOR(carryIn, halfAdd[1]);
-  return [sum, carry];
-
-  // sum = XOR(XOR(a, b), carryIn);
-  // carry = !NAND(a, b) || carryIn (XOR(a, b));
-
+function fullAdder(a, b, carryIn = 0) {
+  const halfAdd1 = halfAdder(a, b);
+  const halfAdd2 = halfAdder(halfAdd1, carryIn);
+  // const carry = OR(first[1], second[1]);
+  const carry = halfAdd1[1] || halfAdd2[1];
+  return [halfAdd2[0], carry];
 }
 
 function fullAdder4(a, b) {
-  return [1,1,1,1,1];
+
 }
 
 /* eslint no-console: 0 */
@@ -62,7 +58,8 @@ console.log(halfAdder(true, true));   // ~~~> [ false, true ]
 console.log(halfAdder(true, false));  // ~~~> [ true, false ]
 console.log(halfAdder(false, true));  // ~~~> [ true, false ]
 console.log(halfAdder(false, false)); // ~~~> [ false, false ]
-console.log(fullAdder(true, true));   // ~~~> [ false, true ]
+
+console.log(fullAdder(true, true));   // ~~~> [ true, true ]
 console.log(fullAdder(true, false));  // ~~~> [ true, false ]
 console.log(fullAdder(false, true));  // ~~~> [ true, false ]
-console.log(fullAdder(false, false)); // ~~~> [ false, false ]
+console.log(fullAdder(false, false)); // ~~~> [ true, false ]
