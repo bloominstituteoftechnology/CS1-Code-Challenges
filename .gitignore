@@ -1,4 +1,5 @@
 # npm installs
+/node_modules
 */node_modules
 
 # MongoDB
