@@ -30,3 +30,43 @@ const makeBoard = (n) => {
 };
 
 // write your code here for t
+const robotPaths = (n) => {
+  // make a board size n
+  // keep a path counter.
+  // create a path tracking function that we can call recursively (takes in location) (i, j)
+    // <if> basecase: check to see if function has arrived. if true, pathcounter++;
+    // <if> check to see if its out of bounds i < 0, j < 0, i >= n, j >= n
+    // <if> check to see if we've already been here.
+    // <else>
+    // board.toggle(i, j)
+    // recurse(i, j + 1);
+    // recurse(i + 1, j);
+    // recurse(i, j - 1);
+    // recurse(i - 1, j);
+  // recurse(0, 0);
+  // return pathCounter;
+  
+  const board = makeBoard(n);
+  let pathCounter = 0;
+
+  const traverse = (i, j) => {
+    if (i === n - 1 && j === n - 1) {
+      pathCounter++;
+      return;
+    }
+    if (i < 0 || j < 0 || i >= n || j >= n) return;
+    if (board.hasBeenVisited(i, j)) return;
+    else {
+      board.toggle(i, j);
+      traverse(i, j + 1);
+      traverse(i + 1, j);
+      traverse(i, j - 1);
+      traverse(i - 1, j);
+      board.toggle(i, j);
+    }
+  };
+  traverse(0, 0);
+  return pathCounter;
+};
+
+console.log(robotPaths(5));
