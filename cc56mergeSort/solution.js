@@ -1,5 +1,5 @@
 // https://repl.it/student/assignments/458240/model_solution?fromSubmissionId=1746465
-//
+// https://youtu.be/oMlOBuyazv4
 
 function mergeSort(arr) {
   if (arr.length < 2) return arr;
