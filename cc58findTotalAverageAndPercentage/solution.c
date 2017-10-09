@@ -1,5 +1,6 @@
 // https://repl.it/student/assignments/460928/model_solution?fromSubmissionId=1764702
-//
+// https://piazza.com/class/j63w1pdyopf7kj?cid=64
+// https://youtu.be/7sBMwuVb0EI
 
 #include <stdio.h>
 
