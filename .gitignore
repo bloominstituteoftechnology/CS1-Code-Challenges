@@ -17,3 +17,6 @@
 
 # Ignore macOS
 .DS_Store
+
+# gcc
+a.out
