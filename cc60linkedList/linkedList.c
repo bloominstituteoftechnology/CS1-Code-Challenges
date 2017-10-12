@@ -1,4 +1,4 @@
-/* cc60
+/* cc60 linkedList
 It's finally time to implement a linked list in C!
 To be slightly less mean, you won't be starting entirely from scratch.
 
