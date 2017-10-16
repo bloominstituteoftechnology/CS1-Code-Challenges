@@ -40,7 +40,9 @@ void printInOrder(struct node *root)
 
 struct node* insert(struct node* node, int item)
 {
+  if (node == NULL) {
 
+  }
 }
 
 int main(int argc, char* argv[])
