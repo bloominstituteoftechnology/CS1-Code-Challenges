@@ -1,0 +1,14 @@
+{
+  "name": "fizzbuzztesting",
+  "version": "1.0.0",
+  "description": "Test the fizzbuff function",
+  "main": "fizzBuzz.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "wlharvey4",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.5.0"
+  }
+}

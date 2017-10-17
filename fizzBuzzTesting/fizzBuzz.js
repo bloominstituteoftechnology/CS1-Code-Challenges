@@ -8,7 +8,19 @@
  * The main focus of this challenge is the testing aspect of it.
  */
 
-const fizzBuzz = (num) => {
-
+function fizzBuzz(num) {
+  const rem3 = num % 3
+  const rem5 = num % 5;
+  if ((!rem3 && !rem5)) {
+    return 'fizzbuzz';
+  }
+  if (!rem3) {
+    return 'fizz';
+  }
+  if (!rem5) {
+    return 'buzz';
+  }
+  return num;
 };
 
+module.exports = { fizzBuzz };
