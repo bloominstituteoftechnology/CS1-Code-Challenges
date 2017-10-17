@@ -66,21 +66,23 @@ int pop(struct Stack* stack)
 struct Queue
 {
   // Your code here
-  
+  struct Stack* stack;
 };
 
 // Create a queue with the given capacity
 struct Queue* createQueue(unsigned capacity)
 {
   // Your code here
-  
+  struct Queue* queue = malloc(sizeof(struct Queue));
+  queue->stack = createStack(capacity);
+  return queue;
 }
 
 // Add and item to the queue
 void enqueue(struct Queue* queue, int item)
 {
   // Your code here
-  
+  push(queue->stack, item);
   printf("%d enqueued onto queue\n", item);
 }
 
@@ -88,7 +90,13 @@ void enqueue(struct Queue* queue, int item)
 int dequeue(struct Queue* queue)
 {
   // Your code here
-  
+  int top, result;
+  top = pop(queue->stack);
+  if (isEmpty(queue->stack))
+    return top;
+  result = dequeue(queue);
+  push(queue->stack, top);
+  return result;
 }
 
 // Program to test above functions
