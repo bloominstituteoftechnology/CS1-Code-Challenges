@@ -18,11 +18,19 @@ if you can't get started on a C implementation.
 */
 
 #include <stdio.h>
-#include <math.h>
 
 void insertionSort(int arr[], int n)
 {
-
+  int i, j;
+  for (i = 0; i < n; ++i) {
+    int temp = arr[i];
+    j = i - 1;
+    while (j >= 0 & arr[j] > temp) {
+      arr[j + 1] = arr[j];
+      --j;
+    }
+    arr[j + 1] = temp;
+  }
 }
 
 void printArray(int arr[], int n)
