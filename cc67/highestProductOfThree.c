@@ -58,7 +58,7 @@ int highestProductOf3(int arr[], int length)
   printArray(arr, length);
 
   // if two lowest negatives and highest positive are greater than the three highest positives
-  if (arr[0] * arr[1] * arr[length] > arr[length - 2] * arr[length - 1] * arr[length]) {
+  if (arr[0] * arr[1] * arr[length] > arr[length - 3] * arr[length - 2] * arr[length - 1]) {
     puts("What the frog?");
     return arr[0] * arr[1] * arr[length];
   // else return three highest positives
@@ -69,7 +69,7 @@ int highestProductOf3(int arr[], int length)
 
 }
 
-int main(int argc, char* argv)
+int main(int argc, char** argv)
 {
   int arr1[] = {-10, -10, 1, 3, 2};  // ~~~> 300
   int arr2[] = {1, 10, -5, 1, -100}; // ~~~> 5000
