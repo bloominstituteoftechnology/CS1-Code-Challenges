@@ -1,0 +1,28 @@
+{
+  "name": "code-challenges",
+  "version": "1.0.0",
+  "description": "Prep for Job Interviews",
+  "main": "app.js",
+  "scripts": {
+    "test": "eslint *.js && mocha -R nyan tests",
+    "watch": "npm test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixelpixel/CS1-Code-Challenges.git"
+  },
+  "author": "Patrick Kennedy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mixelpixel/CS1-Code-Challenges/issues"
+  },
+  "homepage": "https://github.com/mixelpixel/CS1-Code-Challenges#readme",
+  "dependencies": {
+    "babel-preset-es2015": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-import": "*"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  }
+}
