@@ -1,5 +1,6 @@
 # https://repl.it/student/assignments/493753/model_solution?fromSubmissionId=1855286
-#
+# https://piazza.com/class/j63w1pdyopf7kj?cid=81
+# https://youtu.be/VC52108omBI
 
 # 1. Donuts
 # Given an int count of a number of donuts, return a string
