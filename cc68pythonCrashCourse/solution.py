@@ -1,22 +1,5 @@
-# cc68 pythonCrashCourse
-# https://repl.it/student/submissions/1847090
-
-'''
-Let's walk through the basic language constructs of Python.
-This will be a bit of a whirlwind through a bunch of basic Python features.
-Don't stress about not remembering all of these details at the end of this,
-you definitely won't remember it all, so just accept that fact right now :)
-
-Remember, we're delving into other programming languages in an attempt to
-broaden your breadth, and to continually practice decoupling the way you think
-about problems from how you implement problems.
-
-Follow along the instructions and try out the exercises whenever you're prompted.
-Little exercises strewn throughout the assignment are prefaced with EXERCISE, so look out for those.
-
-Here's a link to a pretty thorough Python manual that much of this material was drawn from:
-http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html
-'''
+# https://piazza.com/class/j63w1pdyopf7kj?cid=80
+# https://youtu.be/qUmJVVOSFyY
 
 # Comments in Python use the '#' symbol
 
@@ -33,7 +16,7 @@ b = 2
 
 # Also note that expressions don't end with semicolons
 # EXERCISE: Define a global variable PI and have it store as many digits of pi as you can muster
-PI = 3.14159
+PI = 3.14
 
 
 
@@ -43,7 +26,7 @@ PI = 3.14159
 # Also, there are no braces in Python; whitespace actually matters!
 
 ''' After closing the parentheses where function parameters go,
-instead of an opening curly brace, a colon is used: '''
+instead of an opening curly brace, a colon is used; '''
 
 def example_function(new_input_to_append, a_list=None):
   # Same thing with if statements; end them with a colon
@@ -58,7 +41,6 @@ def example_function(new_input_to_append, a_list=None):
 Here, we're invoking our example function with the variable `c` you
 defined earlier and nothing as the second argument, meaning the function
 will utilize the default parameter that was given in the function definition '''
-
 print("Our example function returns: ", example_function(PI))
 
 
@@ -70,16 +52,14 @@ both JavaScript and C. Python opts for a much cleaner syntax with regards to loo
 
 # We iterate a specified number of times using the `range` function
 for x in range(5):
-  print(x, end="")
-print()
+  print(x)
 
 # The body of the loop is denoted by indentation, so you need to delineate your whitespace correctly
 
-# Given a list (arrays are called lists in Python), we iterate through it like so
+# Given an list (arrays are called lists in Python), we iterate through it like so
 fibonacci = [1, 1, 2, 3, 5, 8, 13]
 for number in fibonacci:
-  print(number, end="")
-print()
+  print(number)
 
 # You can loop over an element along with its index using the `enumerate` function like so:
 for index, number in enumerate(fibonacci):
@@ -107,10 +87,10 @@ numbers = [
 
 # Your code here:
 for n in numbers:
-  if n < 237:
-    if n % 2 == 0:
-      print(n)
-
+  if n % 2 == 0:
+    print(n)
+  if x == 237:
+    break
 
 
 
@@ -175,7 +155,6 @@ full_names = dict(zip(first_names, last_names))
 print("full_names dict: ", full_names)
 
 # full_names.John doesn't work; use full_names['John'] instead
-print(full_names['John']) #<~~ 'Cleese'
 
 # Dicts come with the `.keys` and `.values` methods you're used to on JS objects
 print("full_names dict keys: ", full_names.keys())
@@ -187,8 +166,8 @@ print("full_names dict values: ", full_names.values())
 ''' Python lists, akin to JS arrays, pretty much also work as you're used to.
 Not much to say here, except the way you find the length of a list is by using
 the `len()` function instead of accessing a property on the list'''
-
 print("The length of this list is: ", len([4,6,8,4,1,4,6,7,5,4,3,2,2,8,10]))
+
 
 
 
@@ -200,7 +179,6 @@ use them with lists, so let's illustrate that first. '''
 squares = []
 for x in range(10):
   squares.append(x**2)
-print(squares)
 
 ''' Looks fine. Does what you'd expect it to. In Python, though, this can be very
 concisely one-lined via a list comprehension: '''
@@ -217,7 +195,7 @@ print("Stuff list comprehension returns: ", stuff)
 ''' The above list comprehension combines the elements of two lists into a new list if
 elements at matching indexes do not match '''
 
-# Comprehensions aren't only limited to lists; they work with dicts as well!
+# Comprehensions are only limited to lists; they work with dicts as well!
 # The following comprehension builds a dict where value is indexed by its square root:
 squares_dict = {x: x**2 for x in range(10)}
 print("squares_dict list comprehension returns: ", squares_dict)
@@ -226,8 +204,7 @@ print("squares_dict list comprehension returns: ", squares_dict)
 the alphabet as values with their keys being their index in the alphabet: '''
 from string import ascii_lowercase
 # Your code here
-
-alphabet_dict = {num: alpha for num, alpha in enumerate(ascii_lowercase)}
+alphabet_dict = { x: ascii_lowercase[x] for x in range(26) }
 print("alphabet_dict list comprehension returns: ", alphabet_dict)
 
 
@@ -250,5 +227,5 @@ print("Result of filtering out non-even fib numbers: ", result)
 But first, we need to import `reduce` from the `functools` module: '''
 from functools import reduce
 ints = [47, 11, 42, 102, 13]
-result = reduce(lambda x, y: x if x > y else y, ints)
+result = reduce(lambda x, y: x if (x > y) else y, ints)
 print("Result of reducing a list to find the max: ", result)
