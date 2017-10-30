@@ -66,6 +66,25 @@ class ListNode {
     this.val = val;
     this.next = next || null;
   }
+  
+  // Insert a value right after the node.
+  insertAfter(val) {
+    const next = this.next;
+    this.next = new ListNode(this, val, next);
+    if (next) next.prev = this.next;
+  }
+
+  // Insert a value right before the node.
+  insertBefore(val) {
+    const prev = this.prev;
+    this.prev = new ListNode(prev, val, this);
+    if (prev) prev.next = this.prev;
+  }
+
+  delete() {
+    if (this.prev) this.prev.next = this.next;
+    if (this.next) this.next.prev = this.prev;
+  }
 }
 
 class List {
@@ -158,23 +177,4 @@ class List {
     }
     return result;
   }
-
-  // Insert a value right after the node.
-  insertAfter(val) {
-    const next = this.next;
-    this.next = new ListNode(this, val, next);
-    if (next) next.prev = this.next;
-  }
-
-  // Insert a value right before the node.
-  insertBefore(val) {
-    const prev = this.prev;
-    this.prev = new ListNode(prev, val, this);
-    if (prev) prev.next = this.prev;
-  }
-
-  delete() {
-    if (this.prev) this.prev.next = this.next;
-    if (this.next) this.next.prev = this.prev;
-  }
-
+}
