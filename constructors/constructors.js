@@ -22,3 +22,42 @@
  * This is how you would structure the game objects in an actual game
  * application in Unity or another similar framework.
  */
+
+class NPC {
+  constructor(options) {
+    this.hp = options.hp;
+    this.str = options.str;
+    this.def = options.def;
+    this.spd = options.spd;
+  }
+}
+
+class Humanoid extends NPC {
+  constructor(options) {
+    super(options);
+    this.job = options.job;
+  }
+}
+
+class Human extends Humanoid {
+  constructor(options) {
+    super(options);
+    this.race = options.race;
+  }
+}
+
+class Soldier extends Human {
+  constructor(options) {
+    super(options);
+    this.hp += 10;
+    };
+}
+
+ const jeff = new Soldier({
+  hp: 10,
+  str: 10,
+  def: 10,
+  spd: 10,
+  job: 'Baker'
+ });
+ console.log(jeff); 

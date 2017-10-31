@@ -11,5 +11,19 @@
 **/
 
 const binarySearch = (nums, target) => {
-
+  let min = 0;
+  let max = nums.length;
+  const search = () => {
+    if(nums[max / 2] > target) {
+      max = max / 2 - 1;
+      search();
+    }
+    if(nums[max / 2] < target) {
+      min = max / 2 + 1;
+      search();
+    }
+    if(nums[max / 2] === target) {
+      return max / 2;
+    }
+  };
 };

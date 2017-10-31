@@ -8,3 +8,7 @@
 * Input: "abcdefgh" Output: [ 0, 0 ]
 * Input: "aabbbcccc" Output: [ 5, 4 ]
 */
+
+const longestRun = (str) => {
+  let arr = [0, 0];
+}

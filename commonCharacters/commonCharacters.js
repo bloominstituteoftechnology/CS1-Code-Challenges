@@ -7,3 +7,6 @@
  * Returns: 'aeiou'
 */
 
+const commonCharacters = (a, b) => {
+  
+}
