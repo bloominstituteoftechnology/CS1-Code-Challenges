@@ -35,6 +35,7 @@ lot of work that isn't necessary. How could that be cut down?
 '''
 
 def make_change(amount, denominations):
+    # # Recursive solution - redundancies
     # # BASE CASE
     # if (amount < 0):
     #     return 0
@@ -42,10 +43,16 @@ def make_change(amount, denominations):
     #     return 1
     # else:
     #     return sum([make_change(amount - denom, denominations) for denom in denominations])
+
+    # # Iterative solution
     combinations = [1] + [0] * amount
+    print('start: ', combinations)
     for denom in denominations:
+        print('active denomination: ', denom)
         for i in range(denom, amount + 1):
+            print(combinations[i], '+=', combinations[i - denom])
             combinations[i] += combinations[i - denom]
+            print('iterate: ', combinations)
     return combinations[amount]
 
 # TEST SUITE
