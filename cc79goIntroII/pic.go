@@ -14,17 +14,17 @@ func Pic(x, y int) [][]uint8 {
        $ go get "golang.org/x/tour/pic"
        $ go build
      */
-  array2D := make([][]uint8, y)
-  // for i := 0; i < y; i++ {
-  for i := range array2D {
-    array2D[i] = make([]uint8, x)
-    // for j := 0; j < x; j++ {
-    for j := range array2D[i] {
-      array2D[i][j] = uint8(x * y * j + i)
-    }
-  }
-  return array2D;
-}
+   array2D := make([][]uint8, y)
+   // for i := 0; i < y; i++ {
+   for i := range array2D {
+     array2D[i] = make([]uint8, x)
+     // for j := 0; j < x; j++ {
+     for j := range array2D[i] {
+       array2D[i][j] = uint8(x * y / (j + 1) + i)
+     }
+   }
+   return array2D;
+ }
 
 func main() {
   pic.Show(Pic)
