@@ -1,4 +1,4 @@
-// cc78 goIntroI https://repl.it/student/submissions/1929699
+// cc78 goIntroI Variables, Types & Loops https://repl.it/student/submissions/1929699
 /*
 For the next two weeks, we'll be doing morning code challenges using Go
 (sometimes referred to as Golang). Go is a statically typed, compiled language
