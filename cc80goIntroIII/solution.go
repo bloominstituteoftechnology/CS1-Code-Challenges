@@ -1,5 +1,6 @@
 // https://repl.it/student/assignments/535531/model_solution?fromSubmissionId=1943334
-//
+// https://piazza.com/class/j63w1pdyopf7kj?cid=102
+// https://youtu.be/mIhpRnLLhG0
 
 package main
 
