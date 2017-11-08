@@ -79,19 +79,29 @@ func (v Vertex) Abs() float64 {
 // TODO: Convert the Scale function to be a method on the Vertex class. The receiver argument in
 // this case should still be a pointer since values are still being modified
 // Implement your function here
-
-
+func (v *Vertex) Scale(factor float64) {
+  v.X = v.X * factor
+  v.Y = v.Y * factor
+}
 
 // TODO: Implement a method on the Vertex class called Midpoint that receives another vertex and finds the
 // midpoint between the two vertices. Should return the midpoint as a Vertex.
 // Implement your function here
-
+func (v1 Vertex) Midpoint(v2 Vertex) Vertex {
+  Xm := (v1.X + v2.X) / 2;
+  Ym := (v1.Y - v2.Y) / 2;
+  return Vertex{Xm, Ym};
+}
 
 
 // TODO: Implement a method on the Vertex class called Distance that receives another vertex and finds the
 // distance between the two vertices. Should return a float64 representing the distance.
 // Implement your function here
-
+func (v1 Vertex) Distance(v2 Vertex) float64 {
+  Xd := math.Pow(v1.X - v2.X, 2);
+  Yd := math.Pow(v1.Y - v2.Y, 2);
+  return math.Sqrt(Xd + Yd);
+}
 
 
 func main() {
