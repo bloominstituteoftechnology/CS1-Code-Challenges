@@ -1,3 +1,5 @@
+// https://youtu.be/Ras1WlZFMnI
+
 /*
 1) Deep Equality w/Evan Allen
 cc45 deepEquality
