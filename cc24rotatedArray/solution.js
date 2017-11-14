@@ -14,9 +14,10 @@
  *
  * Target time complexity: O(log(n))
  */
+/* eslint no-console: 0 */
 
 const rotatedArraySearch = (arr, number) => {
-  // low = 0
+/*// low = 0
   // high = arr.length - 1
   //  while low <= high
     // create middle to be initialized to avg of low + high
@@ -29,7 +30,7 @@ const rotatedArraySearch = (arr, number) => {
       // if arr[middle] < number && number <= array[high]
         // low = mid + 1;
       // else high = middle - 1
-  // return null;
+  // return null; */
   let low = 0;
   let high = arr.length - 1;
   while (low <= high) {

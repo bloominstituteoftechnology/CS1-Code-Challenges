@@ -24,6 +24,8 @@
  6) not sure how to quickly return the index...
 */
 
+/* eslint no-console: 0 */
+
 const rotatedArraySearch = (arr, queryNum) => {
   const len = arr.length;
   let i, high, low, highIndex, lowIndex;
