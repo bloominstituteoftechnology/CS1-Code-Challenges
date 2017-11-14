@@ -5,15 +5,15 @@
 
 // // version 1: O(n) but is it O(2 + n^2) because the if() condition is an array?
 const vowelCount = (str) => {
-  count = 0
-  for (i = 0; i < str.length; i++) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
     // lowercase vowels only
     if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
       count++;
     }
   }
   return count;
-}
+};
 
 // // version 2: Big O?
 // const vowelCount = str => Array.from(str)
