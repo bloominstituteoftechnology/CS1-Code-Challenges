@@ -5,6 +5,8 @@
 // your method should return the original string.
 // You can assume the string has only uppercase and lowercase letters (a - z).
 
+/* eslint no-console: 0 */
+
 const compressor = function(str) {
   // is there a simple check prevent the algorithm from running
   // if it would make a longer string? Seems like not having to
@@ -20,7 +22,7 @@ const compressor = function(str) {
       count++;
     } else if ((str[i] != str[i + 1])) {
       arr.push(`${str[i]}${count}`);
-      count = 1
+      count = 1;
     }
   }
   const compressed = arr.join('');
@@ -28,7 +30,7 @@ const compressor = function(str) {
   // if (str.length <= compressed.length) return `inadequate algorithm`;
   // return compressed;
   // ternary
-  return str.length <= compressed.length ? str : compressed
+  return str.length <= compressed.length ? str : compressed;
 };
 
 // TEST SUITE
