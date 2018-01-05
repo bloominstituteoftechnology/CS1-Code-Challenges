@@ -7,3 +7,13 @@
  * Returns: 'aeiou'
 */
 
+const commonCharacters = (str1, str2) => {
+  let tempSet = new Set(str2);
+  let ansStr = '';
+  for (let i = 0; i < str1.length; i++) {
+    if (tempSet.has(str1[i]) && str1[i] !== ' ') {
+      ansStr += str1[i];
+    }
+  }
+  return ansStr;
+};

@@ -4,3 +4,21 @@
 // If the "compressed" string would not become smaller than the original string,
 // your method should return the original string.
 // You can assume the string has only uppercase and lowercase letters (a - z).
+
+const stringCompression = (str) => {
+  let newString = '';
+  for (let i = 0; i < str.length;) {
+    const letter = str[i];
+    let numLetter = 0;
+    do {
+      numLetter++;
+      i++;
+    }
+    while (str[i] === letter);
+    newString += letter + numLetter;
+  }
+  if (newString.length >= str.length) {
+    return str;
+  }
+  return newString;
+};

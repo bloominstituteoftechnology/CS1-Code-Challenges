@@ -23,4 +23,23 @@
 
 const bubbleSort = (arr) => {
   //code here
+  const sortArr = () => {
+    for (i = 0; i < arr.length;) {
+      if (i < arr.length - 1) {
+        if (arr[i] < arr [i + 1]) {
+          i++;
+        }
+        if (arr[i] > arr[i + 1]) {
+          const x = arr[i + 1];
+          arr[i + 1] = arr[i];
+          arr[i] = x;
+          sortArr();
+        }
+      }
+    }
+  }
+  sortArr();
+  return arr;
 };
+
+// I know the time complexity is really high, but to be honest, I had a hard time getting it to actually work so I don't think I can figure out how to reduce the time complexity.
