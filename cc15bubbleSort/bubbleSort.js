@@ -31,9 +31,9 @@ const bubbleSort = (arr, count = 0) => {
       //   console.log(`Sorting pass  #${modify}:  ${arr}`);
       // }
 
-      bubbleSort(arr, sorting)
+      bubbleSort(arr, sorting);
     }
-  };
+  }
   // return sorted array
   return arr;
 };
