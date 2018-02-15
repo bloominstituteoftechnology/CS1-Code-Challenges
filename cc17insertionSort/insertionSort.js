@@ -14,15 +14,20 @@
 
 const insertionSort = (array) => {
   for(let i = 0; i < array.length; i++) {
-    // console.log('step', i, array);
     let temp = array[i];
+    console.log('temp ------------------------>', temp);
     let j = i - 1;
+    console.log('           i | j    array[i] =', array[i], ' array[j] =', array[j])
+    console.log('for loop: ', i, '|  ', array);
+    console.log('----------------------------------------------')
     while (j >= 0 && array[j] > temp) {
-      // console.log('step', i, j, array);
+      console.log('while:    ', i, '|', j, array);
       array[j + 1] = array[j];
       j--;
     }
+    console.log('----------------------------------------------')
     array[j + 1] = temp;
+    console.log('end of for loop:', array, '\n\n');
   }
   return array;
 };
