@@ -41,8 +41,8 @@ const modulo = function(phi, psi) {
 console.log(multiply(2, 10));   // ---> 20
 console.log(multiply(1, 1));    // ---> 1
 console.log(multiply(21, 0));   // -->  0
-// console.log(multiply(21, -1));  // --> error
 console.log(multiply(-21, 1));  // --> -21
+// console.log(multiply(21, -1));  // --> error
 // console.log(multiply(-21, -3)); // --> error
 
 // division
