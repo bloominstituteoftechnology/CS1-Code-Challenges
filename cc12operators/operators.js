@@ -12,7 +12,8 @@
 const multiply = function(a, b) {
   const arr = new Array(b).fill(a);
   console.log(arr);
-  const product = arr.reduce((a, b) => a + b, 0);
+  const product = arr.reduce((a, b) => a + b);
+  // const product = arr.reduce((a, b) => a + b, 0); // 0 is an initial value
   console.log(product);
   return product;
 };
@@ -39,9 +40,10 @@ const modulo = function(phi, psi) {
 // TEST SUITE
 // multiplication
 console.log(multiply(2, 10));   // ---> 20
-console.log(multiply(1, 1));    // ---> 1
-console.log(multiply(21, 0));   // -->  0
-console.log(multiply(-21, 1));  // --> -21
+// console.log(multiply(1, 1));    // ---> 1
+// console.log(multiply(113, 17));    // ---> 1921
+// console.log(multiply(21, 0));   // -->  0 BUT .reduce needs and initial value
+// console.log(multiply(-21, 1));  // --> -21
 // console.log(multiply(21, -1));  // --> error
 // console.log(multiply(-21, -3)); // --> error
 
